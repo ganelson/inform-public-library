@@ -1,0 +1,57 @@
+Adaptive Prose
+	Responses
+	Varying What is Written
+	Varying What is Read
+	Using the Player's Input
+Place
+	Map
+	Continuous Spaces and the Outdoors
+	Doors, Staircases, and Bridges
+Time and Plot
+	The Passage of Time
+The Viewpoint Character
+	Characterization
+	Background, Memory, and Knowledge
+Commands
+	Looking
+	Looking Under and Hiding
+	Going, Pushing things in Directions
+	Entering and Exiting, Sitting and Standing
+	Opening, Closing, Locking and Unlocking
+	Additional Command Sets
+	Remembering, Converting and Combining Actions
+	Action at a Distance
+	Clarification and Correction
+Other Characters
+	Getting Started with Conversation
+	Saying Complicated Things
+	Character Emotion
+	Traveling Characters
+Vehicles, Animals, and Furniture
+	Bicycles, Cars, and Boats
+	Ships, Trains, and Elevators
+	Furniture
+	Kitchen and Bathroom
+Props: Food, Clothing, Money, Toys, Books, Electronics
+	Bags, Bottles, Boxes and Safes
+	Computers
+Physics: Substances, Ropes, Energy and Weight
+	Liquids
+	Volume, Height, Weight
+	Connections and Attachments
+Numerical Effects and Programming Tools
+	Conditionals
+Out of World Actions and Effects
+	Helping and Hinting
+	Ending
+Typography, Layout, and Multimedia Effects
+	Screen Effects (General)
+	Typography
+	The Status Line
+	Menus
+	Vorple Framework
+	Glulx Multimedia Effects (General)
+	Glulx Graphics
+Testing and Publishing
+	Testing and Debugging
+

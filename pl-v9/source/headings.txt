@@ -1,0 +1,6 @@
+{sections}
+{section-title of: {SECTIONID}}
+{subsections in: {SECTIONID}}
+	{subsection-title of: {SUBSECTIONID}}
+{end-subsections}
+{end-sections}

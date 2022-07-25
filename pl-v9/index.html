@@ -1,0 +1,3774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Extensions</title>
+<style type="text/css">
+<!--
+	.headingbox {
+		position: relative;
+		height: 56px;
+		padding: 0px;
+		white-space:nowrap;
+		background: #808080;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+	.headingtext {
+		position: absolute;
+		top: -4px;
+		left: -1px;
+		width: 100%;
+		color: #ffffff;
+		padding: 14px 10px 0px 10px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.headingrubric {
+		position: absolute;
+		top: 36px;
+		width: 100%;
+		color: #ffffff;
+		padding: 0px 10px 0px 10px;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.buttons {
+		height: 20px;
+		padding: 2px 8px 2px 8px;
+		margin: 2px;
+		font-size: 11px;
+		border:1px solid;
+		border-radius: 5px;
+		border-color: #000000;
+	}
+	.minibuttons {
+		height: 14px;
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		font-size: 10px;
+		border:1px solid;
+		border-radius: 4px;
+		border-color: #000000;
+	}
+	.uninstalled {
+		color: #000000;
+		background: #ffffdd;
+	}
+	.installed {
+		color: #000000;
+		background: #ffffff;
+		pointer-events: none;
+	}
+	.builtin {
+		color: #888888;
+		background: #ffffff;
+		pointer-events: none;
+	}
+	.update {
+		color: #000000;
+		background: #aaddff;
+	}
+	.revert {
+		color: #000000;
+		background: #ddaaff;
+	}
+	.revealer {
+		color: #ffffff;
+		background: #444444;
+	}
+	p {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+	}
+	span.sectionnameopen {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	div.sectionitemsopen {
+		display: block;
+	}
+	span.sectionname {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+	}
+	span.sectionmark {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+		color: #666;
+	}
+	div.sectionitemsclosed {
+		display: none;
+	}
+	span.subsectionname {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	span.subsectionmark {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 14px;
+		line-height: 16px;
+		color: #666;
+	}
+	p.item {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 80px;
+		text-indent: -40px;
+	}
+	p.forum {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 80px;
+	}
+	p.leftitem {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 40px;
+		text-indent: -40px;
+	}
+	a.silentlink {
+		text-decoration: none;
+		color: #000;
+	}
+	a.buttonlink {
+		text-decoration: none;
+	}
+	a.contentslink:link {										/* unvisited link */
+		text-decoration: none;
+		color: #202020;
+	}
+	a.contentslink:visited {									/* visited link */
+		text-decoration: none;
+		color: #202020;
+	}
+	a.contentslink:hover {										/* mouse over link */
+		text-decoration: none;
+		color: #D00000;
+	}
+	a.contentslink:active {										/* selected link */
+		text-decoration: none;
+		color: #D00000;
+	}
+--></style>
+<script type="text/javascript">
+	window.getAllList = [];
+	window.getAllLength = 0;
+	window.updateList = [];
+	window.updateListLength = 0;
+	window.sectionExtentD = new Array();
+	window.sectionExtentI = new Array();
+	window.sectionExtentU = new Array();
+	window.sectionExtentR = new Array();
+	window.subsectionExtentD = new Array();
+	window.subsectionExtentI = new Array();
+	window.subsectionExtentU = new Array();
+	window.subsectionExtentR = new Array();
+	function query(itemid, sid, ssid, author, title, available, url) {
+		var myProject = window.Project;
+		var imid = 'button' + itemid;
+		var res = myProject.askInterfaceForLocalVersion(author, title, available);
+		var buttontext = 'DOWNLOAD';
+		var buttonclass = 'buttons uninstalled';
+		if (res == '!') {
+			buttontext = 'BUILT IN'; buttonclass = 'buttons builtin';
+			window.sectionExtentI[sid]++;
+			window.subsectionExtentI[ssid]++;
+		}
+		if (res == '=') {
+			buttontext = 'INSTALLED'; buttonclass = 'buttons installed';
+			window.sectionExtentI[sid]++;
+			window.subsectionExtentI[ssid]++;
+		}
+		if (res == '<') {
+			var loc = myProject.askInterfaceForLocalVersionText(author, title);
+			buttontext = 'UPDATE ' + loc + ' &#9654 ' + available;
+			buttonclass = 'buttons update';
+			window.updateList.push(itemid);
+			window.updateList.push(url);
+			window.updateList.push(title + ' by ' + author);
+			window.updateListLength = window.updateListLength + 1;
+			window.sectionExtentU[sid]++;
+			window.subsectionExtentU[ssid]++;
+		}
+		if (res == '>') {
+			var loc = myProject.askInterfaceForLocalVersionText(author, title);
+			buttontext = 'REVERT TO LIBRARY VERSION (' + loc + ' &#9654 ' + available + ')';
+			buttonclass = 'buttons revert';
+			window.sectionExtentR[sid]++;
+			window.subsectionExtentR[ssid]++;
+		}
+		if (buttontext == 'DOWNLOAD') {
+			window.getAllList.push(itemid);
+			window.getAllList.push(url);
+			window.getAllList.push(title + ' by ' + author);
+			window.getAllLength = window.getAllLength + 1;
+			window.sectionExtentD[sid]++;
+			window.subsectionExtentD[ssid]++;
+		}
+		document.getElementById(imid).innerHTML = buttontext;
+		document.getElementById(imid).className = buttonclass;
+	}
+	function onLoaded() {
+		resetCounts(0);
+	}
+	window.onload=onLoaded;
+	function addToIndicator(existing, count, className) {
+		if (count == 0) return existing;
+		if (existing != '') existing = existing + '+';
+		return existing + '<span class="minibuttons ' + className + '">' + count + '</span>';
+	}
+	function setIndicatorForSection(sid) {
+		var temp = addToIndicator('', window.sectionExtentI[sid], 'installed');
+		temp = addToIndicator(temp, window.sectionExtentD[sid], 'uninstalled');
+		temp = addToIndicator(temp, window.sectionExtentU[sid], 'update');
+		temp = addToIndicator(temp, window.sectionExtentR[sid], 'revert');
+		document.getElementById('sectionindicator'+sid).innerHTML = temp;
+	}
+	function setIndicatorForSubsection(sid) {
+		var temp = addToIndicator('', window.subsectionExtentI[sid], 'installed');
+		temp = addToIndicator(temp, window.subsectionExtentD[sid], 'uninstalled');
+		temp = addToIndicator(temp, window.subsectionExtentU[sid], 'update');
+		temp = addToIndicator(temp, window.subsectionExtentR[sid], 'revert');
+		document.getElementById('subsectionindicator'+sid).innerHTML = temp;
+	}
+	function openSection(sid) {
+		document.getElementById('sectionitems'+sid).className = 'sectionitemsopen';
+		document.getElementById('sectionindicator'+sid).innerHTML = '';
+	}
+	function closeSection(sid) {
+		document.getElementById('sectionitems'+sid).className = 'sectionitemsclosed';
+		setIndicatorForSection(sid);
+	}
+	function maybeCloseSection(sid, updating) {
+		if ((updating == 1) && (document.getElementById('sectionitems'+sid).className != 'sectionitemsclosed')) {
+			return;
+		}
+		document.getElementById('sectionitems'+sid).className = 'sectionitemsclosed';
+		setIndicatorForSection(sid);
+	}
+	function toggleSection(sid) {
+		if (document.getElementById('sectionitems'+sid).className == 'sectionitemsclosed') {
+			openSection(sid);
+		} else {
+			closeSection(sid);
+		}
+	}
+	function openSubsection(ssid) {
+		document.getElementById('subsectionitems'+ssid).className = 'sectionitemsopen';
+		document.getElementById('subsectionindicator'+ssid).innerHTML = '';
+	}
+	function closeSubsection(ssid) {
+		document.getElementById('subsectionitems'+ssid).className = 'sectionitemsclosed';
+		setIndicatorForSubsection(ssid);
+	}
+	function maybeCloseSubsection(ssid, updating) {
+		if ((updating == 1) && (document.getElementById('subsectionitems'+ssid).className != 'sectionitemsclosed')) {
+			return;
+		}
+		document.getElementById('subsectionitems'+ssid).className = 'sectionitemsclosed';
+		setIndicatorForSubsection(ssid);
+	}
+	function toggleSubsection(ssid) {
+		if (document.getElementById('subsectionitems'+ssid).className == 'sectionitemsclosed') {
+			openSubsection(ssid);
+		} else {
+			closeSubsection(ssid);
+		}
+	}
+	function updateButtonLabels() {
+		if (window.getAllLength == 0) {
+			document.getElementById('getall').innerHTML = 'ALL DOWNLOADED';
+			document.getElementById('getall').className = 'buttons installed';
+		} else {
+			if (window.getAllLength == 1) {
+				document.getElementById('getall').innerHTML = 'DOWNLOAD 1 EXTENSION';
+			} else {
+				document.getElementById('getall').innerHTML = 'DOWNLOAD ' + window.getAllLength + ' EXTENSIONS';
+			}
+			document.getElementById('getall').className = 'buttons uninstalled';
+		}
+		if (window.updateListLength == 0) {
+			document.getElementById('updateall').innerHTML = 'ALL UP TO DATE';
+			document.getElementById('updateall').className = 'buttons installed';
+		} else {
+			if (window.updateListLength == 1) {
+				document.getElementById('updateall').innerHTML = 'UPDATE 1 EXTENSION';
+			} else {
+				document.getElementById('updateall').innerHTML = 'UPDATE ' + window.updateListLength + ' EXTENSIONS';
+			}
+			document.getElementById('updateall').className = 'buttons update';
+		}
+	}
+	function clearSectionExtents(sid) {
+		window.sectionExtentI[sid] = 0;
+		window.sectionExtentD[sid] = 0;
+		window.sectionExtentU[sid] = 0;
+		window.sectionExtentR[sid] = 0;
+	}
+	function clearSubsectionExtents(ssid) {
+		window.subsectionExtentI[ssid] = 0;
+		window.subsectionExtentD[ssid] = 0;
+		window.subsectionExtentU[ssid] = 0;
+		window.subsectionExtentR[ssid] = 0;
+	}
+	function resetCounts(updating) {
+		clearExtents();
+		setupResources();
+		maybeCloseSubsections(updating);
+		updateButtonLabels();
+	}
+
+	function setupResources() {
+		query(0,
+			0,
+			0,
+			'Aaron Reed',
+			'Response Assistant',
+			'Version 1',
+			'library:/resources/Extensions/Aaron%20Reed/Response%20Assistant.i7x?id=0');
+		query(1,
+			0,
+			1,
+			'Emily Short',
+			'Assorted Text Generation',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Assorted%20Text%20Generation.i7x?id=1');
+		query(2,
+			0,
+			1,
+			'Emily Short',
+			'Complex Listing',
+			'Version 9',
+			'library:/resources/Extensions/Emily%20Short/Complex%20Listing.i7x?id=2');
+		query(3,
+			0,
+			1,
+			'Eric Eve',
+			'List Control',
+			'Version 4',
+			'library:/resources/Extensions/Eric%20Eve/List%20Control.i7x?id=3');
+		query(4,
+			0,
+			1,
+			'Eric Eve',
+			'List Controller',
+			'Version 4',
+			'library:/resources/Extensions/Eric%20Eve/List%20Controller.i7x?id=4');
+		query(5,
+			0,
+			1,
+			'Eric Eve',
+			'Text Capture',
+			'Version 8',
+			'library:/resources/Extensions/Eric%20Eve/Text%20Capture.i7x?id=5');
+		query(6,
+			0,
+			2,
+			'Emily Short',
+			'Punctuation Removal',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Punctuation%20Removal.i7x?id=6');
+		query(7,
+			0,
+			3,
+			'Aaron Reed',
+			'Keyword Interface',
+			'Version 9/140501',
+			'library:/resources/Extensions/Aaron%20Reed/Keyword%20Interface.i7x?id=7');
+		query(8,
+			0,
+			3,
+			'Ron Newcomb',
+			'Phrases for Tables with Topics',
+			'Version 3',
+			'library:/resources/Extensions/Ron%20Newcomb/Phrases%20for%20Tables%20with%20Topics.i7x?id=8');
+		query(9,
+			0,
+			3,
+			'Ron Newcomb',
+			'Rewrite the Command Line',
+			'Version 2/110202',
+			'library:/resources/Extensions/Ron%20Newcomb/Rewrite%20the%20Command%20Line.i7x?id=9');
+		query(10,
+			1,
+			4,
+			'Aaron Reed',
+			'Dynamic Rooms',
+			'Version 3',
+			'library:/resources/Extensions/Aaron%20Reed/Dynamic%20Rooms.i7x?id=10');
+		query(11,
+			1,
+			5,
+			'Emily Short',
+			'Facing',
+			'Version 10',
+			'library:/resources/Extensions/Emily%20Short/Facing.i7x?id=11');
+		query(12,
+			1,
+			6,
+			'Emily Short',
+			'Deluxe Doors',
+			'Version 4',
+			'library:/resources/Extensions/Emily%20Short/Deluxe%20Doors.i7x?id=12');
+		query(13,
+			2,
+			7,
+			'Eric Eve',
+			'Variable Time Control',
+			'Version 4',
+			'library:/resources/Extensions/Eric%20Eve/Variable%20Time%20Control.i7x?id=13');
+		query(14,
+			2,
+			7,
+			'Ron Newcomb',
+			'Phrases for Adaptive Pacing',
+			'Version 1',
+			'library:/resources/Extensions/Ron%20Newcomb/Phrases%20for%20Adaptive%20Pacing.i7x?id=14');
+		query(15,
+			2,
+			7,
+			'Ron Newcomb',
+			'Real Date and Time',
+			'Version 2',
+			'library:/resources/Extensions/Ron%20Newcomb/Real%20Date%20and%20Time.i7x?id=15');
+		query(16,
+			3,
+			8,
+			'Ron Newcomb',
+			'Unsuccessful PC Attempt',
+			'Version 2',
+			'library:/resources/Extensions/Ron%20Newcomb/Unsuccessful%20PC%20Attempt.i7x?id=16');
+		query(17,
+			3,
+			9,
+			'Eric Eve',
+			'Epistemology',
+			'Version 6',
+			'library:/resources/Extensions/Eric%20Eve/Epistemology.i7x?id=17');
+		query(18,
+			3,
+			9,
+			'Aaron Reed',
+			'Remembering',
+			'Version 9/140430',
+			'library:/resources/Extensions/Aaron%20Reed/Remembering.i7x?id=18');
+		query(19,
+			4,
+			10,
+			'Emily Short',
+			'Introductions',
+			'Version 2',
+			'library:/resources/Extensions/Emily%20Short/Introductions.i7x?id=19');
+		query(20,
+			4,
+			10,
+			'Emily Short',
+			'Ordinary Room Description',
+			'Version 3',
+			'library:/resources/Extensions/Emily%20Short/Ordinary%20Room%20Description.i7x?id=20');
+		query(21,
+			4,
+			10,
+			'Emily Short',
+			'Room Description Control',
+			'Version 12',
+			'library:/resources/Extensions/Emily%20Short/Room%20Description%20Control.i7x?id=21');
+		query(22,
+			4,
+			10,
+			'Emily Short',
+			'Single Paragraph Description',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Single%20Paragraph%20Description.i7x?id=22');
+		query(23,
+			4,
+			10,
+			'Emily Short',
+			'Tailored Room Description',
+			'Version 12',
+			'library:/resources/Extensions/Emily%20Short/Tailored%20Room%20Description.i7x?id=23');
+		query(24,
+			4,
+			11,
+			'Eric Eve',
+			'Underside',
+			'Version 6',
+			'library:/resources/Extensions/Eric%20Eve/Underside.i7x?id=24');
+		query(25,
+			4,
+			11,
+			'Eric Eve',
+			'Hiding Under',
+			'Version 4',
+			'library:/resources/Extensions/Eric%20Eve/Hiding%20Under.i7x?id=25');
+		query(26,
+			4,
+			12,
+			'Emily Short',
+			'Approaches',
+			'Version 6',
+			'library:/resources/Extensions/Emily%20Short/Approaches.i7x?id=26');
+		query(27,
+			4,
+			12,
+			'Ron Newcomb',
+			'Permission to Visit',
+			'Version 7',
+			'library:/resources/Extensions/Ron%20Newcomb/Permission%20to%20Visit.i7x?id=27');
+		query(28,
+			4,
+			12,
+			'Juhana Leinonen',
+			'Regional Travel',
+			'Version 2',
+			'library:/resources/Extensions/Juhana%20Leinonen/Regional%20Travel.i7x?id=28');
+		query(29,
+			4,
+			13,
+			'Emily Short',
+			'Modified Exit',
+			'Version 6',
+			'library:/resources/Extensions/Emily%20Short/Modified%20Exit.i7x?id=29');
+		query(30,
+			4,
+			14,
+			'Emily Short',
+			'Locksmith',
+			'Version 12',
+			'library:/resources/Extensions/Emily%20Short/Locksmith.i7x?id=30');
+		query(31,
+			4,
+			14,
+			'Emily Short',
+			'Skeleton Keys',
+			'Version 1',
+			'library:/resources/Extensions/Emily%20Short/Skeleton%20Keys.i7x?id=31');
+		query(32,
+			4,
+			15,
+			'Aaron Reed',
+			'Extended Grammar',
+			'Version 8/140501',
+			'library:/resources/Extensions/Aaron%20Reed/Extended%20Grammar.i7x?id=32');
+		query(33,
+			4,
+			16,
+			'Ron Newcomb',
+			'Editable Stored Actions',
+			'Version 10',
+			'library:/resources/Extensions/Ron%20Newcomb/Editable%20Stored%20Actions.i7x?id=33');
+		query(34,
+			4,
+			16,
+			'Eric Eve',
+			'Implicit Actions',
+			'Version 13',
+			'library:/resources/Extensions/Eric%20Eve/Implicit%20Actions.i7x?id=34');
+		query(35,
+			4,
+			16,
+			'Eric Eve',
+			'Limited Implicit Actions',
+			'Version 3',
+			'library:/resources/Extensions/Eric%20Eve/Limited%20Implicit%20Actions.i7x?id=35');
+		query(36,
+			4,
+			16,
+			'Eric Eve',
+			'NPC Implicit Actions',
+			'Version 4',
+			'library:/resources/Extensions/Eric%20Eve/NPC%20Implicit%20Actions.i7x?id=36');
+		query(37,
+			4,
+			16,
+			'Aaron Reed',
+			'Small Kindnesses',
+			'Version 13/140501',
+			'library:/resources/Extensions/Aaron%20Reed/Small%20Kindnesses.i7x?id=37');
+		query(38,
+			4,
+			16,
+			'Ron Newcomb',
+			'After Not Doing Something',
+			'Version 2',
+			'library:/resources/Extensions/Ron%20Newcomb/After%20Not%20Doing%20Something.i7x?id=38');
+		query(39,
+			4,
+			17,
+			'Ron Newcomb',
+			'Scope Control',
+			'Version 2',
+			'library:/resources/Extensions/Ron%20Newcomb/Scope%20Control.i7x?id=39');
+		query(40,
+			4,
+			18,
+			'Aaron Reed',
+			'Numbered Disambiguation Choices',
+			'Version 7/140501',
+			'library:/resources/Extensions/Aaron%20Reed/Numbered%20Disambiguation%20Choices.i7x?id=40');
+		query(41,
+			4,
+			18,
+			'Juhana Leinonen',
+			'Reversed Persuasion Correction',
+			'Version 2',
+			'library:/resources/Extensions/Juhana%20Leinonen/Reversed%20Persuasion%20Correction.i7x?id=41');
+		query(42,
+			5,
+			19,
+			'Eric Eve',
+			'Conversation Framework',
+			'Version 11',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Framework.i7x?id=42');
+		query(43,
+			5,
+			19,
+			'Chris Conley',
+			'Threaded Conversation',
+			'Version 8/220120',
+			'library:/resources/Extensions/Chris%20Conley/Threaded%20Conversation.i7x?id=43');
+		query(44,
+			5,
+			19,
+			'Emily Short',
+			'Inanimate Listeners',
+			'Version 1',
+			'library:/resources/Extensions/Emily%20Short/Inanimate%20Listeners.i7x?id=44');
+		query(45,
+			5,
+			20,
+			'Eric Eve',
+			'Conversation Nodes',
+			'Version 7',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Nodes.i7x?id=45');
+		query(46,
+			5,
+			20,
+			'Eric Eve',
+			'Conversation Package',
+			'Version 3',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Package.i7x?id=46');
+		query(47,
+			5,
+			20,
+			'Eric Eve',
+			'Conversation Responses',
+			'Version 7',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Responses.i7x?id=47');
+		query(48,
+			5,
+			20,
+			'Eric Eve',
+			'Conversation Rules',
+			'Version 7',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Rules.i7x?id=48');
+		query(49,
+			5,
+			20,
+			'Eric Eve',
+			'Conversation Suggestions',
+			'Version 6',
+			'library:/resources/Extensions/Eric%20Eve/Conversation%20Suggestions.i7x?id=49');
+		query(50,
+			5,
+			20,
+			'Eric Eve',
+			'Conversational Defaults',
+			'Version 3',
+			'library:/resources/Extensions/Eric%20Eve/Conversational%20Defaults.i7x?id=50');
+		query(51,
+			5,
+			21,
+			'Emily Short',
+			'Mood Variations',
+			'Version 3',
+			'library:/resources/Extensions/Emily%20Short/Mood%20Variations.i7x?id=51');
+		query(52,
+			5,
+			22,
+			'Emily Short',
+			'Simple Followers',
+			'Version 7',
+			'library:/resources/Extensions/Emily%20Short/Simple%20Followers.i7x?id=52');
+		query(53,
+			6,
+			23,
+			'Graham Nelson',
+			'Rideable Vehicles',
+			'Version 3',
+			'library:/resources/Extensions/Graham%20Nelson/Rideable%20Vehicles.i7x?id=53');
+		query(54,
+			6,
+			24,
+			'Emily Short',
+			'Transit System',
+			'Version 6',
+			'library:/resources/Extensions/Emily%20Short/Transit%20System.i7x?id=54');
+		query(55,
+			6,
+			25,
+			'Emily Short',
+			'Automated Drawers',
+			'Version 6',
+			'library:/resources/Extensions/Emily%20Short/Automated%20Drawers.i7x?id=55');
+		query(56,
+			6,
+			25,
+			'Emily Short',
+			'Postures',
+			'Version 2',
+			'library:/resources/Extensions/Emily%20Short/Postures.i7x?id=56');
+		query(57,
+			6,
+			26,
+			'Emily Short',
+			'Modern Conveniences',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Modern%20Conveniences.i7x?id=57');
+		query(58,
+			7,
+			27,
+			'Emily Short',
+			'Dishes',
+			'Version 2',
+			'library:/resources/Extensions/Emily%20Short/Dishes.i7x?id=58');
+		query(59,
+			7,
+			28,
+			'Emily Short',
+			'Computers',
+			'Version 7',
+			'library:/resources/Extensions/Emily%20Short/Computers.i7x?id=59');
+		query(60,
+			8,
+			29,
+			'Emily Short',
+			'Measured Liquid',
+			'Version 6',
+			'library:/resources/Extensions/Emily%20Short/Measured%20Liquid.i7x?id=60');
+		query(61,
+			8,
+			30,
+			'Graham Nelson',
+			'Metric Units',
+			'Version 2',
+			'library:/resources/Extensions/Graham%20Nelson/Metric%20Units.i7x?id=61');
+		query(62,
+			8,
+			30,
+			'Graham Nelson',
+			'Approximate Metric Units',
+			'Version 1',
+			'library:/resources/Extensions/Graham%20Nelson/Approximate%20Metric%20Units.i7x?id=62');
+		query(63,
+			8,
+			30,
+			'Eric Eve',
+			'Bulk Limiter',
+			'Version 9',
+			'library:/resources/Extensions/Eric%20Eve/Bulk%20Limiter.i7x?id=63');
+		query(64,
+			8,
+			30,
+			'Juhana Leinonen',
+			'Bulky Items',
+			'Version 3',
+			'library:/resources/Extensions/Juhana%20Leinonen/Bulky%20Items.i7x?id=64');
+		query(65,
+			8,
+			31,
+			'Sean Turner',
+			'Plugs and Sockets',
+			'Version 4',
+			'library:/resources/Extensions/Sean%20Turner/Plugs%20and%20Sockets.i7x?id=65');
+		query(66,
+			8,
+			31,
+			'Emily Short',
+			'Power Sources',
+			'Version 2',
+			'library:/resources/Extensions/Emily%20Short/Power%20Sources.i7x?id=66');
+		query(67,
+			9,
+			32,
+			'Eric Eve',
+			'Alternatives',
+			'Version 3',
+			'library:/resources/Extensions/Eric%20Eve/Alternatives.i7x?id=67');
+		query(68,
+			10,
+			33,
+			'Eric Eve',
+			'Adaptive Hints',
+			'Version 7',
+			'library:/resources/Extensions/Eric%20Eve/Adaptive%20Hints.i7x?id=68');
+		query(69,
+			10,
+			33,
+			'Emily Short',
+			'Basic Help Menu',
+			'Version 1',
+			'library:/resources/Extensions/Emily%20Short/Basic%20Help%20Menu.i7x?id=69');
+		query(70,
+			10,
+			33,
+			'Aaron Reed',
+			'Commonly Unimplemented',
+			'Version 2',
+			'library:/resources/Extensions/Aaron%20Reed/Commonly%20Unimplemented.i7x?id=70');
+		query(71,
+			10,
+			33,
+			'Aaron Reed',
+			'Poor Man\'s Mistype',
+			'Version 8',
+			'library:/resources/Extensions/Aaron%20Reed/Poor%20Man\'s%20Mistype.i7x?id=71');
+		query(72,
+			10,
+			33,
+			'Aaron Reed',
+			'Smarter Parser',
+			'Version 16/140501',
+			'library:/resources/Extensions/Aaron%20Reed/Smarter%20Parser.i7x?id=72');
+		query(73,
+			10,
+			33,
+			'Emily Short',
+			'Tutorial Mode',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Tutorial%20Mode.i7x?id=73');
+		query(74,
+			10,
+			34,
+			'Emily Short',
+			'Recorded Endings',
+			'Version 5',
+			'library:/resources/Extensions/Emily%20Short/Recorded%20Endings.i7x?id=74');
+		query(75,
+			11,
+			35,
+			'Emily Short',
+			'Basic Screen Effects',
+			'Version 7/140425',
+			'library:/resources/Extensions/Emily%20Short/Basic%20Screen%20Effects.i7x?id=75');
+		query(76,
+			11,
+			36,
+			'Emily Short',
+			'Glulx Text Effects',
+			'Version 4/140425',
+			'library:/resources/Extensions/Emily%20Short/Glulx%20Text%20Effects.i7x?id=76');
+		query(77,
+			11,
+			36,
+			'Andrew Plotkin',
+			'Unicode Parser',
+			'Version 7',
+			'library:/resources/Extensions/Andrew%20Plotkin/Unicode%20Parser.i7x?id=77');
+		query(78,
+			11,
+			36,
+			'Graham Nelson',
+			'Unicode Character Names',
+			'Version 1',
+			'library:/resources/Extensions/Graham%20Nelson/Unicode%20Character%20Names.i7x?id=78');
+		query(79,
+			11,
+			36,
+			'Graham Nelson',
+			'Unicode Full Character Names',
+			'Version 1',
+			'library:/resources/Extensions/Graham%20Nelson/Unicode%20Full%20Character%20Names.i7x?id=79');
+		query(80,
+			11,
+			37,
+			'Eric Eve',
+			'Exit Lister',
+			'Version 11',
+			'library:/resources/Extensions/Eric%20Eve/Exit%20Lister.i7x?id=80');
+		query(81,
+			11,
+			38,
+			'Emily Short',
+			'Menus',
+			'Version 3',
+			'library:/resources/Extensions/Emily%20Short/Menus.i7x?id=81');
+		query(82,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple.i7x?id=82');
+		query(83,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple Screen Effects',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Screen%20Effects.i7x?id=83');
+		query(84,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple Notifications',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Notifications.i7x?id=84');
+		query(85,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple Hyperlinks',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Hyperlinks.i7x?id=85');
+		query(86,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple Multimedia',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Multimedia.i7x?id=86');
+		query(87,
+			11,
+			39,
+			'Juhana Leinonen',
+			'Vorple Tooltips',
+			'Version 2/140430',
+			'library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Tooltips.i7x?id=87');
+		query(88,
+			11,
+			40,
+			'Emily Short',
+			'Glulx Entry Points',
+			'Version 10/140425',
+			'library:/resources/Extensions/Emily%20Short/Glulx%20Entry%20Points.i7x?id=88');
+		query(89,
+			11,
+			41,
+			'Emily Short',
+			'Glulx Image Centering',
+			'Version 3',
+			'library:/resources/Extensions/Emily%20Short/Glulx%20Image%20Centering.i7x?id=89');
+		query(90,
+			11,
+			41,
+			'Emily Short',
+			'Location Images',
+			'Version 1',
+			'library:/resources/Extensions/Emily%20Short/Location%20Images.i7x?id=90');
+		query(91,
+			12,
+			42,
+			'Juhana Leinonen',
+			'Debug Files',
+			'Version 2',
+			'library:/resources/Extensions/Juhana%20Leinonen/Debug%20Files.i7x?id=91');
+		query(92,
+			12,
+			42,
+			'Juhana Leinonen',
+			'Object Response Tests',
+			'Version 6',
+			'library:/resources/Extensions/Juhana%20Leinonen/Object%20Response%20Tests.i7x?id=92');
+		query(93,
+			12,
+			42,
+			'Emily Short',
+			'Property Checking',
+			'Version 4',
+			'library:/resources/Extensions/Emily%20Short/Property%20Checking.i7x?id=93');
+	}
+	function downloadSucceeded(itemid) {
+		if (itemid == 0) { openSection(0); openSubsection(0); }
+		if (itemid == 1) { openSection(0); openSubsection(1); }
+		if (itemid == 2) { openSection(0); openSubsection(1); }
+		if (itemid == 3) { openSection(0); openSubsection(1); }
+		if (itemid == 4) { openSection(0); openSubsection(1); }
+		if (itemid == 5) { openSection(0); openSubsection(1); }
+		if (itemid == 6) { openSection(0); openSubsection(2); }
+		if (itemid == 7) { openSection(0); openSubsection(3); }
+		if (itemid == 8) { openSection(0); openSubsection(3); }
+		if (itemid == 9) { openSection(0); openSubsection(3); }
+		if (itemid == 10) { openSection(1); openSubsection(4); }
+		if (itemid == 11) { openSection(1); openSubsection(5); }
+		if (itemid == 12) { openSection(1); openSubsection(6); }
+		if (itemid == 13) { openSection(2); openSubsection(7); }
+		if (itemid == 14) { openSection(2); openSubsection(7); }
+		if (itemid == 15) { openSection(2); openSubsection(7); }
+		if (itemid == 16) { openSection(3); openSubsection(8); }
+		if (itemid == 17) { openSection(3); openSubsection(9); }
+		if (itemid == 18) { openSection(3); openSubsection(9); }
+		if (itemid == 19) { openSection(4); openSubsection(10); }
+		if (itemid == 20) { openSection(4); openSubsection(10); }
+		if (itemid == 21) { openSection(4); openSubsection(10); }
+		if (itemid == 22) { openSection(4); openSubsection(10); }
+		if (itemid == 23) { openSection(4); openSubsection(10); }
+		if (itemid == 24) { openSection(4); openSubsection(11); }
+		if (itemid == 25) { openSection(4); openSubsection(11); }
+		if (itemid == 26) { openSection(4); openSubsection(12); }
+		if (itemid == 27) { openSection(4); openSubsection(12); }
+		if (itemid == 28) { openSection(4); openSubsection(12); }
+		if (itemid == 29) { openSection(4); openSubsection(13); }
+		if (itemid == 30) { openSection(4); openSubsection(14); }
+		if (itemid == 31) { openSection(4); openSubsection(14); }
+		if (itemid == 32) { openSection(4); openSubsection(15); }
+		if (itemid == 33) { openSection(4); openSubsection(16); }
+		if (itemid == 34) { openSection(4); openSubsection(16); }
+		if (itemid == 35) { openSection(4); openSubsection(16); }
+		if (itemid == 36) { openSection(4); openSubsection(16); }
+		if (itemid == 37) { openSection(4); openSubsection(16); }
+		if (itemid == 38) { openSection(4); openSubsection(16); }
+		if (itemid == 39) { openSection(4); openSubsection(17); }
+		if (itemid == 40) { openSection(4); openSubsection(18); }
+		if (itemid == 41) { openSection(4); openSubsection(18); }
+		if (itemid == 42) { openSection(5); openSubsection(19); }
+		if (itemid == 43) { openSection(5); openSubsection(19); }
+		if (itemid == 44) { openSection(5); openSubsection(19); }
+		if (itemid == 45) { openSection(5); openSubsection(20); }
+		if (itemid == 46) { openSection(5); openSubsection(20); }
+		if (itemid == 47) { openSection(5); openSubsection(20); }
+		if (itemid == 48) { openSection(5); openSubsection(20); }
+		if (itemid == 49) { openSection(5); openSubsection(20); }
+		if (itemid == 50) { openSection(5); openSubsection(20); }
+		if (itemid == 51) { openSection(5); openSubsection(21); }
+		if (itemid == 52) { openSection(5); openSubsection(22); }
+		if (itemid == 53) { openSection(6); openSubsection(23); }
+		if (itemid == 54) { openSection(6); openSubsection(24); }
+		if (itemid == 55) { openSection(6); openSubsection(25); }
+		if (itemid == 56) { openSection(6); openSubsection(25); }
+		if (itemid == 57) { openSection(6); openSubsection(26); }
+		if (itemid == 58) { openSection(7); openSubsection(27); }
+		if (itemid == 59) { openSection(7); openSubsection(28); }
+		if (itemid == 60) { openSection(8); openSubsection(29); }
+		if (itemid == 61) { openSection(8); openSubsection(30); }
+		if (itemid == 62) { openSection(8); openSubsection(30); }
+		if (itemid == 63) { openSection(8); openSubsection(30); }
+		if (itemid == 64) { openSection(8); openSubsection(30); }
+		if (itemid == 65) { openSection(8); openSubsection(31); }
+		if (itemid == 66) { openSection(8); openSubsection(31); }
+		if (itemid == 67) { openSection(9); openSubsection(32); }
+		if (itemid == 68) { openSection(10); openSubsection(33); }
+		if (itemid == 69) { openSection(10); openSubsection(33); }
+		if (itemid == 70) { openSection(10); openSubsection(33); }
+		if (itemid == 71) { openSection(10); openSubsection(33); }
+		if (itemid == 72) { openSection(10); openSubsection(33); }
+		if (itemid == 73) { openSection(10); openSubsection(33); }
+		if (itemid == 74) { openSection(10); openSubsection(34); }
+		if (itemid == 75) { openSection(11); openSubsection(35); }
+		if (itemid == 76) { openSection(11); openSubsection(36); }
+		if (itemid == 77) { openSection(11); openSubsection(36); }
+		if (itemid == 78) { openSection(11); openSubsection(36); }
+		if (itemid == 79) { openSection(11); openSubsection(36); }
+		if (itemid == 80) { openSection(11); openSubsection(37); }
+		if (itemid == 81) { openSection(11); openSubsection(38); }
+		if (itemid == 82) { openSection(11); openSubsection(39); }
+		if (itemid == 83) { openSection(11); openSubsection(39); }
+		if (itemid == 84) { openSection(11); openSubsection(39); }
+		if (itemid == 85) { openSection(11); openSubsection(39); }
+		if (itemid == 86) { openSection(11); openSubsection(39); }
+		if (itemid == 87) { openSection(11); openSubsection(39); }
+		if (itemid == 88) { openSection(11); openSubsection(40); }
+		if (itemid == 89) { openSection(11); openSubsection(41); }
+		if (itemid == 90) { openSection(11); openSubsection(41); }
+		if (itemid == 91) { openSection(12); openSubsection(42); }
+		if (itemid == 92) { openSection(12); openSubsection(42); }
+		if (itemid == 93) { openSection(12); openSubsection(42); }
+		resetCounts(1);
+	}
+	function clearExtents() {
+		clearSectionExtents(0);
+		clearSubsectionExtents(0);
+		clearSubsectionExtents(1);
+		clearSubsectionExtents(2);
+		clearSubsectionExtents(3);
+		clearSectionExtents(1);
+		clearSubsectionExtents(4);
+		clearSubsectionExtents(5);
+		clearSubsectionExtents(6);
+		clearSectionExtents(2);
+		clearSubsectionExtents(7);
+		clearSectionExtents(3);
+		clearSubsectionExtents(8);
+		clearSubsectionExtents(9);
+		clearSectionExtents(4);
+		clearSubsectionExtents(10);
+		clearSubsectionExtents(11);
+		clearSubsectionExtents(12);
+		clearSubsectionExtents(13);
+		clearSubsectionExtents(14);
+		clearSubsectionExtents(15);
+		clearSubsectionExtents(16);
+		clearSubsectionExtents(17);
+		clearSubsectionExtents(18);
+		clearSectionExtents(5);
+		clearSubsectionExtents(19);
+		clearSubsectionExtents(20);
+		clearSubsectionExtents(21);
+		clearSubsectionExtents(22);
+		clearSectionExtents(6);
+		clearSubsectionExtents(23);
+		clearSubsectionExtents(24);
+		clearSubsectionExtents(25);
+		clearSubsectionExtents(26);
+		clearSectionExtents(7);
+		clearSubsectionExtents(27);
+		clearSubsectionExtents(28);
+		clearSectionExtents(8);
+		clearSubsectionExtents(29);
+		clearSubsectionExtents(30);
+		clearSubsectionExtents(31);
+		clearSectionExtents(9);
+		clearSubsectionExtents(32);
+		clearSectionExtents(10);
+		clearSubsectionExtents(33);
+		clearSubsectionExtents(34);
+		clearSectionExtents(11);
+		clearSubsectionExtents(35);
+		clearSubsectionExtents(36);
+		clearSubsectionExtents(37);
+		clearSubsectionExtents(38);
+		clearSubsectionExtents(39);
+		clearSubsectionExtents(40);
+		clearSubsectionExtents(41);
+		clearSectionExtents(12);
+		clearSubsectionExtents(42);
+	}
+	function maybeCloseSubsections(updating) {
+		maybeCloseSection(0, updating);
+		maybeCloseSubsection(0, updating);
+		maybeCloseSubsection(1, updating);
+		maybeCloseSubsection(2, updating);
+		maybeCloseSubsection(3, updating);
+		maybeCloseSection(1, updating);
+		maybeCloseSubsection(4, updating);
+		maybeCloseSubsection(5, updating);
+		maybeCloseSubsection(6, updating);
+		maybeCloseSection(2, updating);
+		maybeCloseSubsection(7, updating);
+		maybeCloseSection(3, updating);
+		maybeCloseSubsection(8, updating);
+		maybeCloseSubsection(9, updating);
+		maybeCloseSection(4, updating);
+		maybeCloseSubsection(10, updating);
+		maybeCloseSubsection(11, updating);
+		maybeCloseSubsection(12, updating);
+		maybeCloseSubsection(13, updating);
+		maybeCloseSubsection(14, updating);
+		maybeCloseSubsection(15, updating);
+		maybeCloseSubsection(16, updating);
+		maybeCloseSubsection(17, updating);
+		maybeCloseSubsection(18, updating);
+		maybeCloseSection(5, updating);
+		maybeCloseSubsection(19, updating);
+		maybeCloseSubsection(20, updating);
+		maybeCloseSubsection(21, updating);
+		maybeCloseSubsection(22, updating);
+		maybeCloseSection(6, updating);
+		maybeCloseSubsection(23, updating);
+		maybeCloseSubsection(24, updating);
+		maybeCloseSubsection(25, updating);
+		maybeCloseSubsection(26, updating);
+		maybeCloseSection(7, updating);
+		maybeCloseSubsection(27, updating);
+		maybeCloseSubsection(28, updating);
+		maybeCloseSection(8, updating);
+		maybeCloseSubsection(29, updating);
+		maybeCloseSubsection(30, updating);
+		maybeCloseSubsection(31, updating);
+		maybeCloseSection(9, updating);
+		maybeCloseSubsection(32, updating);
+		maybeCloseSection(10, updating);
+		maybeCloseSubsection(33, updating);
+		maybeCloseSubsection(34, updating);
+		maybeCloseSection(11, updating);
+		maybeCloseSubsection(35, updating);
+		maybeCloseSubsection(36, updating);
+		maybeCloseSubsection(37, updating);
+		maybeCloseSubsection(38, updating);
+		maybeCloseSubsection(39, updating);
+		maybeCloseSubsection(40, updating);
+		maybeCloseSubsection(41, updating);
+		maybeCloseSection(12, updating);
+		maybeCloseSubsection(42, updating);
+	}
+	function showJustHeadings() {
+		closeSection(0);
+		closeSection(1);
+		closeSection(2);
+		closeSection(3);
+		closeSection(4);
+		closeSection(5);
+		closeSection(6);
+		closeSection(7);
+		closeSection(8);
+		closeSection(9);
+		closeSection(10);
+		closeSection(11);
+		closeSection(12);
+	}
+	function showHeadingsAndSubheadings() {
+		openSection(0);
+		closeSubsection(0);
+		closeSubsection(1);
+		closeSubsection(2);
+		closeSubsection(3);
+		openSection(1);
+		closeSubsection(4);
+		closeSubsection(5);
+		closeSubsection(6);
+		openSection(2);
+		closeSubsection(7);
+		openSection(3);
+		closeSubsection(8);
+		closeSubsection(9);
+		openSection(4);
+		closeSubsection(10);
+		closeSubsection(11);
+		closeSubsection(12);
+		closeSubsection(13);
+		closeSubsection(14);
+		closeSubsection(15);
+		closeSubsection(16);
+		closeSubsection(17);
+		closeSubsection(18);
+		openSection(5);
+		closeSubsection(19);
+		closeSubsection(20);
+		closeSubsection(21);
+		closeSubsection(22);
+		openSection(6);
+		closeSubsection(23);
+		closeSubsection(24);
+		closeSubsection(25);
+		closeSubsection(26);
+		openSection(7);
+		closeSubsection(27);
+		closeSubsection(28);
+		openSection(8);
+		closeSubsection(29);
+		closeSubsection(30);
+		closeSubsection(31);
+		openSection(9);
+		closeSubsection(32);
+		openSection(10);
+		closeSubsection(33);
+		closeSubsection(34);
+		openSection(11);
+		closeSubsection(35);
+		closeSubsection(36);
+		closeSubsection(37);
+		closeSubsection(38);
+		closeSubsection(39);
+		closeSubsection(40);
+		closeSubsection(41);
+		openSection(12);
+		closeSubsection(42);
+	}
+	function showEverything() {
+		openSection(0);
+		openSubsection(0);
+		openSubsection(1);
+		openSubsection(2);
+		openSubsection(3);
+		openSection(1);
+		openSubsection(4);
+		openSubsection(5);
+		openSubsection(6);
+		openSection(2);
+		openSubsection(7);
+		openSection(3);
+		openSubsection(8);
+		openSubsection(9);
+		openSection(4);
+		openSubsection(10);
+		openSubsection(11);
+		openSubsection(12);
+		openSubsection(13);
+		openSubsection(14);
+		openSubsection(15);
+		openSubsection(16);
+		openSubsection(17);
+		openSubsection(18);
+		openSection(5);
+		openSubsection(19);
+		openSubsection(20);
+		openSubsection(21);
+		openSubsection(22);
+		openSection(6);
+		openSubsection(23);
+		openSubsection(24);
+		openSubsection(25);
+		openSubsection(26);
+		openSection(7);
+		openSubsection(27);
+		openSubsection(28);
+		openSection(8);
+		openSubsection(29);
+		openSubsection(30);
+		openSubsection(31);
+		openSection(9);
+		openSubsection(32);
+		openSection(10);
+		openSubsection(33);
+		openSubsection(34);
+		openSection(11);
+		openSubsection(35);
+		openSubsection(36);
+		openSubsection(37);
+		openSubsection(38);
+		openSubsection(39);
+		openSubsection(40);
+		openSubsection(41);
+		openSection(12);
+		openSubsection(42);
+	}
+
+</script>
+</head>
+<body>
+<table cellspacing="3" border="0" width="100%">
+	<tr id="surround0">
+		<td align="left" valign="top" border=0 width=150 height=150>
+			<img src='inform:/doc_images/extensions@2x.png' width=150 height=150>
+		</td>
+		<td style="width:100%">
+			<div class="headingbox">
+				<div class="headingtext">The Public Library</div>
+				<div class="headingrubric">Extensions shared by Inform users</div>
+			</div>
+			<p>This is a public library of extensions shared by Inform authors. They're all published under a
+			Creative Commons Attribution licence, which means you can use them for free in any project of your own.
+			(Inform will automatically take care of crediting the authors.) The extensions shown here have
+			all been updated to the 2014 build of Inform.</p>
+			<p>You can review or discuss extensions (other than the built-in ones) at the
+			Interactive Fiction Forum using the links provided. If you'd like to suggest future
+			extensions, or talk about general questions to do with extensions, please
+			<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13409'>click here instead<a>
+			to get to the topic provided for that.</p>
+
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="4" cellpadding="0" width=100%>
+	<tr>
+		<td align="left" valign="top" width="0"></td>
+		<td align="left" valign="top">
+			<hr>
+			<p class='leftitem'>
+			Show:
+			&nbsp;
+			<a class="buttonlink" href="#" onClick="showJustHeadings(); return false;">
+			<span class="buttons revealer">JUST HEADINGS</span></a>
+			&nbsp;
+			<a class="buttonlink" href="#" onClick="showHeadingsAndSubheadings(); return false;">
+			<span class="buttons revealer">HEADINGS AND SUBHEADINGS</span></a>
+			&nbsp;
+			<a class="buttonlink" href="#" onClick="showEverything(); return false;">
+			<span class="buttons revealer">EVERYTHING</span></a>
+			</p>
+			<hr>
+
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section0">
+							<a href='#' onClick="toggleSection(0); return false;" class='contentslink'>
+								Adaptive Prose
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(0); return false;" class='silentlink'>
+							<span id="sectionindicator0"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems0'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§1.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection0">
+							<a href='#' onClick="toggleSubsection(0); return false;" class='contentslink'>
+								Responses
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(0); return false;" class='silentlink'>
+							<span id="subsectionindicator0"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems0'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Response%20Assistant.i7x?id=0' class="buttonlink">
+					<span id="button0" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Response Assistant by Aaron Reed</b> (Version 1).
+				Adds some helpful testing commands for changing default responses.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13554'>Click here</a>
+				to review or discuss Response Assistant at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§1.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection1">
+							<a href='#' onClick="toggleSubsection(1); return false;" class='contentslink'>
+								Varying What is Written
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(1); return false;" class='silentlink'>
+							<span id="subsectionindicator1"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems1'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Assorted%20Text%20Generation.i7x?id=1' class="buttonlink">
+					<span id="button1" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Assorted Text Generation by Emily Short</b> (Version 5).
+				Provides a range of convenient say phrases, including more varieties of number-printing, descriptions of object locations, and descriptions of which members of a set conform to a criterion (such as "Three of them are closed." when speaking of a group of doors).
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13559'>Click here</a>
+				to review or discuss Assorted Text Generation at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Complex%20Listing.i7x?id=2' class="buttonlink">
+					<span id="button2" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Complex Listing by Emily Short</b> (Version 9).
+				Complex Listing provides more sophisticated listing options: the ability to impose special ordering instructions on a list, and also the ability to change the delimiters of the list to produce different styles and effects.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/List%20Control.i7x?id=3' class="buttonlink">
+					<span id="button3" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>List Control by Eric Eve</b> (Version 4).
+				Provides a means of using tables as shuffled, cyclic or stop lists.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13598'>Click here</a>
+				to review or discuss List Control at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/List%20Controller.i7x?id=4' class="buttonlink">
+					<span id="button4" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>List Controller by Eric Eve</b> (Version 4).
+				Provides a means of using tables as shuffled, cyclic or stopping lists. This is an alternative to List Control that uses list controller objects instead of a Table of Table Types.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13599'>Click here</a>
+				to review or discuss List Controller at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Text%20Capture.i7x?id=5' class="buttonlink">
+					<span id="button5" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Text Capture by Eric Eve</b> (Version 8).
+				Allows the capture of text that would otherwise be output to the screen, so that the text can be further manipulated, displayed at some other point, or simply discarded. Version 6 avoids using phrases deprecated in 6E59.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13601'>Click here</a>
+				to review or discuss Text Capture at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§1.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection2">
+							<a href='#' onClick="toggleSubsection(2); return false;" class='contentslink'>
+								Varying What is Read
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(2); return false;" class='silentlink'>
+							<span id="subsectionindicator2"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems2'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Punctuation%20Removal.i7x?id=6' class="buttonlink">
+					<span id="button6" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Punctuation Removal by Emily Short</b> (Version 5).
+				Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as "Mrs." or "Dr.".
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§1.4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection3">
+							<a href='#' onClick="toggleSubsection(3); return false;" class='contentslink'>
+								Using the Player's Input
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(3); return false;" class='silentlink'>
+							<span id="subsectionindicator3"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems3'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Keyword%20Interface.i7x?id=7' class="buttonlink">
+					<span id="button7" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Keyword Interface by Aaron Reed</b> (Version 9/140501).
+				This extension emulates Blue Lacuna's emphasized keyword system for simplifying common IF input. Nouns, directions, and topics can be typed without a verb to examine, go, or discuss. Works with Glulx or z-code.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13550'>Click here</a>
+				to review or discuss Keyword Interface at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Phrases%20for%20Tables%20with%20Topics.i7x?id=8' class="buttonlink">
+					<span id="button8" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Phrases for Tables with Topics by Ron Newcomb</b> (Version 3).
+				Grants five new phrases regarding the player's command, the matched text, and the topic understood: if one is a topic listed in a table, if one includes or matches a topic listed in a table, what corresponds to one within a table, and the last phrase corrects a bug so the topic understood may be used within an understand-as-mistake line.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13619'>Click here</a>
+				to review or discuss Phrases for Tables with Topics at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Rewrite%20the%20Command%20Line.i7x?id=9' class="buttonlink">
+					<span id="button9" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Rewrite the Command Line by Ron Newcomb</b> (Version 2/110202).
+				Allows us to erase then rewrite the commands our player types in.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13621'>Click here</a>
+				to review or discuss Rewrite the Command Line at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section1">
+							<a href='#' onClick="toggleSection(1); return false;" class='contentslink'>
+								Place
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(1); return false;" class='silentlink'>
+							<span id="sectionindicator1"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems1'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§2.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection4">
+							<a href='#' onClick="toggleSubsection(4); return false;" class='contentslink'>
+								Map
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(4); return false;" class='silentlink'>
+							<span id="subsectionindicator4"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems4'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Dynamic%20Rooms.i7x?id=10' class="buttonlink">
+					<span id="button10" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Dynamic Rooms by Aaron Reed</b> (Version 3).
+				Create and destroy new rooms on the fly. While this is technically possible with Jesse McGrew's Dynamic Objects, the method here is simpler, customized for rooms, and available for both z-code and Glulx.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13548'>Click here</a>
+				to review or discuss Dynamic Rooms at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§2.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection5">
+							<a href='#' onClick="toggleSubsection(5); return false;" class='contentslink'>
+								Continuous Spaces and the Outdoors
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(5); return false;" class='silentlink'>
+							<span id="subsectionindicator5"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems5'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Facing.i7x?id=11' class="buttonlink">
+					<span id="button11" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Facing by Emily Short</b> (Version 10).
+				Provides actions to face a direction, look toward a named room, or look through a named door.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13564'>Click here</a>
+				to review or discuss Facing at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§2.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection6">
+							<a href='#' onClick="toggleSubsection(6); return false;" class='contentslink'>
+								Doors, Staircases, and Bridges
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(6); return false;" class='silentlink'>
+							<span id="subsectionindicator6"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems6'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Deluxe%20Doors.i7x?id=12' class="buttonlink">
+					<span id="button12" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Deluxe Doors by Emily Short</b> (Version 4).
+				Allows for doors that are implemented as having independent 'faces' -- to put a knocker on that can only be seen from on side, for instance, or to allow the player to lock one side with a key but the other with a latch. Also introduces a 'latched door' kind.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13562'>Click here</a>
+				to review or discuss Deluxe Doors at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section2">
+							<a href='#' onClick="toggleSection(2); return false;" class='contentslink'>
+								Time and Plot
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(2); return false;" class='silentlink'>
+							<span id="sectionindicator2"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems2'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§3.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection7">
+							<a href='#' onClick="toggleSubsection(7); return false;" class='contentslink'>
+								The Passage of Time
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(7); return false;" class='silentlink'>
+							<span id="subsectionindicator7"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems7'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Variable%20Time%20Control.i7x?id=13' class="buttonlink">
+					<span id="button13" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Variable Time Control by Eric Eve</b> (Version 4).
+				Allows individual actions to take a different number of seconds, or no time at all. Also allows the standard time taken per turn to be defined as so many seconds, which can be varied during the course of play.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13603'>Click here</a>
+				to review or discuss Variable Time Control at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Phrases%20for%20Adaptive%20Pacing.i7x?id=14' class="buttonlink">
+					<span id="button14" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Phrases for Adaptive Pacing by Ron Newcomb</b> (Version 1).
+				We may ask the time when (a description of scenes) began/ended; the number of turns since (a description of scenes) began/ended; if (a future event) is soon; the time/turns until (a future event); the time/turns when (a future event). We may also un-schedule a future event with 'never shall'; begin or end a scene on an event; say a time 'as a time period'; repeat through future events; and change the turns-to-minutes ratio with 'per'.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13618'>Click here</a>
+				to review or discuss Phrases for Adaptive Pacing at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Real%20Date%20and%20Time.i7x?id=15' class="buttonlink">
+					<span id="button15" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Real Date and Time by Ron Newcomb</b> (Version 2).
+				Allows the author to get the real-world time and date from the player's computer.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13620'>Click here</a>
+				to review or discuss Real Date and Time at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section3">
+							<a href='#' onClick="toggleSection(3); return false;" class='contentslink'>
+								The Viewpoint Character
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(3); return false;" class='silentlink'>
+							<span id="sectionindicator3"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems3'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§4.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection8">
+							<a href='#' onClick="toggleSubsection(8); return false;" class='contentslink'>
+								Characterization
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(8); return false;" class='silentlink'>
+							<span id="subsectionindicator8"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems8'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Unsuccessful%20PC%20Attempt.i7x?id=16' class="buttonlink">
+					<span id="button16" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Unsuccessful PC Attempt by Ron Newcomb</b> (Version 2).
+				Will run the Unsuccessful Attempt By rules for all characters, including the player.  Also silences the library messages printed by the built-in Check rules.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13624'>Click here</a>
+				to review or discuss Unsuccessful PC Attempt at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§4.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection9">
+							<a href='#' onClick="toggleSubsection(9); return false;" class='contentslink'>
+								Background, Memory, and Knowledge
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(9); return false;" class='silentlink'>
+							<span id="subsectionindicator9"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems9'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Epistemology.i7x?id=17' class="buttonlink">
+					<span id="button17" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Epistemology by Eric Eve</b> (Version 6).
+				Keeping track of what the player character knows and sees.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Remembering.i7x?id=18' class="buttonlink">
+					<span id="button18" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Remembering by Aaron Reed</b> (Version 9/140430).
+				Replaces 'You can't see any such thing' with a message reminding the player where they last saw the item they're trying to interact with. Requires Epistemology by Eric Eve and Plurality by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13553'>Click here</a>
+				to review or discuss Remembering at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§5.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section4">
+							<a href='#' onClick="toggleSection(4); return false;" class='contentslink'>
+								Commands
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(4); return false;" class='silentlink'>
+							<span id="sectionindicator4"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems4'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection10">
+							<a href='#' onClick="toggleSubsection(10); return false;" class='contentslink'>
+								Looking
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(10); return false;" class='silentlink'>
+							<span id="subsectionindicator10"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems10'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Introductions.i7x?id=19' class="buttonlink">
+					<span id="button19" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Introductions by Emily Short</b> (Version 2).
+				Introductions provides an introductory paragraph about objects in a room description the first time the player looks in that location. It also allows the author to add segue text that will appear between one description and the next.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13565'>Click here</a>
+				to review or discuss Introductions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Ordinary%20Room%20Description.i7x?id=20' class="buttonlink">
+					<span id="button20" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Ordinary Room Description by Emily Short</b> (Version 3).
+				Note: An extension to go with Room Description Control, which emulates as closely as possible the behavior of Inform defaults, but allows the intervention of Room Description Control.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13571'>Click here</a>
+				to review or discuss Ordinary Room Description at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Room%20Description%20Control.i7x?id=21' class="buttonlink">
+					<span id="button21" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Room Description Control by Emily Short</b> (Version 12).
+				A framework by which the author can considerably change the listing of objects in a room description. Includes facilities for concealing objects arbitrarily and changing the order in which objects are listed.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13576'>Click here</a>
+				to review or discuss Room Description Control at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Single%20Paragraph%20Description.i7x?id=22' class="buttonlink">
+					<span id="button22" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Single Paragraph Description by Emily Short</b> (Version 5).
+				A room description extension based on Room Description Control (which is required). All contents of a room are summarized in a single paragraph, starting with the regular room description.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13578'>Click here</a>
+				to review or discuss Single Paragraph Description at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Tailored%20Room%20Description.i7x?id=23' class="buttonlink">
+					<span id="button23" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Tailored Room Description by Emily Short</b> (Version 12).
+				An extension to go with Room Description Control, providing a different style of room description than the default. Parenthetical remarks such as (open) and (in which are...) are omitted in favor of full English sentences. Removes the requirement for Text Variations.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13579'>Click here</a>
+				to review or discuss Tailored Room Description at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection11">
+							<a href='#' onClick="toggleSubsection(11); return false;" class='contentslink'>
+								Looking Under and Hiding
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(11); return false;" class='silentlink'>
+							<span id="subsectionindicator11"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems11'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Underside.i7x?id=24' class="buttonlink">
+					<span id="button24" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Underside by Eric Eve</b> (Version 6).
+				Allows objects to be put under other objects. An underside usually starts out closed so that its contents are hidden from view. Requires Version 7 (or later) of Bulk Limiter; the space under objects is limited by bulk. Underside is compatible with Version 10 or later of Implicit Actions, but does not require it. Version 5 of Underside avoids features deprecated in Version 6E59 of Inform.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13602'>Click here</a>
+				to review or discuss Underside at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Hiding%20Under.i7x?id=25' class="buttonlink">
+					<span id="button25" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Hiding Under by Eric Eve</b> (Version 4).
+				Allows things to be hidden under other things, using a many-to-one underconcealment relation. Can be used either standalone (with basic functionality) or in conjunction with Underside (to add fuller functionality to both extensions). Version 3 of Hiding Under avoids using phrases deprecated in Version 6E59 of Inform.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13593'>Click here</a>
+				to review or discuss Hiding Under at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection12">
+							<a href='#' onClick="toggleSubsection(12); return false;" class='contentslink'>
+								Going, Pushing things in Directions
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(12); return false;" class='silentlink'>
+							<span id="subsectionindicator12"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems12'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Approaches.i7x?id=26' class="buttonlink">
+					<span id="button26" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Approaches by Emily Short</b> (Version 6).
+				Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13558'>Click here</a>
+				to review or discuss Approaches at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Permission%20to%20Visit.i7x?id=27' class="buttonlink">
+					<span id="button27" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Permission to Visit by Ron Newcomb</b> (Version 7).
+				In lieu of compass directions, we may VISIT, ATTEND, GO TO, and FIND various people, events, places, and things.  Characters may INVITE, PERMIT, and FORBID each other to or from their respective domains.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13617'>Click here</a>
+				to review or discuss Permission to Visit at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Regional%20Travel.i7x?id=28' class="buttonlink">
+					<span id="button28" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Regional Travel by Juhana Leinonen</b> (Version 2).
+				Allows the player to travel between regions. Useful for example when the player travels between large regions far apart from each other (e.g. cities), or for traveling in vehicles and public transportation.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13607'>Click here</a>
+				to review or discuss Regional Travel at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection13">
+							<a href='#' onClick="toggleSubsection(13); return false;" class='contentslink'>
+								Entering and Exiting, Sitting and Standing
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(13); return false;" class='silentlink'>
+							<span id="subsectionindicator13"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems13'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Modified%20Exit.i7x?id=29' class="buttonlink">
+					<span id="button29" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Modified Exit by Emily Short</b> (Version 6).
+				Changes the handling of the EXIT action, allowing commands such as EXIT PLATFORM and GET OUT OF CHAIR, making characters leave enterable objects before traveling, and altering the default interpretation of >OUT when the player is neither inside an object nor in a room with an outside exit. Updated for adaptive text.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13569'>Click here</a>
+				to review or discuss Modified Exit at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.5.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection14">
+							<a href='#' onClick="toggleSubsection(14); return false;" class='contentslink'>
+								Opening, Closing, Locking and Unlocking
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(14); return false;" class='silentlink'>
+							<span id="subsectionindicator14"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems14'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Locksmith.i7x?id=30' class="buttonlink">
+					<span id="button30" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Locksmith by Emily Short</b> (Version 12).
+				Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Skeleton%20Keys.i7x?id=31' class="buttonlink">
+					<span id="button31" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Skeleton Keys by Emily Short</b> (Version 1).
+				Allows for locks which can be opened by more than one key.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.6.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection15">
+							<a href='#' onClick="toggleSubsection(15); return false;" class='contentslink'>
+								Additional Command Sets
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(15); return false;" class='silentlink'>
+							<span id="subsectionindicator15"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems15'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Extended%20Grammar.i7x?id=32' class="buttonlink">
+					<span id="button32" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Extended Grammar by Aaron Reed</b> (Version 8/140501).
+				Some of the most commonly attempted synonyms for verb words. Based on the Inform 6 extension ExpertGrammar.h by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13549'>Click here</a>
+				to review or discuss Extended Grammar at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.7.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection16">
+							<a href='#' onClick="toggleSubsection(16); return false;" class='contentslink'>
+								Remembering, Converting and Combining Actions
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(16); return false;" class='silentlink'>
+							<span id="subsectionindicator16"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems16'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Editable%20Stored%20Actions.i7x?id=33' class="buttonlink">
+					<span id="button33" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Editable Stored Actions by Ron Newcomb</b> (Version 10).
+				This extension expands section 12.20 of Writing with Inform.  The individual parts of a stored action -- actor, noun, second noun, action-name -- can now be directly changed.  Also adds four new parts: request, text, participle, and preposition.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13616'>Click here</a>
+				to review or discuss Editable Stored Actions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Implicit%20Actions.i7x?id=34' class="buttonlink">
+					<span id="button34" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Implicit Actions by Eric Eve</b> (Version 13).
+				Provides implicit taking, opening, closing, locking and unlocking actions for a variety of cases where this makes for smoother game play. The extension also defines phrases which make it easy to define additional implicit actions if desired. Version 11 can be used with Locksmith by Emily Short (although Implicit Actions covers most of what Locksmith does, and in most cases it will be better to use Implicit Actions without Locksmith). Requires Plurality by Emily Short and Version 5 of Text Capture by Eric Eve.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13594'>Click here</a>
+				to review or discuss Implicit Actions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Limited%20Implicit%20Actions.i7x?id=35' class="buttonlink">
+					<span id="button35" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Limited Implicit Actions by Eric Eve</b> (Version 3).
+				A cut-down version of Implicit Actions for use where code size may be restricted and the full functionality of Implicit Actions is not needed. Requires Plurality by Emily Short and is compatible with Locksmith by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13596'>Click here</a>
+				to review or discuss Limited Implicit Actions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/NPC%20Implicit%20Actions.i7x?id=36' class="buttonlink">
+					<span id="button36" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>NPC Implicit Actions by Eric Eve</b> (Version 4).
+				A basic extension of the Implicit Actions extension into actions carried out by NPCs. This extension automatically includes Implicit Actions.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13600'>Click here</a>
+				to review or discuss NPC Implicit Actions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Small%20Kindnesses.i7x?id=37' class="buttonlink">
+					<span id="button37" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Small Kindnesses by Aaron Reed</b> (Version 13/140501).
+				Provides a number of small interface improvements for players, understanding commands like GO BACK and GET IN, automatically getting off enclosables before moving, responding to vague movement commands when there is only one sensible option, and more.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13555'>Click here</a>
+				to review or discuss Small Kindnesses at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/After%20Not%20Doing%20Something.i7x?id=38' class="buttonlink">
+					<span id="button38" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>After Not Doing Something by Ron Newcomb</b> (Version 2).
+				A small, straightforward extension that provides authors a new hook for when the player (or any NPC) fails an action.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13615'>Click here</a>
+				to review or discuss After Not Doing Something at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.8.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection17">
+							<a href='#' onClick="toggleSubsection(17); return false;" class='contentslink'>
+								Action at a Distance
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(17); return false;" class='silentlink'>
+							<span id="subsectionindicator17"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems17'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Ron%20Newcomb/Scope%20Control.i7x?id=39' class="buttonlink">
+					<span id="button39" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Scope Control by Ron Newcomb</b> (Version 2).
+				Allows us to ask why the Deciding the Scope For Something activity is running, so we can modify the scope only when we absolutely need to.  Highly useful for giving NPCs commands over telephones or while in darkness, creating 'can hear' relations, or modifying how Inform parses the command line.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13622'>Click here</a>
+				to review or discuss Scope Control at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§5.9.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection18">
+							<a href='#' onClick="toggleSubsection(18); return false;" class='contentslink'>
+								Clarification and Correction
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(18); return false;" class='silentlink'>
+							<span id="subsectionindicator18"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems18'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Numbered%20Disambiguation%20Choices.i7x?id=40' class="buttonlink">
+					<span id="button40" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Numbered Disambiguation Choices by Aaron Reed</b> (Version 7/140501).
+				Numbers the options in disambiguation questions, to help new players and solve the 'disambiguation loop' problem caused by indistinguishable objects.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13551'>Click here</a>
+				to review or discuss Numbered Disambiguation Choices at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Reversed%20Persuasion%20Correction.i7x?id=41' class="buttonlink">
+					<span id="button41" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Reversed Persuasion Correction by Juhana Leinonen</b> (Version 2).
+				Automatically corrects commands given to NPCs where the word order is reversed, for example HELLO, ALICE instead of ALICE, HELLO.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13608'>Click here</a>
+				to review or discuss Reversed Persuasion Correction at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§6.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section5">
+							<a href='#' onClick="toggleSection(5); return false;" class='contentslink'>
+								Other Characters
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(5); return false;" class='silentlink'>
+							<span id="sectionindicator5"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems5'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§6.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection19">
+							<a href='#' onClick="toggleSubsection(19); return false;" class='contentslink'>
+								Getting Started with Conversation
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(19); return false;" class='silentlink'>
+							<span id="subsectionindicator19"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems19'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Framework.i7x?id=42' class="buttonlink">
+					<span id="button42" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Framework by Eric Eve</b> (Version 11).
+				A framework for conversations that allows saying hello and goodbye, abbreviated forms of ask and tell commands for conversing with the current interlocutor, and asking and telling about things as well as topics.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13585'>Click here</a>
+				to review or discuss Conversation Framework at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Chris%20Conley/Threaded%20Conversation.i7x?id=43' class="buttonlink">
+					<span id="button43" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Threaded Conversation by Chris Conley</b> (Version 8/220120).
+				A conversation system tracking facts known, phrases spoken, and subjects of conversation, modified from the original by Emily Short. Combines ask/tell style commands with hints about what to say next, and extensive authoring tools for organizing and controlling the flow of conversations. Requires Conversation Framework by Eric Eve.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=17924'>Click here</a>
+				to review or discuss Threaded Conversation at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Inanimate%20Listeners.i7x?id=44' class="buttonlink">
+					<span id="button44" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Inanimate Listeners by Emily Short</b> (Version 1).
+				Allows the player to address inanimate objects such as a talking computer, microphone, or telephone in a form such as ASK COMPUTER ABOUT COORDINATES.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§6.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection20">
+							<a href='#' onClick="toggleSubsection(20); return false;" class='contentslink'>
+								Saying Complicated Things
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(20); return false;" class='silentlink'>
+							<span id="subsectionindicator20"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems20'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Nodes.i7x?id=45' class="buttonlink">
+					<span id="button45" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Nodes by Eric Eve</b> (Version 7).
+				Builds on Conversational Defaults and adds the ability to define particular points in a conversational thread (nodes) at which particular conversational options become available.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13586'>Click here</a>
+				to review or discuss Conversation Nodes at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Package.i7x?id=46' class="buttonlink">
+					<span id="button46" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Package by Eric Eve</b> (Version 3).
+				This extension includes both Conversation Nodes and Conversation Suggestions, and makes the suggestions aware of conversation nodes. It therefore includes the complete conversational system in one package. It also requires Conversation Responses, Conversational Defaults, Conversation Framework and Epistemology. The documentation for this extension give some guidance on how these other extensions can be mixed and matched.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13587'>Click here</a>
+				to review or discuss Conversation Package at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Responses.i7x?id=47' class="buttonlink">
+					<span id="button47" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Responses by Eric Eve</b> (Version 7).
+				Conversation Responses allows response rules for various conversational commands to be written in the form "Response for Bob when asked about..." or "Response for Bob when asked-or-told..." (or many other variations).
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13588'>Click here</a>
+				to review or discuss Conversation Responses at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Rules.i7x?id=48' class="buttonlink">
+					<span id="button48" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Rules by Eric Eve</b> (Version 7).
+				A way of controlling conversations using rules and tables. Also implements topic suggestions and Conversation nodes. Requires Plurality by Emily Short and Conversation Framework, Epistemology and List Control by Eric Eve.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13589'>Click here</a>
+				to review or discuss Conversation Rules at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversation%20Suggestions.i7x?id=49' class="buttonlink">
+					<span id="button49" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversation Suggestions by Eric Eve</b> (Version 6).
+				Provides a means of suggesting topics of conversation to the player, either in response to a TOPICS command or when NPCs are greeted. This extension requires Conversation Framework.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13590'>Click here</a>
+				to review or discuss Conversation Suggestions at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Conversational%20Defaults.i7x?id=50' class="buttonlink">
+					<span id="button50" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Conversational Defaults by Eric Eve</b> (Version 3).
+				Provides a set of rules to facilitate defining default conversational responses for different conversational commands targeted at various NPCs. This extension requires Conversation Framework.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13591'>Click here</a>
+				to review or discuss Conversational Defaults at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§6.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection21">
+							<a href='#' onClick="toggleSubsection(21); return false;" class='contentslink'>
+								Character Emotion
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(21); return false;" class='silentlink'>
+							<span id="subsectionindicator21"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems21'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Mood%20Variations.i7x?id=51' class="buttonlink">
+					<span id="button51" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Mood Variations by Emily Short</b> (Version 3).
+				Allows the author to define a mood value for characters and then use text substitutions such as '[when bored]The king fidgets on his throne[or sleepy]The king snores[at other times]The king grins[end when].' Moods will be interpreted in 'writing a paragraph' and similar contexts as the mood of the person described in the paragraph, but at other times according to the mood of the person to whom the player is currently speaking.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13570'>Click here</a>
+				to review or discuss Mood Variations at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§6.4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection22">
+							<a href='#' onClick="toggleSubsection(22); return false;" class='contentslink'>
+								Traveling Characters
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(22); return false;" class='silentlink'>
+							<span id="subsectionindicator22"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems22'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Simple%20Followers.i7x?id=52' class="buttonlink">
+					<span id="button52" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Simple Followers by Emily Short</b> (Version 7).
+				Allows non-player characters to follow the player (or one another); adds a FOLLOW command and a corresponding STOP FOLLOWING command so that the player can issue these orders to non-player characters. Adds adaptive text features.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13577'>Click here</a>
+				to review or discuss Simple Followers at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§7.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section6">
+							<a href='#' onClick="toggleSection(6); return false;" class='contentslink'>
+								Vehicles, Animals, and Furniture
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(6); return false;" class='silentlink'>
+							<span id="sectionindicator6"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems6'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§7.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection23">
+							<a href='#' onClick="toggleSubsection(23); return false;" class='contentslink'>
+								Bicycles, Cars, and Boats
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(23); return false;" class='silentlink'>
+							<span id="subsectionindicator23"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems23'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Graham%20Nelson/Rideable%20Vehicles.i7x?id=53' class="buttonlink">
+					<span id="button53" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Rideable Vehicles by Graham Nelson</b> (Version 3).
+				Vehicles which one sits on top of, rather than inside, such as elephants or motorcycles.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§7.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection24">
+							<a href='#' onClick="toggleSubsection(24); return false;" class='contentslink'>
+								Ships, Trains, and Elevators
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(24); return false;" class='silentlink'>
+							<span id="subsectionindicator24"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems24'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Transit%20System.i7x?id=54' class="buttonlink">
+					<span id="button54" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Transit System by Emily Short</b> (Version 6).
+				Transit System provides a train-car kind which follows a schedule around the map, allowing the player or other characters to get on or off.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13580'>Click here</a>
+				to review or discuss Transit System at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§7.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection25">
+							<a href='#' onClick="toggleSubsection(25); return false;" class='contentslink'>
+								Furniture
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(25); return false;" class='silentlink'>
+							<span id="subsectionindicator25"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems25'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Automated%20Drawers.i7x?id=55' class="buttonlink">
+					<span id="button55" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Automated Drawers by Emily Short</b> (Version 6).
+				Creates a drawer kind of container, which is designed to be part of an item of furniture. Automatically parses names such as 'top drawer' or 'fourth drawer' or 'left drawer'; adds some features for describing furniture with drawers.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13560'>Click here</a>
+				to review or discuss Automated Drawers at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Postures.i7x?id=56' class="buttonlink">
+					<span id="button56" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Postures by Emily Short</b> (Version 2).
+				Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13572'>Click here</a>
+				to review or discuss Postures at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§7.4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection26">
+							<a href='#' onClick="toggleSubsection(26); return false;" class='contentslink'>
+								Kitchen and Bathroom
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(26); return false;" class='silentlink'>
+							<span id="subsectionindicator26"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems26'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Modern%20Conveniences.i7x?id=57' class="buttonlink">
+					<span id="button57" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Modern Conveniences by Emily Short</b> (Version 5).
+				Modern Conveniences creates kitchen and bathroom kinds of room, which will automatically be furnished with a set of plausible appliances. (This was originally an example in the manual of how to create extensions, and an annotated version may still be found there.) Version 3 adds compatibility with Measured Liquid, modeling flowing water from taps.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13568'>Click here</a>
+				to review or discuss Modern Conveniences at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§8.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section7">
+							<a href='#' onClick="toggleSection(7); return false;" class='contentslink'>
+								Props: Food, Clothing, Money, Toys, Books, Electronics
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(7); return false;" class='silentlink'>
+							<span id="sectionindicator7"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems7'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§8.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection27">
+							<a href='#' onClick="toggleSubsection(27); return false;" class='contentslink'>
+								Bags, Bottles, Boxes and Safes
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(27); return false;" class='silentlink'>
+							<span id="subsectionindicator27"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems27'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Dishes.i7x?id=58' class="buttonlink">
+					<span id="button58" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Dishes by Emily Short</b> (Version 2).
+				Dishes is a convenience extension for use with Measured Liquid. It provides some standard-sized cups, glasses, graduated measuring cups, jugs, bottles, etc., as well as a corked bottle kind that opens with the use of a secondary cork object.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13563'>Click here</a>
+				to review or discuss Dishes at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§8.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection28">
+							<a href='#' onClick="toggleSubsection(28); return false;" class='contentslink'>
+								Computers
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(28); return false;" class='silentlink'>
+							<span id="subsectionindicator28"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems28'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Computers.i7x?id=59' class="buttonlink">
+					<span id="button59" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Computers by Emily Short</b> (Version 7).
+				Computer hardware and software, including search engines and email programs. Version 3 adds handling for batteries and cords, if we include Power Sources by Emily Short (which itself depends on Plugs and Sockets by Sean Turner).
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13561'>Click here</a>
+				to review or discuss Computers at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§9.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section8">
+							<a href='#' onClick="toggleSection(8); return false;" class='contentslink'>
+								Physics: Substances, Ropes, Energy and Weight
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(8); return false;" class='silentlink'>
+							<span id="sectionindicator8"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems8'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§9.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection29">
+							<a href='#' onClick="toggleSubsection(29); return false;" class='contentslink'>
+								Liquids
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(29); return false;" class='silentlink'>
+							<span id="subsectionindicator29"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems29'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Measured%20Liquid.i7x?id=60' class="buttonlink">
+					<span id="button60" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Measured Liquid by Emily Short</b> (Version 6).
+				Measured Liquid provides a concept of volume, together with the ability to fill containers, pour measured amounts of liquid, and drink from containers. It handles mixtures as well, if desired. It is compatible with, but does not require, the Metric Units extension by Graham Nelson.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13567'>Click here</a>
+				to review or discuss Measured Liquid at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§9.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection30">
+							<a href='#' onClick="toggleSubsection(30); return false;" class='contentslink'>
+								Volume, Height, Weight
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(30); return false;" class='silentlink'>
+							<span id="subsectionindicator30"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems30'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Graham%20Nelson/Metric%20Units.i7x?id=61' class="buttonlink">
+					<span id="button61" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Metric Units by Graham Nelson</b> (Version 2).
+				Scientific kinds of value for simulations, using real number arithmetic. Uses SI units for mass, elapsed time, electric current, temperature, luminosity, frequency, force, energy, pressure, power, electric charge, voltage, luminance, area, volume, velocity, acceleration, momentum, density, heat capacity.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Graham%20Nelson/Approximate%20Metric%20Units.i7x?id=62' class="buttonlink">
+					<span id="button62" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Approximate Metric Units by Graham Nelson</b> (Version 1).
+				Scientific kinds of value for simulations, using scaled integer arithmetic: really only useful for Z-machine projects.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Bulk%20Limiter.i7x?id=63' class="buttonlink">
+					<span id="button63" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Bulk Limiter by Eric Eve</b> (Version 9).
+				Containers that limit their contents by bulk.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13584'>Click here</a>
+				to review or discuss Bulk Limiter at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Bulky%20Items.i7x?id=64' class="buttonlink">
+					<span id="button64" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Bulky Items by Juhana Leinonen</b> (Version 3).
+				Bulky items that can be carried only if the player is not carrying anything else. Version 2 fixes a bug and adds a new example.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13604'>Click here</a>
+				to review or discuss Bulky Items at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§9.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection31">
+							<a href='#' onClick="toggleSubsection(31); return false;" class='contentslink'>
+								Connections and Attachments
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(31); return false;" class='silentlink'>
+							<span id="subsectionindicator31"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems31'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Sean%20Turner/Plugs%20and%20Sockets.i7x?id=65' class="buttonlink">
+					<span id="button65" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Plugs and Sockets by Sean Turner</b> (Version 4).
+				Plug and Sockets is an extension designed to assist with the modelling of devices that can plug and be plugged into. This is done by defining kinds of connectors - male "plugs" and female "sockets" - which form part of the device in question. Grammar is provided to support the connection and disconnection process.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13625'>Click here</a>
+				to review or discuss Plugs and Sockets at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Power%20Sources.i7x?id=66' class="buttonlink">
+					<span id="button66" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Power Sources by Emily Short</b> (Version 2).
+				Power Sources provides an implementation of plugs and batteries, and is designed to be used alongside Computers or as a base for other device implementations. It requires Plugs and Sockets by Sean Turner.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13573'>Click here</a>
+				to review or discuss Power Sources at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§10.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section9">
+							<a href='#' onClick="toggleSection(9); return false;" class='contentslink'>
+								Numerical Effects and Programming Tools
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(9); return false;" class='silentlink'>
+							<span id="sectionindicator9"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems9'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§10.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection32">
+							<a href='#' onClick="toggleSubsection(32); return false;" class='contentslink'>
+								Conditionals
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(32); return false;" class='silentlink'>
+							<span id="subsectionindicator32"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems32'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Alternatives.i7x?id=67' class="buttonlink">
+					<span id="button67" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Alternatives by Eric Eve</b> (Version 3).
+				Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., "If the noun is either the carrot or the potato:", or "Instead of eating something when the noun is neither the cake nor the pudding:".
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13583'>Click here</a>
+				to review or discuss Alternatives at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§11.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section10">
+							<a href='#' onClick="toggleSection(10); return false;" class='contentslink'>
+								Out of World Actions and Effects
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(10); return false;" class='silentlink'>
+							<span id="sectionindicator10"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems10'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§11.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection33">
+							<a href='#' onClick="toggleSubsection(33); return false;" class='contentslink'>
+								Helping and Hinting
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(33); return false;" class='silentlink'>
+							<span id="subsectionindicator33"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems33'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Adaptive%20Hints.i7x?id=68' class="buttonlink">
+					<span id="button68" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Adaptive Hints by Eric Eve</b> (Version 7).
+				An adaptive hint system based on Menus by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13582'>Click here</a>
+				to review or discuss Adaptive Hints at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Basic%20Help%20Menu.i7x?id=69' class="buttonlink">
+					<span id="button69" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Basic Help Menu by Emily Short</b> (Version 1).
+				Provides a simple collection of standard IF-playing advice that can be incorporated as a help menu in a game.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Commonly%20Unimplemented.i7x?id=70' class="buttonlink">
+					<span id="button70" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Commonly Unimplemented by Aaron Reed</b> (Version 2).
+				Responds to attempts to interact with unimplemented clothing, body parts, or generic surroundings. Requires Smarter Parser by Aaron Reed.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13547'>Click here</a>
+				to review or discuss Commonly Unimplemented at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Poor%20Man\'s%20Mistype.i7x?id=71' class="buttonlink">
+					<span id="button71" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Poor Man's Mistype by Aaron Reed</b> (Version 8).
+				Adds basic typo correction by checking the first few letters of misunderstood input against the printed names of visible objects. Requires Smarter Parser by Aaron Reed.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13552'>Click here</a>
+				to review or discuss Poor Man's Mistype at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Aaron%20Reed/Smarter%20Parser.i7x?id=72' class="buttonlink">
+					<span id="button72" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Smarter Parser by Aaron Reed</b> (Version 16/140501).
+				Understands a broader range of input than the standard parser, and can direct new players towards proper syntax. A rules-based system makes it easy to customize by removing or add new forms of understood input.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13556'>Click here</a>
+				to review or discuss Smarter Parser at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Tutorial%20Mode.i7x?id=73' class="buttonlink">
+					<span id="button73" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Tutorial Mode by Emily Short</b> (Version 5).
+				Adds a tutorial mode, which is on by default, to any game, to introduce key actions for the novice player. Can be revised or expanded by the author.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13581'>Click here</a>
+				to review or discuss Tutorial Mode at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§11.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection34">
+							<a href='#' onClick="toggleSubsection(34); return false;" class='contentslink'>
+								Ending
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(34); return false;" class='silentlink'>
+							<span id="subsectionindicator34"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems34'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Recorded%20Endings.i7x?id=74' class="buttonlink">
+					<span id="button74" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Recorded Endings by Emily Short</b> (Version 5).
+				Records the endings the player encounters in multiple play-throughs to an external file; then adds an ENDINGS option to the final question to allow the player to review which endings he has seen so far.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13575'>Click here</a>
+				to review or discuss Recorded Endings at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§12.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section11">
+							<a href='#' onClick="toggleSection(11); return false;" class='contentslink'>
+								Typography, Layout, and Multimedia Effects
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(11); return false;" class='silentlink'>
+							<span id="sectionindicator11"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems11'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection35">
+							<a href='#' onClick="toggleSubsection(35); return false;" class='contentslink'>
+								Screen Effects (General)
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(35); return false;" class='silentlink'>
+							<span id="subsectionindicator35"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems35'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Basic%20Screen%20Effects.i7x?id=75' class="buttonlink">
+					<span id="button75" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Basic Screen Effects by Emily Short</b> (Version 7/140425).
+				Waiting for a keypress; clearing the screen. Also provides facilities for changing the foreground and background colors of text, when using the z-machine. These abilities will not function under Glulx.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.2.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection36">
+							<a href='#' onClick="toggleSubsection(36); return false;" class='contentslink'>
+								Typography
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(36); return false;" class='silentlink'>
+							<span id="subsectionindicator36"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems36'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Glulx%20Text%20Effects.i7x?id=76' class="buttonlink">
+					<span id="button76" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Glulx Text Effects by Emily Short</b> (Version 4/140425).
+				Glulx Text Effects provides an easy way to set up special text effects for Glulx.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Andrew%20Plotkin/Unicode%20Parser.i7x?id=77' class="buttonlink">
+					<span id="button77" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Unicode Parser by Andrew Plotkin</b> (Version 7).
+				Replaces much of the low-level parser machinery with Unicode-friendly input and parsing functions. This allows us to accept commands in non-Latin alphabets.  Since Inform does not support this natively, this extension is awkward to use in practice. It is provided as sample code and as a possible basis for future Inform development.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13557'>Click here</a>
+				to review or discuss Unicode Parser at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Graham%20Nelson/Unicode%20Character%20Names.i7x?id=78' class="buttonlink">
+					<span id="button78" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Unicode Character Names by Graham Nelson</b> (Version 1).
+				Defines 2909 names like [unicode Greek small letter gamma] for Latin, Cyrillic, Greek and Hebrew letters, along with currency and other symbols.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Graham%20Nelson/Unicode%20Full%20Character%20Names.i7x?id=79' class="buttonlink">
+					<span id="button79" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Unicode Full Character Names by Graham Nelson</b> (Version 1).
+				Defines 12997 names like [unicode Arabic letter hah with three dots above] for the full range of characters named in the Unicode 4.1 standard.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.3.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection37">
+							<a href='#' onClick="toggleSubsection(37); return false;" class='contentslink'>
+								The Status Line
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(37); return false;" class='silentlink'>
+							<span id="subsectionindicator37"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems37'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Eric%20Eve/Exit%20Lister.i7x?id=80' class="buttonlink">
+					<span id="button80" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Exit Lister by Eric Eve</b> (Version 11).
+				A status line exit-lister and an EXITS command, with optional colouring of unvisited exits.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13592'>Click here</a>
+				to review or discuss Exit Lister at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.4.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection38">
+							<a href='#' onClick="toggleSubsection(38); return false;" class='contentslink'>
+								Menus
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(38); return false;" class='silentlink'>
+							<span id="subsectionindicator38"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems38'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Menus.i7x?id=81' class="buttonlink">
+					<span id="button81" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Menus by Emily Short</b> (Version 3).
+				A table-based way to display full-screen menus to the player.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.5.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection39">
+							<a href='#' onClick="toggleSubsection(39); return false;" class='contentslink'>
+								Vorple Framework
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(39); return false;" class='silentlink'>
+							<span id="subsectionindicator39"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems39'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple.i7x?id=82' class="buttonlink">
+					<span id="button82" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple by Juhana Leinonen</b> (Version 2/140430).
+				Core functionality of Vorple, including JavaScript evaluation, HTML elements and turn type marking.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13609'>Click here</a>
+				to review or discuss Vorple at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Screen%20Effects.i7x?id=83' class="buttonlink">
+					<span id="button83" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple Screen Effects by Juhana Leinonen</b> (Version 2/140430).
+				Vorple equivalent of Basic Screen Effects by Emily Short. Waiting for a keypress, clearing the screen, aligning, styling and coloring text.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13613'>Click here</a>
+				to review or discuss Vorple Screen Effects at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Notifications.i7x?id=84' class="buttonlink">
+					<span id="button84" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple Notifications by Juhana Leinonen</b> (Version 2/140430).
+				Notifications and dialogs.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13612'>Click here</a>
+				to review or discuss Vorple Notifications at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Hyperlinks.i7x?id=85' class="buttonlink">
+					<span id="button85" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple Hyperlinks by Juhana Leinonen</b> (Version 2/140430).
+				Hyperlinks that either open a web site or execute a parser command.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13610'>Click here</a>
+				to review or discuss Vorple Hyperlinks at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Multimedia.i7x?id=86' class="buttonlink">
+					<span id="button86" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple Multimedia by Juhana Leinonen</b> (Version 2/140430).
+				Displaying images, playing sounds and music, and showing videos from YouTube.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13611'>Click here</a>
+				to review or discuss Vorple Multimedia at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Vorple%20Tooltips.i7x?id=87' class="buttonlink">
+					<span id="button87" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Vorple Tooltips by Juhana Leinonen</b> (Version 2/140430).
+				Tooltips that can be activated on request or when the mouse cursor is moved over an element.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13614'>Click here</a>
+				to review or discuss Vorple Tooltips at the IFF)
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.6.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection40">
+							<a href='#' onClick="toggleSubsection(40); return false;" class='contentslink'>
+								Glulx Multimedia Effects (General)
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(40); return false;" class='silentlink'>
+							<span id="subsectionindicator40"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems40'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Glulx%20Entry%20Points.i7x?id=88' class="buttonlink">
+					<span id="button88" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Glulx Entry Points by Emily Short</b> (Version 10/140425).
+				Provides hooks to allow the author to write specialized multimedia behavior that would normally go through HandleGlkEvent. This is a rather dull utility library that will be of most use to authors wanting to write Glulx extensions compatible with other Glulx extensions already in use.
+			</p>
+
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§12.7.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection41">
+							<a href='#' onClick="toggleSubsection(41); return false;" class='contentslink'>
+								Glulx Graphics
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(41); return false;" class='silentlink'>
+							<span id="subsectionindicator41"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems41'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Glulx%20Image%20Centering.i7x?id=89' class="buttonlink">
+					<span id="button89" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Glulx Image Centering by Emily Short</b> (Version 3).
+				Glulx Image Centering adds the ability to display an image that is centered (left/right) on the screen.
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Location%20Images.i7x?id=90' class="buttonlink">
+					<span id="button90" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Location Images by Emily Short</b> (Version 1).
+				Allows the author to set per-room images and show these as the player moves from room to room. Requires Simple Graphical Window by Emily Short.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13566'>Click here</a>
+				to review or discuss Location Images at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='sectionmark'>§13.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='sectionname' id="section12">
+							<a href='#' onClick="toggleSection(12); return false;" class='contentslink'>
+								Testing and Publishing
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(12); return false;" class='silentlink'>
+							<span id="sectionindicator12"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems12'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='subsectionmark'>§13.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='subsectionname' id="subsection42">
+							<a href='#' onClick="toggleSubsection(42); return false;" class='contentslink'>
+								Testing and Debugging
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(42); return false;" class='silentlink'>
+							<span id="subsectionindicator42"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems42'>
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Debug%20Files.i7x?id=91' class="buttonlink">
+					<span id="button91" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Debug Files by Juhana Leinonen</b> (Version 2).
+				A development tool for saving debugging information to an external text file during beta testing. (Glulx-only)
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13605'>Click here</a>
+				to review or discuss Debug Files at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Juhana%20Leinonen/Object%20Response%20Tests.i7x?id=92' class="buttonlink">
+					<span id="button92" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Object Response Tests by Juhana Leinonen</b> (Version 6).
+				A development tool for testing all actions on any given object - or one action on all objects - at once to see whether the game's responses are sensible. Version 2 adds the possibility to test individual actions and to run the tests with NPC as the actor.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13606'>Click here</a>
+				to review or discuss Object Response Tests at the IFF)
+			</p>
+
+			<p class='item'>
+				<a href='library:/resources/Extensions/Emily%20Short/Property%20Checking.i7x?id=93' class="buttonlink">
+					<span id="button93" class="buttons">buttontext</span>
+				</a>
+				&nbsp;
+				<b>Property Checking by Emily Short</b> (Version 4).
+				A lightweight extension to identify rooms and objects in a game for which no description has yet been written.
+				<br>
+				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t=13574'>Click here</a>
+				to review or discuss Property Checking at the IFF)
+			</p>
+
+			</div>
+			</div>
+			<hr>
+			<p class='leftitem'>
+				<a class="buttonlink" href="#" onClick="window.Project.downloadMultipleExtensions(window.getAllList); return false;">
+					<span id="getall" class="buttons">getall-buttontext</span>
+				</a>
+				&nbsp;This button downloads every extension you haven't got, but doesn't
+				change the version of any extension you already have. This may take a few minutes.
+			</p>
+			<p class='leftitem'>
+				<a class="buttonlink" href="#" onClick="window.Project.downloadMultipleExtensions(window.updateList); return false;">
+				<span id="updateall" class="buttons">updateall-buttontext</span></a>
+				&nbsp;This button replaces every extension you have for which the Library
+				has a newer version. (If you need to get an earlier version back again,
+				go to the Inform website.)
+			</p>
+			<hr>
+
+		</td>
+	</tr>
+</table>
+</body>
+</html>

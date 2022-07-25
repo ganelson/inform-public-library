@@ -1,0 +1,151 @@
+Adaptive Prose
+	Responses
+		Response Assistant by Aaron Reed v1
+	Varying What is Written
+		Assorted Text Generation by Emily Short v5
+		Complex Listing by Emily Short v9
+		List Control by Eric Eve v4
+		List Controller by Eric Eve v4
+		Text Capture by Eric Eve v8
+	Varying What is Read
+		Punctuation Removal by Emily Short v5
+	Using the Player's Input
+		Keyword Interface by Aaron Reed v9/140501
+		Phrases for Tables with Topics by Ron Newcomb v3
+		Rewrite the Command Line by Ron Newcomb v2/110202
+Place
+	Map
+		Dynamic Rooms by Aaron Reed v3
+	Continuous Spaces and the Outdoors
+		Facing by Emily Short v10
+	Doors, Staircases, and Bridges
+		Deluxe Doors by Emily Short v4
+Time and Plot
+	The Passage of Time
+		Variable Time Control by Eric Eve v4
+		Phrases for Adaptive Pacing by Ron Newcomb v1
+		Real Date and Time by Ron Newcomb v2
+The Viewpoint Character
+	Characterization
+		Unsuccessful PC Attempt by Ron Newcomb v2
+	Background, Memory, and Knowledge
+		Epistemology by Eric Eve v6
+		Remembering by Aaron Reed v9/140430
+Commands
+	Looking
+		Introductions by Emily Short v2
+		Ordinary Room Description by Emily Short v3
+		Room Description Control by Emily Short v12
+		Single Paragraph Description by Emily Short v5
+		Tailored Room Description by Emily Short v12
+	Looking Under and Hiding
+		Underside by Eric Eve v6
+		Hiding Under by Eric Eve v4
+	Going, Pushing things in Directions
+		Approaches by Emily Short v6
+		Permission to Visit by Ron Newcomb v7
+		Regional Travel by Juhana Leinonen v2
+	Entering and Exiting, Sitting and Standing
+		Modified Exit by Emily Short v6
+	Opening, Closing, Locking and Unlocking
+		Locksmith by Emily Short v12
+		Skeleton Keys by Emily Short v1
+	Additional Command Sets
+		Extended Grammar by Aaron Reed v8/140501
+	Remembering, Converting and Combining Actions
+		Editable Stored Actions by Ron Newcomb v10
+		Implicit Actions by Eric Eve v13
+		Limited Implicit Actions by Eric Eve v3
+		NPC Implicit Actions by Eric Eve v4
+		Small Kindnesses by Aaron Reed v13/140501
+		After Not Doing Something by Ron Newcomb v2
+	Action at a Distance
+		Scope Control by Ron Newcomb v2
+	Clarification and Correction
+		Numbered Disambiguation Choices by Aaron Reed v7/140501
+		Reversed Persuasion Correction by Juhana Leinonen v2
+Other Characters
+	Getting Started with Conversation
+		Conversation Framework by Eric Eve v11
+		Threaded Conversation by Chris Conley v8/220120
+		Inanimate Listeners by Emily Short v1
+	Saying Complicated Things
+		Conversation Nodes by Eric Eve v7
+		Conversation Package by Eric Eve v3
+		Conversation Responses by Eric Eve v7
+		Conversation Rules by Eric Eve v7
+		Conversation Suggestions by Eric Eve v6
+		Conversational Defaults by Eric Eve v3
+	Character Emotion
+		Mood Variations by Emily Short v3
+	Traveling Characters
+		Simple Followers by Emily Short v7
+Vehicles, Animals, and Furniture
+	Bicycles, Cars, and Boats
+		Rideable Vehicles by Graham Nelson v3
+	Ships, Trains, and Elevators
+		Transit System by Emily Short v6
+	Furniture
+		Automated Drawers by Emily Short v6
+		Postures by Emily Short v2
+	Kitchen and Bathroom
+		Modern Conveniences by Emily Short v5
+Props: Food, Clothing, Money, Toys, Books, Electronics
+	Bags, Bottles, Boxes and Safes
+		Dishes by Emily Short v2
+	Computers
+		Computers by Emily Short v7
+Physics: Substances, Ropes, Energy and Weight
+	Liquids
+		Measured Liquid by Emily Short v6
+	Volume, Height, Weight
+		Metric Units by Graham Nelson v2
+		Approximate Metric Units by Graham Nelson v1
+		Bulk Limiter by Eric Eve v9
+		Bulky Items by Juhana Leinonen v3
+	Connections and Attachments
+		Plugs and Sockets by Sean Turner v4
+		Power Sources by Emily Short v2
+Numerical Effects and Programming Tools
+	Conditionals
+		Alternatives by Eric Eve v3
+Out of World Actions and Effects
+	Helping and Hinting
+		Adaptive Hints by Eric Eve v7
+		Basic Help Menu by Emily Short v1
+		Commonly Unimplemented by Aaron Reed v2
+		Poor Man's Mistype by Aaron Reed v8
+		Smarter Parser by Aaron Reed v16/140501
+		Tutorial Mode by Emily Short v5
+	Ending
+		Recorded Endings by Emily Short v5
+Typography, Layout, and Multimedia Effects
+	Screen Effects (General)
+		Basic Screen Effects by Emily Short v7/140425
+	Typography
+		Glulx Text Effects by Emily Short v4/140425
+		Unicode Parser by Andrew Plotkin v7
+		Unicode Character Names by Graham Nelson v1
+		Unicode Full Character Names by Graham Nelson v1
+	The Status Line
+		Exit Lister by Eric Eve v11
+	Menus
+		Menus by Emily Short v3
+	Vorple Framework
+		Vorple by Juhana Leinonen v2/140430
+		Vorple Screen Effects by Juhana Leinonen v2/140430
+		Vorple Notifications by Juhana Leinonen v2/140430
+		Vorple Hyperlinks by Juhana Leinonen v2/140430
+		Vorple Multimedia by Juhana Leinonen v2/140430
+		Vorple Tooltips by Juhana Leinonen v2/140430
+	Glulx Multimedia Effects (General)
+		Glulx Entry Points by Emily Short v10/140425
+	Glulx Graphics
+		Glulx Image Centering by Emily Short v3
+		Location Images by Emily Short v1
+Testing and Publishing
+	Testing and Debugging
+		Debug Files by Juhana Leinonen v2
+		Object Response Tests by Juhana Leinonen v6
+		Property Checking by Emily Short v4
+

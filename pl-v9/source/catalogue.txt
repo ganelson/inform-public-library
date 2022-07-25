@@ -1,0 +1,9 @@
+{sections}
+{section-title of: {SECTIONID}}
+{subsections in: {SECTIONID}}
+	{subsection-title of: {SUBSECTIONID}}
+		{resources in: {SUBSECTIONID}}
+		{title of: {ID}} by {author of: {ID}} v{version of: {ID}}
+		{end-resources}
+{end-subsections}
+{end-sections}
