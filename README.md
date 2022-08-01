@@ -14,22 +14,22 @@ with a hacky Perl script which worked from a purely textual metadata file
 called the "roster". The Perl is all gone now, and instead the registry
 is built like so:
 ```
-inbuild -build-registry inform-public-library/pl-v9/catalogue.txt
+inbuild -build-registry inform-public-library/current/catalogue.txt
 ```
 What this does is to build (currently) ten indexing files from templates
-in `pl-v9/source` to produce the indexes into `pl-v9` itself. Specifically,
+in `current/source` to produce the indexes into `current` itself. Specifically,
 it turns:
 
-- `pl-v9/source/index.html` into `pl-v9/index.html`
-- `pl-v9/source/index-linux.html` into `pl-v9/index-linux.html`
-- `pl-v9/source/index-macos.html` into `pl-v9/index-macos.html`
-- `pl-v9/source/index-windows.html` into `pl-v9/index-windows.html`
-- `pl-v9/source/pl404.html` into `pl-v9/pl404.html`
-- `pl-v9/source/pl404-linux.html` into `pl-v9/pl404-linux.html`
-- `pl-v9/source/pl404-macos.html` into `pl-v9/pl404-macos.html`
-- `pl-v9/source/pl404-windows.html` into `pl-v9/pl404-windows.html`
-- `pl-v9/source/catalogue.txt` into `pl-v9/catalogue.txt`
-- `pl-v9/source/headings.txt` into `pl-v9/headings.txt`
+- `current/source/index.html` into `current/index.html`
+- `current/source/index-linux.html` into `current/index-linux.html`
+- `current/source/index-macos.html` into `current/index-macos.html`
+- `current/source/index-windows.html` into `current/index-windows.html`
+- `current/source/pl404.html` into `current/pl404.html`
+- `current/source/pl404-linux.html` into `current/pl404-linux.html`
+- `current/source/pl404-macos.html` into `current/pl404-macos.html`
+- `current/source/pl404-windows.html` into `current/pl404-windows.html`
+- `current/source/catalogue.txt` into `current/catalogue.txt`
+- `current/source/headings.txt` into `current/headings.txt`
 
 The `pl404.html` page is not actually needed on the server, but instead is
 used in the apps, to be displayed if the Internet (or the server) is down.
