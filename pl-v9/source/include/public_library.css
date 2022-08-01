@@ -1,8 +1,10 @@
-	.headingbox {
+	.headingpanellayout {
 		position: relative;
 		height: 56px;
 		padding: 0px;
 		white-space:nowrap;
+	}
+	.headingpanelalt {
 		background: #808080;
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		-webkit-font-smoothing: antialiased;
@@ -12,8 +14,10 @@
 		top: -4px;
 		left: -1px;
 		width: 100%;
-		color: #ffffff;
 		padding: 14px 10px 0px 10px;
+	}
+	span.headingpaneltextalt {
+		color: #ffffff;
 		font-size: 20px;
 		font-weight: bold;
 	}
@@ -21,141 +25,136 @@
 		position: absolute;
 		top: 36px;
 		width: 100%;
-		color: #ffffff;
 		padding: 0px 10px 0px 10px;
+	}
+	span.headingpanelrubricalt {
+		color: #ffffff;
 		font-size: 11px;
 		font-weight: bold;
 	}
-	.buttons {
+	span.registrybuttons {
 		height: 20px;
 		padding: 2px 8px 2px 8px;
 		margin: 2px;
-		font-size: 11px;
 		border:1px solid;
 		border-radius: 5px;
+	}
+	span.registrybuttontext {
+		font-size: 11px;
 		border-color: #000000;
 	}
-	.minibuttons {
+	span.registryminibuttons {
 		height: 14px;
 		padding: 2px 5px 2px 5px;
 		margin: 2px;
-		font-size: 10px;
 		border:1px solid;
 		border-radius: 4px;
+	}
+	span.registryminibuttontext {
+		font-size: 10px;
 		border-color: #000000;
 	}
-	.uninstalled {
+
+
+	span.registrybuttonuninstalled {
 		color: #000000;
 		background: #ffffdd;
 	}
-	.installed {
+	span.registrybuttoninstalled {
 		color: #000000;
 		background: #ffffff;
 		pointer-events: none;
 	}
-	.builtin {
+	span.registrybuttonbuiltin {
 		color: #888888;
 		background: #ffffff;
 		pointer-events: none;
 	}
-	.update {
+	span.registrybuttonupdate {
 		color: #000000;
 		background: #aaddff;
 	}
-	.revert {
+	span.registrybuttonrevert {
 		color: #000000;
 		background: #ddaaff;
 	}
-	.revealer {
+	span.registrybuttonrevealer {
 		color: #ffffff;
 		background: #444444;
 	}
+
 	p {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 12px;
 	}
-	span.sectionnameopen {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		font-size: 15px;
-		line-height: 18px;
-	}
-	div.sectionitemsopen {
+	div.registrysectionitemsopen {
 		display: block;
 	}
-	span.sectionname {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		font-size: 16px;
-		line-height: 18px;
-	}
-	span.sectionmark {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		font-size: 16px;
-		line-height: 18px;
-		color: #666;
-	}
-	div.sectionitemsclosed {
+	div.registrysectionitemsclosed {
 		display: none;
 	}
-	span.subsectionname {
+	span.registrysectionname {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+	}
+	span.registrysubsectionname {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 14px;
 		line-height: 16px;
 	}
-	span.subsectionmark {
+	span.registrysectionmark {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+		color: #666;
+	}
+	span.registrysubsectionmark {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 14px;
 		line-height: 16px;
 		color: #666;
 	}
-	p.item {
+	span.registryitemtext {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 12px;
 		line-height: 16px;
+	}
+	p.registryitem {
 		padding-left: 80px;
 		text-indent: -40px;
 	}
-	p.forum {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		font-size: 12px;
-		line-height: 16px;
-		padding-left: 80px;
-	}
-	p.leftitem {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		font-size: 12px;
-		line-height: 16px;
+	p.registryaddition {
 		padding-left: 40px;
 		text-indent: -40px;
 	}
-	a.silentlink {
+
+	a.registrysilentlink {
 		text-decoration: none;
 		color: #000;
 	}
-	a.buttonlink {
+	a.registrybuttonlink {
 		text-decoration: none;
 	}
-	a.contentslink:link {										/* unvisited link */
-		text-decoration: none;
-		color: #202020;
-	}
-	a.contentslink:visited {									/* visited link */
+	a.registrycontentslink:link {
 		text-decoration: none;
 		color: #202020;
 	}
-	a.contentslink:hover {										/* mouse over link */
+	a.registrycontentslink:visited {
+		text-decoration: none;
+		color: #202020;
+	}
+	a.registrycontentslink:hover {
 		text-decoration: none;
 		color: #D00000;
 	}
-	a.contentslink:active {										/* selected link */
+	a.registrycontentslink:active {
 		text-decoration: none;
 		color: #D00000;
 	}

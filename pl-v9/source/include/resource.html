@@ -1,13 +1,15 @@
-			<p class='item'>
-				<a href='library:/resources/Extensions/{author of: {ID} escape: both}/{title of: {ID} escape: both}.i7x?id={ID}' class="buttonlink">
-					<span id="button{ID}" class="buttons">buttontext</span>
-				</a>
-				&nbsp;
-				<b>{title of: {ID} escape: neither} by {author of: {ID} escape: neither}</b> (Version {version of: {ID}}).
-				{summary of: {ID}}
-				{if-forum-thread for: {ID}}
-				<br>
-				(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t={forum-thread of: {ID}}'>Click here</a>
-				to review or discuss {title of: {ID} escape: neither} at the IFF)
-				{end-if-forum-thread}
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/{author of: {ID} escape: both}/{title of: {ID} escape: both}.i7x?id={ID}' class="registrybuttonlink">
+						<span id="button{ID}" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>{title of: {ID} escape: neither} by {author of: {ID} escape: neither}</b> (Version {version of: {ID}}).
+					{summary of: {ID}}
+					{if-forum-thread for: {ID}}
+					<br>
+					(<a href='http://www.intfiction.org/forum/viewtopic.php?f=45&t={forum-thread of: {ID}}'>Click here</a>
+					to review or discuss {title of: {ID} escape: neither} at the IFF)
+					{end-if-forum-thread}
+				</span>
 			</p>
