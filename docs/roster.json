@@ -75,6 +75,15 @@
 		}, {
 			"title": "Using the Player's Input",
 			"holdings": [ {
+				"author": "Alice Grove",
+				"title": "Common Commands Sidebar",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 19839,
+				"version": "2/161024",
+				"summary": "Displays a list of common parser commands in a sidebar as a reference for novice players. Includes actions to turn the sidebar off and on. Story author can tailor the command list and the appearance of the sidebar, or just plug and play. For version 6L or 6M of Inform 7.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
 				"author": "Aaron Reed",
 				"title": "Keyword Interface",
 				"standard-installation": false,
@@ -133,6 +142,15 @@
 		}, {
 			"title": "Doors, Staircases, and Bridges",
 			"holdings": [ {
+				"author": "Andrew Plotkin",
+				"title": "Disappearing Doors",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 13409,
+				"version": "1",
+				"summary": "The ability to remove doors from the world and put them back.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
 				"author": "Emily Short",
 				"title": "Deluxe Doors",
 				"standard-installation": false,
@@ -140,6 +158,24 @@
 				"forum-thread": 13562,
 				"version": "4",
 				"summary": "Allows for doors that are implemented as having independent 'faces' -- to put a knocker on that can only be seen from on side, for instance, or to allow the player to lock one side with a key but the other with a latch. Also introduces a 'latched door' kind.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
+				"author": "Gavin Lambert",
+				"title": "Secret Doors",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17918,
+				"version": "1",
+				"summary": "Doors and switches that cannot be acted upon until they are discovered.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
+				"author": "Hanon Ondricek",
+				"title": "Easy Doors",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 18060,
+				"version": "3/160425",
+				"summary": "Easy Doors provides a new kind of door which does not use map connections, and may be manipulated via rules more flexibly than the standard doors provided in Inform 7.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		} ]
@@ -219,6 +255,24 @@
 		"subsections": [ {
 			"title": "Looking",
 			"holdings": [ {
+				"author": "Alice Grove",
+				"title": "Simple Spelling",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 20164,
+				"version": "2/160807",
+				"summary": "Simple Spelling aims to make stories more screen-reader-friendly by allowing players to request the spelling of any visible thing. This extension adds two actions: 'listing visible items for spelling' and 'spelling the numbered word.'",
+				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+			}, {
+				"author": "Gavin Lambert",
+				"title": "Exit Lister",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17917,
+				"version": "3",
+				"summary": "Based on Exit Lister by Andre Kosmos, Gavin Lambert's edition reworks the internal design and provides more options for controlling lists in dark rooms.",
+				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+			}, {
 				"author": "Emily Short",
 				"title": "Introductions",
 				"standard-installation": false,
@@ -242,7 +296,7 @@
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13576,
-				"version": "12",
+				"version": "13/160517",
 				"summary": "A framework by which the author can considerably change the listing of objects in a room description. Includes facilities for concealing objects arbitrarily and changing the order in which objects are listed.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			}, {
@@ -293,7 +347,7 @@
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13558,
-				"version": "6",
+				"version": "7",
 				"summary": "Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			}, {
@@ -361,6 +415,15 @@
 		}, {
 			"title": "Remembering, Converting and Combining Actions",
 			"holdings": [ {
+				"author": "John Clemens",
+				"title": "Consolidated Multiple Actions",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17929,
+				"version": "3",
+				"summary": "An extension to consolidate action reports when performing an action on multiple objects, such as with 'take all'. Requires Hypothetical Questions by Jesse McGrew. Version 3 updated by Emily Short for 6L38 compatibility.",
+				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT" 
+			}, {
 				"author": "Ron Newcomb",
 				"title": "Editable Stored Actions",
 				"standard-installation": false,
@@ -455,12 +518,21 @@
 		"subsections": [ {
 			"title": "Getting Started with Conversation",
 			"holdings": [ {
+				"author": "Brian Rushton",
+				"title": "Clues and Conversation",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 99999,
+				"version": "4",
+				"summary": "A simple system for building conversations.",
+				"time": ""
+			}, {
 				"author": "Eric Eve",
 				"title": "Conversation Framework",
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13585,
-				"version": "11",
+				"version": "12",
 				"summary": "A framework for conversations that allows saying hello and goodbye, abbreviated forms of ask and tell commands for conversing with the current interlocutor, and asking and telling about things as well as topics.",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
@@ -472,6 +544,15 @@
 				"version": "8/220120",
 				"summary": "A conversation system tracking facts known, phrases spoken, and subjects of conversation, modified from the original by Emily Short. Combines ask/tell style commands with hints about what to say next, and extensive authoring tools for organizing and controlling the flow of conversations. Requires Conversation Framework by Eric Eve.",
 				"time": "Time: Fri, 21 Jan 2022 23:39:24 GMT"
+			}, {
+				"author": "Chris Conley",
+				"title": "Conversation Builder",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17925,
+				"version": "3/170420",
+				"summary": "An interactive question-and-answer system for building conversations, modified from the original by Emily Short. Requires Threaded Conversation v5 by Chris Conley. Compatible with 6M62.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
 				"author": "Emily Short",
 				"title": "Inanimate Listeners",
@@ -525,7 +606,7 @@
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13590,
-				"version": "6",
+				"version": "7",
 				"summary": "Provides a means of suggesting topics of conversation to the player, either in response to a TOPICS command or when NPCs are greeted. This extension requires Conversation Framework.",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
@@ -606,7 +687,7 @@
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13572,
-				"version": "2",
+				"version": "3",
 				"summary": "Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
 			} ]
@@ -648,6 +729,18 @@
 				"forum-thread": 13561,
 				"version": "7",
 				"summary": "Computer hardware and software, including search engines and email programs. Version 3 adds handling for batteries and cords, if we include Power Sources by Emily Short (which itself depends on Plugs and Sockets by Sean Turner).",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			} ]
+		}, {
+			"title": "Reading and Writing",
+			"holdings": [ {
+				"author": "Bart Massey",
+				"title": "Basic Literacy",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 22755,
+				"version": "2.1",
+				"summary": "Provides objects and actions for (proper) reading, writing and erasing.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		} ]
@@ -694,6 +787,15 @@
 				"summary": "Containers that limit their contents by bulk.",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
+				"author": "Daniel Gaskell",
+				"title": "Volumetric Limiter",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17931,
+				"version": "1",
+				"summary": "Containers and actor that limit their contents by volume. Modeled after Bulk Limiter by Eric Eve, but understands length, width, and height as well as total size.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			}, {
 				"author": "Juhana Leinonen",
 				"title": "Bulky Items",
 				"standard-installation": false,
@@ -701,6 +803,18 @@
 				"forum-thread": 13604,
 				"version": "3",
 				"summary": "Bulky items that can be carried only if the player is not carrying anything else. Version 2 fixes a bug and adds a new example.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
+			} ]
+		}, {
+			"title": "Journals and Notebooks",
+			"holdings": [ {
+				"author": "Jim Aikin",
+				"title": "Notepad",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 18059,
+				"version": "3",
+				"summary": "Provides a new kind of thing called a notepad, which the player (and NPCs) can write in. The text in a notepad can be read, added to, copied, erased, and erased from in a selective manner. It can also be write-protected. A notepad can optionally require a writing implement.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
 			} ]
 		}, {
@@ -739,12 +853,33 @@
 				"version": "3",
 				"summary": "Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., "If the noun is either the carrot or the potato:", or "Instead of eating something when the noun is neither the cake nor the pudding:".",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			}, {
+				"author": "Jesse McGrew",
+				"title": "Hypothetical Questions",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17930,
+				"version": "4/180124",
+				"summary": "Allows us to test the consequences of a phrase or action without permanently changing the game state.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			} ]
 		} ]
 	}, {
 		"title": "Out of World Actions and Effects",
 		"leafname": "out-of-world",
 		"subsections": [ {
+			"title": "Start-up Features",
+			"holdings": [ {
+				"author": "Jon Ingold",
+				"title": "Title Page",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17915,
+				"version": "3",
+				"summary": "Provides an intro panel to the game, offering a menu, a restore and restart prompt, a quotation and (under Glulx) a picture.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			} ]
+		}, {
 			"title": "Helping and Hinting",
 			"holdings": [ {
 				"author": "Eric Eve",
@@ -763,6 +898,24 @@
 				"version": "1",
 				"summary": "Provides a simple collection of standard IF-playing advice that can be incorporated as a help menu in a game.",
 				"time": "Time: Sun, 23 Oct 2011 17:48:53 GMT"
+			}, {
+				"author": "Wade Clarke",
+				"title": "Basic Help Menu",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 19344,
+				"version": "4",
+				"summary": "Adds a HELP command to your Glulx or Z-Code project for Inform 6M62 or later which brings up a menu giving some standard instructions about IF. This is a tech and content update of Emily Short's Basic Help Menu extension made for compatibility with Wade Clarke's Menus. Requires Menus by Wade Clarke (version 5 or greater) to run.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			}, {
+				"author": "Wade Clarke",
+				"title": "Menus",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 19343,
+				"version": "5",
+				"summary": "Lets you include a menu system of help, hints and/or other information in your Glulx or Z-Code project for Inform 6M62 or later. This upgrade of Emily Short's classic Menus extension features user-friendly single keypress controls, a more sophisticated UI, compatibility with screen readers and portable devices, an optional book mode with automatic pagination, and isolated message content to make translations easier. Classic Menus tables can be reformatted for this extension with a little work.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
 				"author": "Aaron Reed",
 				"title": "Commonly Unimplemented",
@@ -801,6 +954,18 @@
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		}, {
+			"title": "Scoring",
+			"holdings": [ {
+				"author": "Juhana Leinonen",
+				"title": "Achievements",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 19492,
+				"version": "1/151231",
+				"summary": "A simple but flexible rule-based achievement system. Awarded achievements can optionally persist in external files after a restart.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			} ]
+		}, {
 			"title": "Ending",
 			"holdings": [ {
 				"author": "Emily Short",
@@ -810,6 +975,18 @@
 				"forum-thread": 13575,
 				"version": "5",
 				"summary": "Records the endings the player encounters in multiple play-throughs to an external file; then adds an ENDINGS option to the final question to allow the player to review which endings he has seen so far.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			} ]
+		}, {
+			"title": "Map building",
+			"holdings": [ {
+				"author": "B David Paulsen",
+				"title": "Rapid Prototyping",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 20513,
+				"version": "1",
+				"summary": "A way to create and extend a game world on the fly during testing via a REPL idiom.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		} ]
@@ -873,6 +1050,18 @@
 				"forum-thread": 13592,
 				"version": "11",
 				"summary": "A status line exit-lister and an EXITS command, with optional colouring of unvisited exits.",
+				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+			} ]
+		}, {
+			"title": "Footnotes",
+			"holdings": [ {
+				"author": "Stephen Granade",
+				"title": "Footnotes",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17911,
+				"version": "2",
+				"summary": "Lets you add footnotes to your game, similar to those in the Infocom game Hitchhiker's Guide to the Galaxy. Footnotes are numbered beginning with 1, and are only assigned numbers as they are referenced. The player can turn footnoting on and off.",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			} ]
 		}, {
@@ -961,7 +1150,7 @@
 				"title": "Glulx Image Centering",
 				"standard-installation": true,
 				"visible": true,
-				"version": "3",
+				"version": "4",
 				"summary": "Glulx Image Centering adds the ability to display an image that is centered (left/right) on the screen.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			}, {
@@ -973,6 +1162,15 @@
 				"version": "1",
 				"summary": "Allows the author to set per-room images and show these as the player moves from room to room. Requires Simple Graphical Window by Emily Short.",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
+				"author": "Emily Short",
+				"title": "Simple Graphical Window",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 17914,
+				"version": "9/160121",
+				"summary": "Provides a graphics window in the upper part of the screen, in which the author can place images; with provision for scaling, tiling, or centering images automatically, as well as setting a background color. Extension requires Glulx Entry Points Version 7.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		} ]
 	}, {
@@ -981,6 +1179,15 @@
 		"subsections": [ {
 			"title": "Testing and Debugging",
 			"holdings": [ {
+				"author": "Michael Kielstra",
+				"title": "Debug Tags",
+				"standard-installation": false,
+				"visible": true,
+				"forum-thread": 26369,
+				"version": "1",
+				"summary": "Allows you to take quick notes about what needs to be done, where it needs to be done, and who needs to do it.  It’s scriptable, extensible, and interacts better with the rest of Inform than [TODO: ] comments do.  All your tags live next to the code in question, and they can even be in rooms in-game, but they’re accessible from anywhere.  Best of all, if you leave one in by accident, the end-user will never notice as they destroy themselves in release builds.",
+				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+			}, {
 				"author": "Juhana Leinonen",
 				"title": "Debug Files",
 				"standard-installation": false,
@@ -995,7 +1202,7 @@
 				"standard-installation": false,
 				"visible": true,
 				"forum-thread": 13606,
-				"version": "6",
+				"version": "7",
 				"summary": "A development tool for testing all actions on any given object - or one action on all objects - at once to see whether the game's responses are sensible. Version 2 adds the possibility to test individual actions and to run the tests with NPC as the actor.",
 				"time": "Time: Sun, 15 Dec 2013 02:29:33 GMT"
 			}, {

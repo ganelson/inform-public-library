@@ -35,19 +35,25 @@ Vehicles, Animals, and Furniture
 Props: Food, Clothing, Money, Toys, Books, Electronics
 	Bags, Bottles, Boxes and Safes
 	Computers
+	Reading and Writing
 Physics: Substances, Ropes, Energy and Weight
 	Liquids
 	Volume, Height, Weight
+	Journals and Notebooks
 	Connections and Attachments
 Numerical Effects and Programming Tools
 	Conditionals
 Out of World Actions and Effects
+	Start-up Features
 	Helping and Hinting
+	Scoring
 	Ending
+	Map building
 Typography, Layout, and Multimedia Effects
 	Screen Effects (General)
 	Typography
 	The Status Line
+	Footnotes
 	Menus
 	Vorple Framework
 	Glulx Multimedia Effects (General)
