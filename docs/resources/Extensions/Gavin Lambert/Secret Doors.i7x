@@ -1,4 +1,4 @@
-Version 1 of Secret Doors by Gavin Lambert begins here.
+Version 2 of Secret Doors by Gavin Lambert begins here.
 
 "Doors and switches that cannot be acted upon until they are discovered."
 
@@ -16,13 +16,21 @@ A secret switch is unrevealed.
 A secret switch is scenery.
 
 To print the you can't go message:
-	say "[text of can't go that way rule response (A)]".
+	say "[text of can't go that way rule response (A)][line break]".
 
 To print the you can't see message:
-	say "[text of parser error internal rule response (E)]".
+	say "[text of parser error internal rule response (E)][line break]".
 
 Before going through a secret door which is unrevealed:
 	print the you can't go message instead.
+	
+Rule for setting action variables for going (this is the going through secret doors rule):
+	if the door gone through is an unrevealed secret door:
+		now the door gone through is nothing;
+		now the room gone to is nothing.
+		
+The going through secret doors rule is listed after the standard set going variables rule in the setting action variables rulebook.
+The determine map connection rule is not listed in any rulebook.
 
 Before doing something to a secret door which is unrevealed:
 	print the you can't see message instead.
@@ -43,6 +51,8 @@ Secret Doors ends here.
 Secret Doors is an extension which provides robust support for hidden
 doors and hidden switches.  It was originally written by Andrew Owen,
 but has had minor changes in order to make it compatible with Inform 7 build 6L02.
+
+Version 2 adds a fix that allows "going nowhere" rules to apply to unrevealed secret doors as well.
 
 It creates two new kinds: "secret door" (a
 kind of door) and "secret switch" (a kind of thing) with the properties
@@ -131,6 +141,9 @@ Example: * Simple Cave with Secret Door and Lever - This defines a simple two-ro
 	The cave wall is scenery in the Big Cave.  "Nothing else more interesting presents itself.  Just more glowing moss."
 	Understand "damp rock" or "rock" as the cave wall.
 
+	Instead of going nowhere from the Big Cave:
+		say "The cave walls seem completely intact in that direction."
+
 	Instead of searching or examining the cave wall for the first time:
 		now the lever is revealed;
 		say "As you examine the cave wall, in a gap between two rocks you discover a lever."
@@ -143,4 +156,4 @@ Example: * Simple Cave with Secret Door and Lever - This defines a simple two-ro
 			now the passage door is open;
 			say "A secret door opens with a rumble, revealing a secret passage in the west wall!"
 
-	Test me with "w / x door / pull lever / x wall / pull lever / w"
+	Test me with "w / open door / pull lever / x wall / x lever / pull lever / x lever / w"

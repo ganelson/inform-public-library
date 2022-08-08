@@ -42,8 +42,6 @@ title (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
 "The room description style is currently [if the current verbosity mode is verbose]VERBOSE[end if][if the current verbosity mode is brief]BRIEF[end if][if the current verbosity mode is superbrief]SUPERBRIEF[end if]"	switch description types rule
 "Score notification is currently [if notify mode is on]ON[otherwise]OFF[end if]"	switch notification status rule
 
-Use scoring.
-
 To decide whether notify mode is on:
 	(- notify_mode -);
 

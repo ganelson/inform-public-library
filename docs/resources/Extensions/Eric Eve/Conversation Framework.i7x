@@ -1,4 +1,4 @@
-Version 11 of Conversation Framework by Eric Eve begins here.
+Version 12 of Conversation Framework by Eric Eve begins here.
 
 "A framework for conversations that allows saying hello and goodbye, abbreviated forms of ask and tell commands for conversing with the current interlocutor, and asking and telling about things as well as topics."
 
@@ -98,6 +98,7 @@ let the interlocutor be a random visible person who is not the player;
    say "(addressing [the interlocutor])" (C);
    let sn be the second noun;
    implicitly greet the interlocutor;
+   if the current interlocutor is not the interlocutor, stop the action; 
    now the second noun is sn;
  otherwise ;
   say "[We] [aren't] talking to anyone." (D);

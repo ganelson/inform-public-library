@@ -1,4 +1,4 @@
-Version 1/151231 of Achievements by Juhana Leinonen begins here.
+Version 1.2 of Achievements by Juhana Leinonen begins here.
 
 "A simple but flexible rule-based achievement system. Awarded achievements can optionally persist in external files after a restart."
 

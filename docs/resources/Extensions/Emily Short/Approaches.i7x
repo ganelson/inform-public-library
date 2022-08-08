@@ -1,22 +1,16 @@
-Version 6 of Approaches by Emily Short begins here.
+Version 8 of Approaches by Emily Short begins here.
 
-"Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short."
+"Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short, but as of Version 8, that is an optional inclusion."
 
-[Does adaptive text.]
+[ For Approaches' automated movement to work when locked doors are involved,
+  include either Implicit Actions by Eric Eve or Locksmith by Emily Short ]
+
+Chapter Common
 
 To find is a verb. To lack is a verb. To head is a verb. To go is a verb.
 
-Include Plurality by Emily Short. Include Version 6 of Locksmith by Emily Short.
-
 A person can be staid or hurrying. A person is usually staid.
 A room can be proper-named or improper-named.
-
-Before refusing keys of something (this is the tell the preface blocked doors with path walked rule): 
-	say "[path-walked so far]" (A).
-	
-Rule for refusing keys of an object (called locked-thing) when the player is hurrying (this is the tell the player when blocked at a door rule):
-	say "Unfortunately, [we] [find] [we] [lack] a key fitting [the locked-thing].[no line break]" (A);
-	rule succeeds.
 
 A person has a list of objects called the path so far.
 A person has a list of indexed text called described motion.
@@ -280,9 +274,8 @@ So for example:
 
 	*: "Easy Keys"
 
+	Include Locksmith by Emily Short.
 	Include Approaches by Emily Short.
-
-	Use sequential action.
 
 	Seamus' Hut is a room. 
 
@@ -292,7 +285,19 @@ So for example:
 
 	South of the open field is Woodland.
 
+	supercrediting is an action out of world.
+	understand "supercredits" as supercrediting.
+	carry out supercrediting: say the complete list of extension credits.        
+
 	Test me with "s / lock door / s / drop key / go to Hut / go to woodland / get key / go to Hut".
+
+	Section Key knowledge (for use with Implicit Actions by Eric Eve)
+
+	The known-key of the hut door is the tiny key.
+
+	Section Sequential (for use with Locksmith by Emily Short)
+    
+	Use sequential action.
 
 Example: * Wide-Eyed Saloon - Demonstrating how to safely interrupt the player's travel with conditions other than locked doors.
 
@@ -300,6 +305,8 @@ Example: * Wide-Eyed Saloon - Demonstrating how to safely interrupt the player's
 
 	*: "Wide-Eyed Saloon"
 
+	
+	
 	Include Approaches by Emily Short.
 
 	Wide-Eyed Saloon is a room.
@@ -323,6 +330,8 @@ As mentioned, we can override output with the rule for printing the name..., as 
 
 	*: "Proper Places"
 
+	
+	
 	Include Approaches by Emily Short. 
 
 	Paris is a room. 
@@ -346,6 +355,8 @@ This example is a little tricky in that we must invoke some of Inform's underlyi
 
 	*: "Traveling with Candles"
 
+	
+	
 	Include Approaches by Emily Short. 
 	
 	The Living Room is a room. The Kitchen is north of the Living Room. The Basement is below the Kitchen. The Oubliette is south of the Basement.
@@ -380,7 +391,10 @@ Finally, because our travel is by vehicle, we're going to restrict the player to
 
 	*: "Riverside Path"
 
-	Include Approaches by Emily Short. Include Rideable Vehicles by Graham Nelson.
+	[ This example doesn't work if Implicit Actions by Eric Eve is included.]
+	
+	Include Approaches by Emily Short.
+	Include Rideable Vehicles by Graham Nelson.
 
 	Section 1 - Restricting travel to bike
 

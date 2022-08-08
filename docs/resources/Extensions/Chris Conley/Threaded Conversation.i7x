@@ -1,4 +1,4 @@
-Version 8/220120 of Threaded Conversation by Chris Conley begins here.
+Version 9.1 of Threaded Conversation by Chris Conley begins here.
 
 "A conversation system tracking facts known, phrases spoken, and subjects of conversation."
 
@@ -6,7 +6,7 @@ Version 8/220120 of Threaded Conversation by Chris Conley begins here.
 
 Include Basic Screen Effects by Emily Short. 
 Include Complex Listing by Emily Short.
-Include version 11 of Conversation Framework by Eric Eve.
+Include version 12 of Conversation Framework by Eric Eve.
 
 Definition: a person is other if he is not the player.
 
@@ -774,7 +774,7 @@ Carry out someone discussing something which is not quippishly-relevant (this is
 		[	Only when the NPC takes up and responds in the new thread has the subject been successfully changed.	]
 
 Carry out someone discussing a one-time character-tailored quip which quip-supplies the current interlocutor (this is the eliminate used quips rule):  
-	remove the noun from play; [This is so that we are steadily whittling away single-use quips after they are discussed.]
+	now the noun is nowhere; [This is so that we are steadily whittling away single-use quips after they are discussed.]
 
 Report someone discussing something (this is the interlocutor's reply rule):
 [	This is a report, rather than a carry out rule, so that in theory characters can discuss things in another room, exchanging information behind the player's back.	]
@@ -2227,9 +2227,7 @@ We also do not provide any cues about special things to say, and we avoid using 
 	Quips are usually repeatable.  The offer hint quips rule is not listed in any rulebook.
 
 	Instead of discussing something which is recollected by the current interlocutor:
-		say "You remember your conversation as follows: 
-	
-[italic type][the reply of the noun][roman type][line break]".
+		say "You remember your conversation as follows:[line break][line break][italic type][the reply of the noun][roman type][line break]".
 	
 	Who is a subject.
 
