@@ -1,1220 +1,1225 @@
 {
-	"sections": [ {
-		"title": "Adaptive Prose",
-		"leafname": "adaptive-prose",
-		"subsections": [ {
-			"title": "Responses",
-			"holdings": [ {
-				"author": "Aaron Reed",
-				"title": "Response Assistant",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13554,
-				"version": "1",
-				"summary": "Adds some helpful testing commands for changing default responses.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			} ]
-		}, {
-			"title": "Varying What is Written",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Assorted Text Generation",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13559,
-				"version": "5",
-				"summary": "Provides a range of convenient say phrases, including more varieties of number-printing, descriptions of object locations, and descriptions of which members of a set conform to a criterion (such as \"Three of them are closed.\" when speaking of a group of doors).",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Complex Listing",
-				"standard-installation": true,
-				"visible": true,
-				"version": "9",
-				"summary": "Complex Listing provides more sophisticated listing options: the ability to impose special ordering instructions on a list, and also the ability to change the delimiters of the list to produce different styles and effects.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "List Control",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13598,
-				"version": "4",
-				"summary": "Provides a means of using tables as shuffled, cyclic or stop lists.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "List Controller",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13599,
-				"version": "4",
-				"summary": "Provides a means of using tables as shuffled, cyclic or stopping lists. This is an alternative to List Control that uses list controller objects instead of a Table of Table Types.",
-				"time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Text Capture",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13601,
-				"version": "8",
-				"summary": "Allows the capture of text that would otherwise be output to the screen, so that the text can be further manipulated, displayed at some other point, or simply discarded. Version 6 avoids using phrases deprecated in 6E59.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Varying What is Read",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Punctuation Removal",
-				"standard-installation": true,
-				"visible": true,
-				"version": "5",
-				"summary": "Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as \"Mrs.\" or \"Dr.\".",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Using the Player's Input",
-			"holdings": [ {
-				"author": "Alice Grove",
-				"title": "Common Commands Sidebar",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 19839,
-				"version": "2/161024",
-				"summary": "Displays a list of common parser commands in a sidebar as a reference for novice players. Includes actions to turn the sidebar off and on. Story author can tailor the command list and the appearance of the sidebar, or just plug and play. For version 6L or 6M of Inform 7.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Keyword Interface",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13550,
-				"version": "9/140501",
-				"summary": "This extension emulates Blue Lacuna's emphasized keyword system for simplifying common IF input. Nouns, directions, and topics can be typed without a verb to examine, go, or discuss. Works with Glulx or z-code.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Phrases for Tables with Topics",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13619,
-				"version": "3",
-				"summary": "Grants five new phrases regarding the player's command, the matched text, and the topic understood: if one is a topic listed in a table, if one includes or matches a topic listed in a table, what corresponds to one within a table, and the last phrase corrects a bug so the topic understood may be used within an understand-as-mistake line.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Rewrite the Command Line",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13621,
-				"version": "2/110202",
-				"summary": "Allows us to erase then rewrite the commands our player types in.",
-				"time": "Time: Wed, 02 Feb 2011 01:18:37 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Place",
-		"leafname": "place",
-		"subsections": [ {
-			"title": "Map",
-			"holdings": [ {
-				"author": "Aaron Reed",
-				"title": "Dynamic Rooms",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13548,
-				"version": "3",
-				"summary": "Create and destroy new rooms on the fly. While this is technically possible with Jesse McGrew's Dynamic Objects, the method here is simpler, customized for rooms, and available for both z-code and Glulx.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			} ]
-		}, {
-			"title": "Continuous Spaces and the Outdoors",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Facing",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13564,
-				"version": "10",
-				"summary": "Provides actions to face a direction, look toward a named room, or look through a named door.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Doors, Staircases, and Bridges",
-			"holdings": [ {
-				"author": "Andrew Plotkin",
-				"title": "Disappearing Doors",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13409,
-				"version": "1",
-				"summary": "The ability to remove doors from the world and put them back.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Deluxe Doors",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13562,
-				"version": "4",
-				"summary": "Allows for doors that are implemented as having independent 'faces' -- to put a knocker on that can only be seen from on side, for instance, or to allow the player to lock one side with a key but the other with a latch. Also introduces a 'latched door' kind.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Gavin Lambert",
-				"title": "Secret Doors",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17918,
-				"version": "1",
-				"summary": "Doors and switches that cannot be acted upon until they are discovered.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Hanon Ondricek",
-				"title": "Easy Doors",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 18060,
-				"version": "3/160425",
-				"summary": "Easy Doors provides a new kind of door which does not use map connections, and may be manipulated via rules more flexibly than the standard doors provided in Inform 7.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Time and Plot",
-		"leafname": "time",
-		"subsections": [ {
-			"title": "The Passage of Time",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Variable Time Control",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13603,
-				"version": "4",
-				"summary": "Allows individual actions to take a different number of seconds, or no time at all. Also allows the standard time taken per turn to be defined as so many seconds, which can be varied during the course of play.",
-				"time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Phrases for Adaptive Pacing",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13618,
-				"version": "1",
-				"summary": "We may ask the time when (a description of scenes) began/ended; the number of turns since (a description of scenes) began/ended; if (a future event) is soon; the time/turns until (a future event); the time/turns when (a future event). We may also un-schedule a future event with 'never shall'; begin or end a scene on an event; say a time 'as a time period'; repeat through future events; and change the turns-to-minutes ratio with 'per'.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Real Date and Time",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13620,
-				"version": "2",
-				"summary": "Allows the author to get the real-world time and date from the player's computer.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT" 
-			} ]
-		} ]
-	}, {
-		"title": "The Viewpoint Character",
-		"leafname": "viewpoint",
-		"subsections": [ {
-			"title": "Characterization",
-			"holdings": [ {
-				"author": "Ron Newcomb",
-				"title": "Unsuccessful PC Attempt",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13624,
-				"version": "2",
-				"summary": "Will run the Unsuccessful Attempt By rules for all characters, including the player.  Also silences the library messages printed by the built-in Check rules.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
-			} ]
-		}, {
-			"title": "Background, Memory, and Knowledge",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Epistemology",
-				"standard-installation": true,
-				"visible": true,
-				"version": "6",
-				"summary": "Keeping track of what the player character knows and sees.",
-				"time": "Time: Sat, 19 Jun 2010 15:56:14 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Remembering",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13553,
-				"version": "9/140430",
-				"summary": "Replaces 'You can't see any such thing' with a message reminding the player where they last saw the item they're trying to interact with. Requires Epistemology by Eric Eve and Plurality by Emily Short.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Commands",
-		"leafname": "commands",
-		"subsections": [ {
-			"title": "Looking",
-			"holdings": [ {
-				"author": "Alice Grove",
-				"title": "Simple Spelling",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 20164,
-				"version": "2/160807",
-				"summary": "Simple Spelling aims to make stories more screen-reader-friendly by allowing players to request the spelling of any visible thing. This extension adds two actions: 'listing visible items for spelling' and 'spelling the numbered word.'",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Gavin Lambert",
-				"title": "Exit Lister",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17917,
-				"version": "3",
-				"summary": "Based on Exit Lister by Andre Kosmos, Gavin Lambert's edition reworks the internal design and provides more options for controlling lists in dark rooms.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Introductions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13565,
-				"version": "2",
-				"summary": "Introductions provides an introductory paragraph about objects in a room description the first time the player looks in that location. It also allows the author to add segue text that will appear between one description and the next.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Ordinary Room Description",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13571,
-				"version": "3",
-				"summary": "Note: An extension to go with Room Description Control, which emulates as closely as possible the behavior of Inform defaults, but allows the intervention of Room Description Control.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Room Description Control",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13576,
-				"version": "13/160517",
-				"summary": "A framework by which the author can considerably change the listing of objects in a room description. Includes facilities for concealing objects arbitrarily and changing the order in which objects are listed.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Single Paragraph Description",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13578,
-				"version": "5",
-				"summary": "A room description extension based on Room Description Control (which is required). All contents of a room are summarized in a single paragraph, starting with the regular room description.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Tailored Room Description",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13579,
-				"version": "12",
-				"summary": "An extension to go with Room Description Control, providing a different style of room description than the default. Parenthetical remarks such as (open) and (in which are...) are omitted in favor of full English sentences. Removes the requirement for Text Variations.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Looking Under and Hiding",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Underside",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13602,
-				"version": "6",
-				"summary": "Allows objects to be put under other objects. An underside usually starts out closed so that its contents are hidden from view. Requires Version 7 (or later) of Bulk Limiter; the space under objects is limited by bulk. Underside is compatible with Version 10 or later of Implicit Actions, but does not require it. Version 5 of Underside avoids features deprecated in Version 6E59 of Inform.",
-				"time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Hiding Under",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13593,
-				"version": "4",
-				"summary": "Allows things to be hidden under other things, using a many-to-one underconcealment relation. Can be used either standalone (with basic functionality) or in conjunction with Underside (to add fuller functionality to both extensions). Version 3 of Hiding Under avoids using phrases deprecated in Version 6E59 of Inform.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Going, Pushing things in Directions",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Approaches",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13558,
-				"version": "7",
-				"summary": "Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Permission to Visit",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13617,
-				"version": "7",
-				"summary": "In lieu of compass directions, we may VISIT, ATTEND, GO TO, and FIND various people, events, places, and things.  Characters may INVITE, PERMIT, and FORBID each other to or from their respective domains.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Regional Travel",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13607,
-				"version": "2",
-				"summary": "Allows the player to travel between regions. Useful for example when the player travels between large regions far apart from each other (e.g. cities), or for traveling in vehicles and public transportation.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Entering and Exiting, Sitting and Standing",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Modified Exit",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13569,
-				"version": "6",
-				"summary": "Changes the handling of the EXIT action, allowing commands such as EXIT PLATFORM and GET OUT OF CHAIR, making characters leave enterable objects before traveling, and altering the default interpretation of >OUT when the player is neither inside an object nor in a room with an outside exit. Updated for adaptive text.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Opening, Closing, Locking and Unlocking",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Locksmith",
-				"standard-installation": true,
-				"visible": true,
-				"version": "12",
-				"summary": "Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Skeleton Keys",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Allows for locks which can be opened by more than one key.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Additional Command Sets",
-			"holdings": [ {
-				"author": "Aaron Reed",
-				"title": "Extended Grammar",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13549,
-				"version": "8/140501",
-				"summary": "Some of the most commonly attempted synonyms for verb words. Based on the Inform 6 extension ExpertGrammar.h by Emily Short.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT" 
-			} ]
-		}, {
-			"title": "Remembering, Converting and Combining Actions",
-			"holdings": [ {
-				"author": "John Clemens",
-				"title": "Consolidated Multiple Actions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17929,
-				"version": "3",
-				"summary": "An extension to consolidate action reports when performing an action on multiple objects, such as with 'take all'. Requires Hypothetical Questions by Jesse McGrew. Version 3 updated by Emily Short for 6L38 compatibility.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT" 
-			}, {
-				"author": "Ron Newcomb",
-				"title": "Editable Stored Actions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13616,
-				"version": "10",
-				"summary": "This extension expands section 12.20 of Writing with Inform.  The individual parts of a stored action -- actor, noun, second noun, action-name -- can now be directly changed.  Also adds four new parts: request, text, participle, and preposition.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Implicit Actions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13594,
-				"version": "13",
-				"summary": "Provides implicit taking, opening, closing, locking and unlocking actions for a variety of cases where this makes for smoother game play. The extension also defines phrases which make it easy to define additional implicit actions if desired. Version 11 can be used with Locksmith by Emily Short (although Implicit Actions covers most of what Locksmith does, and in most cases it will be better to use Implicit Actions without Locksmith). Requires Plurality by Emily Short and Version 5 of Text Capture by Eric Eve.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Limited Implicit Actions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13596,
-				"version": "3",
-				"summary": "A cut-down version of Implicit Actions for use where code size may be restricted and the full functionality of Implicit Actions is not needed. Requires Plurality by Emily Short and is compatible with Locksmith by Emily Short.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "NPC Implicit Actions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13600,
-				"version": "4",
-				"summary": "A basic extension of the Implicit Actions extension into actions carried out by NPCs. This extension automatically includes Implicit Actions.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Small Kindnesses",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13555,
-				"version": "13/140501",
-				"summary": "Provides a number of small interface improvements for players, understanding commands like GO BACK and GET IN, automatically getting off enclosables before moving, responding to vague movement commands when there is only one sensible option, and more.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Ron Newcomb",
-				"title": "After Not Doing Something",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13615,
-				"version": "2",
-				"summary": "A small, straightforward extension that provides authors a new hook for when the player (or any NPC) fails an action.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT" 
-			} ]
-		}, {
-			"title": "Action at a Distance",
-			"holdings": [ {
-				"author": "Ron Newcomb",
-				"title": "Scope Control",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13622,
-				"version": "2",
-				"summary": "Allows us to ask why the Deciding the Scope For Something activity is running, so we can modify the scope only when we absolutely need to.  Highly useful for giving NPCs commands over telephones or while in darkness, creating 'can hear' relations, or modifying how Inform parses the command line.",
-				"time": "Time: Tue, 22 Apr 2014 01:18:37 GMT" 
-			} ]
-		}, {
-			"title": "Clarification and Correction",
-			"holdings": [ {
-				"author": "Aaron Reed",
-				"title": "Numbered Disambiguation Choices",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13551,
-				"version": "7/140501",
-				"summary": "Numbers the options in disambiguation questions, to help new players and solve the 'disambiguation loop' problem caused by indistinguishable objects.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Reversed Persuasion Correction",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13608,
-				"version": "2",
-				"summary": "Automatically corrects commands given to NPCs where the word order is reversed, for example HELLO, ALICE instead of ALICE, HELLO.",
-				"time": "Time: Mon, 03 Jun 2013 11:42:46 GMT" 
-			} ]
-		} ]
-	}, {
-		"title": "Other Characters",
-		"leafname": "npc",
-		"subsections": [ {
-			"title": "Getting Started with Conversation",
-			"holdings": [ {
-				"author": "Brian Rushton",
-				"title": "Clues and Conversation",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 99999,
-				"version": "4",
-				"summary": "A simple system for building conversations.",
-				"time": ""
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversation Framework",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13585,
-				"version": "12",
-				"summary": "A framework for conversations that allows saying hello and goodbye, abbreviated forms of ask and tell commands for conversing with the current interlocutor, and asking and telling about things as well as topics.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Chris Conley",
-				"title": "Threaded Conversation",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17924,
-				"version": "8/220120",
-				"summary": "A conversation system tracking facts known, phrases spoken, and subjects of conversation, modified from the original by Emily Short. Combines ask/tell style commands with hints about what to say next, and extensive authoring tools for organizing and controlling the flow of conversations. Requires Conversation Framework by Eric Eve.",
-				"time": "Time: Fri, 21 Jan 2022 23:39:24 GMT"
-			}, {
-				"author": "Chris Conley",
-				"title": "Conversation Builder",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17925,
-				"version": "3/170420",
-				"summary": "An interactive question-and-answer system for building conversations, modified from the original by Emily Short. Requires Threaded Conversation v5 by Chris Conley. Compatible with 6M62.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Inanimate Listeners",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Allows the player to address inanimate objects such as a talking computer, microphone, or telephone in a form such as ASK COMPUTER ABOUT COORDINATES.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Saying Complicated Things",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Conversation Nodes",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13586,
-				"version": "7",
-				"summary": "Builds on Conversational Defaults and adds the ability to define particular points in a conversational thread (nodes) at which particular conversational options become available.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversation Package",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13587,
-				"version": "3",
-				"summary": "This extension includes both Conversation Nodes and Conversation Suggestions, and makes the suggestions aware of conversation nodes. It therefore includes the complete conversational system in one package. It also requires Conversation Responses, Conversational Defaults, Conversation Framework and Epistemology. The documentation for this extension give some guidance on how these other extensions can be mixed and matched.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversation Responses",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13588,
-				"version": "7",
-				"summary": "Conversation Responses allows response rules for various conversational commands to be written in the form \"Response for Bob when asked about...\" or \"Response for Bob when asked-or-told...\" (or many other variations).",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversation Rules",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13589,
-				"version": "7",
-				"summary": "A way of controlling conversations using rules and tables. Also implements topic suggestions and Conversation nodes. Requires Plurality by Emily Short and Conversation Framework, Epistemology and List Control by Eric Eve.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversation Suggestions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13590,
-				"version": "7",
-				"summary": "Provides a means of suggesting topics of conversation to the player, either in response to a TOPICS command or when NPCs are greeted. This extension requires Conversation Framework.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Conversational Defaults",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13591,
-				"version": "3",
-				"summary": "Provides a set of rules to facilitate defining default conversational responses for different conversational commands targeted at various NPCs. This extension requires Conversation Framework.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Character Emotion",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Mood Variations",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13570,
-				"version": "3",
-				"summary": "Allows the author to define a mood value for characters and then use text substitutions such as '[when bored]The king fidgets on his throne[or sleepy]The king snores[at other times]The king grins[end when].' Moods will be interpreted in 'writing a paragraph' and similar contexts as the mood of the person described in the paragraph, but at other times according to the mood of the person to whom the player is currently speaking.",
-				"time": "Time: Thu, 08 Jul 2010 11:40:50 GMT" 
-			} ]
-		}, {
-			"title": "Traveling Characters",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Simple Followers",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13577,
-				"version": "7",
-				"summary": "Allows non-player characters to follow the player (or one another); adds a FOLLOW command and a corresponding STOP FOLLOWING command so that the player can issue these orders to non-player characters. Adds adaptive text features.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		} ]
-	}, {
-		"title": "Vehicles, Animals, and Furniture",
-		"leafname": "vehicles",
-		"subsections": [ {
-			"title": "Bicycles, Cars, and Boats",
-			"holdings": [ {
-				"author": "Graham Nelson",
-				"title": "Rideable Vehicles",
-				"standard-installation": true,
-				"visible": true,
-				"version": "3",
-				"summary": "Vehicles which one sits on top of, rather than inside, such as elephants or motorcycles.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Ships, Trains, and Elevators",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Transit System",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13580,
-				"version": "6",
-				"summary": "Transit System provides a train-car kind which follows a schedule around the map, allowing the player or other characters to get on or off.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Furniture",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Automated Drawers",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13560,
-				"version": "6",
-				"summary": "Creates a drawer kind of container, which is designed to be part of an item of furniture. Automatically parses names such as 'top drawer' or 'fourth drawer' or 'left drawer'; adds some features for describing furniture with drawers.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Postures",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13572,
-				"version": "3",
-				"summary": "Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Kitchen and Bathroom",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Modern Conveniences",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13568,
-				"version": "5",
-				"summary": "Modern Conveniences creates kitchen and bathroom kinds of room, which will automatically be furnished with a set of plausible appliances. (This was originally an example in the manual of how to create extensions, and an annotated version may still be found there.) Version 3 adds compatibility with Measured Liquid, modeling flowing water from taps.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Props: Food, Clothing, Money, Toys, Books, Electronics",
-		"leafname": "props",
-		"subsections": [ {
-			"title": "Bags, Bottles, Boxes and Safes",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Dishes",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13563,
-				"version": "2",
-				"summary": "Dishes is a convenience extension for use with Measured Liquid. It provides some standard-sized cups, glasses, graduated measuring cups, jugs, bottles, etc., as well as a corked bottle kind that opens with the use of a secondary cork object.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Computers",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Computers",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13561,
-				"version": "7",
-				"summary": "Computer hardware and software, including search engines and email programs. Version 3 adds handling for batteries and cords, if we include Power Sources by Emily Short (which itself depends on Plugs and Sockets by Sean Turner).",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Reading and Writing",
-			"holdings": [ {
-				"author": "Bart Massey",
-				"title": "Basic Literacy",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 22755,
-				"version": "2.1",
-				"summary": "Provides objects and actions for (proper) reading, writing and erasing.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Physics: Substances, Ropes, Energy and Weight",
-		"leafname": "physics",
-		"subsections": [ {
-			"title": "Liquids",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Measured Liquid",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13567,
-				"version": "6",
-				"summary": "Measured Liquid provides a concept of volume, together with the ability to fill containers, pour measured amounts of liquid, and drink from containers. It handles mixtures as well, if desired. It is compatible with, but does not require, the Metric Units extension by Graham Nelson.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Volume, Height, Weight",
-			"holdings": [ {
-				"author": "Graham Nelson",
-				"title": "Metric Units",
-				"standard-installation": true,
-				"visible": true,
-				"version": "2",
-				"summary": "Scientific kinds of value for simulations, using real number arithmetic. Uses SI units for mass, elapsed time, electric current, temperature, luminosity, frequency, force, energy, pressure, power, electric charge, voltage, luminance, area, volume, velocity, acceleration, momentum, density, heat capacity.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Graham Nelson",
-				"title": "Approximate Metric Units",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Scientific kinds of value for simulations, using scaled integer arithmetic: really only useful for Z-machine projects.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Eric Eve",
-				"title": "Bulk Limiter",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13584,
-				"version": "9",
-				"summary": "Containers that limit their contents by bulk.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Daniel Gaskell",
-				"title": "Volumetric Limiter",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17931,
-				"version": "1",
-				"summary": "Containers and actor that limit their contents by volume. Modeled after Bulk Limiter by Eric Eve, but understands length, width, and height as well as total size.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Bulky Items",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13604,
-				"version": "3",
-				"summary": "Bulky items that can be carried only if the player is not carrying anything else. Version 2 fixes a bug and adds a new example.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Journals and Notebooks",
-			"holdings": [ {
-				"author": "Jim Aikin",
-				"title": "Notepad",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 18059,
-				"version": "3",
-				"summary": "Provides a new kind of thing called a notepad, which the player (and NPCs) can write in. The text in a notepad can be read, added to, copied, erased, and erased from in a selective manner. It can also be write-protected. A notepad can optionally require a writing implement.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Connections and Attachments",
-			"holdings": [ {
-				"author": "Sean Turner",
-				"title": "Plugs and Sockets",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13625,
-				"version": "4",
-				"summary": "Plug and Sockets is an extension designed to assist with the modelling of devices that can plug and be plugged into. This is done by defining kinds of connectors - male \"plugs\" and female \"sockets\" - which form part of the device in question. Grammar is provided to support the connection and disconnection process.",
-				"time": "Time: Mon, 21 Apr 2014 16:12:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Power Sources",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13573,
-				"version": "2",
-				"summary": "Power Sources provides an implementation of plugs and batteries, and is designed to be used alongside Computers or as a base for other device implementations. It requires Plugs and Sockets by Sean Turner.",
-				"time": "Time: Mon, 21 Apr 2014 16:12:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Numerical Effects and Programming Tools",
-		"leafname": "programming",
-		"subsections": [ {
-			"title": "Conditionals",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Alternatives",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13583,
-				"version": "3",
-				"summary": "Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., \"If the noun is either the carrot or the potato:\", or \"Instead of eating something when the noun is neither the cake nor the pudding:\".",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Jesse McGrew",
-				"title": "Hypothetical Questions",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17930,
-				"version": "4/180124",
-				"summary": "Allows us to test the consequences of a phrase or action without permanently changing the game state.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Out of World Actions and Effects",
-		"leafname": "out-of-world",
-		"subsections": [ {
-			"title": "Start-up Features",
-			"holdings": [ {
-				"author": "Jon Ingold",
-				"title": "Title Page",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17915,
-				"version": "3",
-				"summary": "Provides an intro panel to the game, offering a menu, a restore and restart prompt, a quotation and (under Glulx) a picture.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Helping and Hinting",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Adaptive Hints",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13582,
-				"version": "7",
-				"summary": "An adaptive hint system based on Menus by Emily Short.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Basic Help Menu",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Provides a simple collection of standard IF-playing advice that can be incorporated as a help menu in a game.",
-				"time": "Time: Sun, 23 Oct 2011 17:48:53 GMT"
-			}, {
-				"author": "Wade Clarke",
-				"title": "Basic Help Menu",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 19344,
-				"version": "4",
-				"summary": "Adds a HELP command to your Glulx or Z-Code project for Inform 6M62 or later which brings up a menu giving some standard instructions about IF. This is a tech and content update of Emily Short's Basic Help Menu extension made for compatibility with Wade Clarke's Menus. Requires Menus by Wade Clarke (version 5 or greater) to run.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Wade Clarke",
-				"title": "Menus",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 19343,
-				"version": "5",
-				"summary": "Lets you include a menu system of help, hints and/or other information in your Glulx or Z-Code project for Inform 6M62 or later. This upgrade of Emily Short's classic Menus extension features user-friendly single keypress controls, a more sophisticated UI, compatibility with screen readers and portable devices, an optional book mode with automatic pagination, and isolated message content to make translations easier. Classic Menus tables can be reformatted for this extension with a little work.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Commonly Unimplemented",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13547,
-				"version": "2",
-				"summary": "Responds to attempts to interact with unimplemented clothing, body parts, or generic surroundings. Requires Smarter Parser by Aaron Reed.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Poor Man's Mistype",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13552,
-				"version": "8",
-				"summary": "Adds basic typo correction by checking the first few letters of misunderstood input against the printed names of visible objects. Requires Smarter Parser by Aaron Reed.",
-				"time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Aaron Reed",
-				"title": "Smarter Parser",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13556,
-				"version": "16/140501",
-				"summary": "Understands a broader range of input than the standard parser, and can direct new players towards proper syntax. A rules-based system makes it easy to customize by removing or add new forms of understood input.",
-				"time": "Time: zSat, 26 Apr 2014 22:57:37 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Tutorial Mode",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13581,
-				"version": "5",
-				"summary": "Adds a tutorial mode, which is on by default, to any game, to introduce key actions for the novice player. Can be revised or expanded by the author.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Scoring",
-			"holdings": [ {
-				"author": "Juhana Leinonen",
-				"title": "Achievements",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 19492,
-				"version": "1/151231",
-				"summary": "A simple but flexible rule-based achievement system. Awarded achievements can optionally persist in external files after a restart.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Ending",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Recorded Endings",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13575,
-				"version": "5",
-				"summary": "Records the endings the player encounters in multiple play-throughs to an external file; then adds an ENDINGS option to the final question to allow the player to review which endings he has seen so far.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Map building",
-			"holdings": [ {
-				"author": "B David Paulsen",
-				"title": "Rapid Prototyping",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 20513,
-				"version": "1",
-				"summary": "A way to create and extend a game world on the fly during testing via a REPL idiom.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Typography, Layout, and Multimedia Effects",
-		"leafname": "typography",
-		"subsections": [ {
-			"title": "Screen Effects (General)",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Basic Screen Effects",
-				"standard-installation": true,
-				"visible": true,
-				"version": "7/140425",
-				"summary": "Waiting for a keypress; clearing the screen. Also provides facilities for changing the foreground and background colors of text, when using the z-machine. These abilities will not function under Glulx.",
-				"time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Typography",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Glulx Text Effects",
-				"standard-installation": true,
-				"visible": true,
-				"version": "4/140425",
-				"summary": "Glulx Text Effects provides an easy way to set up special text effects for Glulx.",
-				"time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Andrew Plotkin",
-				"title": "Unicode Parser",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13557,
-				"version": "7",
-				"summary": "Replaces much of the low-level parser machinery with Unicode-friendly input and parsing functions. This allows us to accept commands in non-Latin alphabets.  Since Inform does not support this natively, this extension is awkward to use in practice. It is provided as sample code and as a possible basis for future Inform development.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Graham Nelson",
-				"title": "Unicode Character Names",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Defines 2909 names like [unicode Greek small letter gamma] for Latin, Cyrillic, Greek and Hebrew letters, along with currency and other symbols.",
-				"time": "Time: Sun, 11 Nov 2007 17:48:53 GMT"
-			}, {
-				"author": "Graham Nelson",
-				"title": "Unicode Full Character Names",
-				"standard-installation": true,
-				"visible": true,
-				"version": "1",
-				"summary": "Defines 12997 names like [unicode Arabic letter hah with three dots above] for the full range of characters named in the Unicode 4.1 standard.",
-				"time": "Time: Sun, 11 Nov 2007 17:48:53 GMT"
-			} ]
-		}, {
-			"title": "The Status Line",
-			"holdings": [ {
-				"author": "Eric Eve",
-				"title": "Exit Lister",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13592,
-				"version": "11",
-				"summary": "A status line exit-lister and an EXITS command, with optional colouring of unvisited exits.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Footnotes",
-			"holdings": [ {
-				"author": "Stephen Granade",
-				"title": "Footnotes",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17911,
-				"version": "2",
-				"summary": "Lets you add footnotes to your game, similar to those in the Infocom game Hitchhiker's Guide to the Galaxy. Footnotes are numbered beginning with 1, and are only assigned numbers as they are referenced. The player can turn footnoting on and off.",
-				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
-			} ]
-		}, {
-			"title": "Menus",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Menus",
-				"standard-installation": true,
-				"visible": true,
-				"version": "3",
-				"summary": "A table-based way to display full-screen menus to the player.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT" 
-			} ]
-		}, {
-			"title": "Vorple Framework",
-			"holdings": [ {
-				"author": "Juhana Leinonen",
-				"title": "Vorple",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13609,
-				"version": "2/140430",
-				"summary": "Core functionality of Vorple, including JavaScript evaluation, HTML elements and turn type marking.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Vorple Screen Effects",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13613,
-				"version": "2/140430",
-				"summary": "Vorple equivalent of Basic Screen Effects by Emily Short. Waiting for a keypress, clearing the screen, aligning, styling and coloring text.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Vorple Notifications",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13612,
-				"version": "2/140430",
-				"summary": "Notifications and dialogs.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Vorple Hyperlinks",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13610,
-				"version": "2/140430",
-				"summary": "Hyperlinks that either open a web site or execute a parser command.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Vorple Multimedia",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13611,
-				"version": "2/140430",
-				"summary": "Displaying images, playing sounds and music, and showing videos from YouTube.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Vorple Tooltips",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13614,
-				"version": "2/140430",
-				"summary": "Tooltips that can be activated on request or when the mouse cursor is moved over an element.",
-				"time": "Time: Wed, 23 Apr 2014 21:09:00 GMT" 
-			} ]
-		}, {
-			"title": "Glulx Multimedia Effects (General)",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Glulx Entry Points",
-				"standard-installation": true,
-				"visible": true,
-				"version": "10/140425",
-				"summary": "Provides hooks to allow the author to write specialized multimedia behavior that would normally go through HandleGlkEvent. This is a rather dull utility library that will be of most use to authors wanting to write Glulx extensions compatible with other Glulx extensions already in use.",
-				"time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
-			} ]
-		}, {
-			"title": "Glulx Graphics",
-			"holdings": [ {
-				"author": "Emily Short",
-				"title": "Glulx Image Centering",
-				"standard-installation": true,
-				"visible": true,
-				"version": "4",
-				"summary": "Glulx Image Centering adds the ability to display an image that is centered (left/right) on the screen.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Location Images",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13566,
-				"version": "1",
-				"summary": "Allows the author to set per-room images and show these as the player moves from room to room. Requires Simple Graphical Window by Emily Short.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Simple Graphical Window",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 17914,
-				"version": "9/160121",
-				"summary": "Provides a graphics window in the upper part of the screen, in which the author can place images; with provision for scaling, tiling, or centering images automatically, as well as setting a background color. Extension requires Glulx Entry Points Version 7.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			} ]
-		} ]
-	}, {
-		"title": "Testing and Publishing",
-		"leafname": "testing-and-publishing",
-		"subsections": [ {
-			"title": "Testing and Debugging",
-			"holdings": [ {
-				"author": "Michael Kielstra",
-				"title": "Debug Tags",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 26369,
-				"version": "1",
-				"summary": "Allows you to take quick notes about what needs to be done, where it needs to be done, and who needs to do it.  It’s scriptable, extensible, and interacts better with the rest of Inform than [TODO: ] comments do.  All your tags live next to the code in question, and they can even be in rooms in-game, but they’re accessible from anywhere.  Best of all, if you leave one in by accident, the end-user will never notice as they destroy themselves in release builds.",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Debug Files",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13605,
-				"version": "2",
-				"summary": "A development tool for saving debugging information to an external text file during beta testing. (Glulx-only)",
-				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
-			}, {
-				"author": "Juhana Leinonen",
-				"title": "Object Response Tests",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13606,
-				"version": "7",
-				"summary": "A development tool for testing all actions on any given object - or one action on all objects - at once to see whether the game's responses are sensible. Version 2 adds the possibility to test individual actions and to run the tests with NPC as the actor.",
-				"time": "Time: Sun, 15 Dec 2013 02:29:33 GMT"
-			}, {
-				"author": "Emily Short",
-				"title": "Property Checking",
-				"standard-installation": false,
-				"visible": true,
-				"forum-thread": 13574,
-				"version": "4",
-				"summary": "A lightweight extension to identify rooms and objects in a game for which no description has yet been written.",
-				"time": "Time: Mon, 05 Jul 2010 12:17:31 GMT"
-			} ]
-		} ]
-	} ]
+    "sections": [
+        {
+            "title": "Adaptive Prose",
+            "leafname": "adaptive-prose",
+            "subsections": [
+                {
+                    "title": "Responses",
+                    "holdings": [
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Response Assistant",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13554,
+                            "version": "1",
+                            "summary": "Adds some helpful testing commands for changing default responses.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Varying What is Written",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Assorted Text Generation",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13559,
+                            "version": "5",
+                            "summary": "Provides a range of convenient say phrases, including more varieties of number-printing, descriptions of object locations, and descriptions of which members of a set conform to a criterion (such as \"Three of them are closed.\" when speaking of a group of doors).",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Complex Listing",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "9",
+                            "summary": "Complex Listing provides more sophisticated listing options: the ability to impose special ordering instructions on a list, and also the ability to change the delimiters of the list to produce different styles and effects.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "List Control",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13598,
+                            "version": "4",
+                            "summary": "Provides a means of using tables as shuffled, cyclic or stop lists.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "List Controller",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13599,
+                            "version": "4",
+                            "summary": "Provides a means of using tables as shuffled, cyclic or stopping lists. This is an alternative to List Control that uses list controller objects instead of a Table of Table Types.",
+                            "time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Text Capture",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13601,
+                            "version": "8.1",
+                            "summary": "Allows the capture of text that would otherwise be output to the screen, so that the text can be further manipulated, displayed at some other point, or simply discarded. Version 6 avoids using phrases deprecated in 6E59.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Varying What is Read",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Punctuation Removal",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "5",
+                            "summary": "Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as \"Mrs.\" or \"Dr.\".",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Using the Player's Input",
+                    "holdings": [
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "Phrases for Tables with Topics",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13619,
+                            "version": "3",
+                            "summary": "Grants five new phrases regarding the player's command, the matched text, and the topic understood: if one is a topic listed in a table, if one includes or matches a topic listed in a table, what corresponds to one within a table, and the last phrase corrects a bug so the topic understood may be used within an understand-as-mistake line.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Place",
+            "leafname": "place",
+            "subsections": [
+                {
+                    "title": "Map",
+                    "holdings": [
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Dynamic Rooms",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13548,
+                            "version": "3",
+                            "summary": "Create and destroy new rooms on the fly. While this is technically possible with Jesse McGrew's Dynamic Objects, the method here is simpler, customized for rooms, and available for both z-code and Glulx.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Continuous Spaces and the Outdoors",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Facing",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13564,
+                            "version": "11.2",
+                            "summary": "Provides actions to face a direction, look toward a named room, or look through a named door.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Doors, Staircases, and Bridges",
+                    "holdings": [
+                        {
+                            "author": "Andrew Plotkin",
+                            "title": "Disappearing Doors",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13409,
+                            "version": "1",
+                            "summary": "The ability to remove doors from the world and put them back.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Deluxe Doors",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13562,
+                            "version": "4",
+                            "summary": "Allows for doors that are implemented as having independent 'faces' -- to put a knocker on that can only be seen from on side, for instance, or to allow the player to lock one side with a key but the other with a latch. Also introduces a 'latched door' kind.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Gavin Lambert",
+                            "title": "Secret Doors",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 17918,
+                            "version": "2",
+                            "summary": "Doors and switches that cannot be acted upon until they are discovered.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Hanon Ondricek",
+                            "title": "Easy Doors",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 18060,
+                            "version": "3.2",
+                            "summary": "Easy Doors provides a new kind of door which does not use map connections, and may be manipulated via rules more flexibly than the standard doors provided in Inform 7.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Time and Plot",
+            "leafname": "time",
+            "subsections": [
+                {
+                    "title": "The Passage of Time",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Variable Time Control",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13603,
+                            "version": "4",
+                            "summary": "Allows individual actions to take a different number of seconds, or no time at all. Also allows the standard time taken per turn to be defined as so many seconds, which can be varied during the course of play.",
+                            "time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "The Viewpoint Character",
+            "leafname": "viewpoint",
+            "subsections": [
+                {
+                    "title": "Characterization",
+                    "holdings": [
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "Unsuccessful PC Attempt",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13624,
+                            "version": "2",
+                            "summary": "Will run the Unsuccessful Attempt By rules for all characters, including the player.  Also silences the library messages printed by the built-in Check rules.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Background, Memory, and Knowledge",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Epistemology",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "6",
+                            "summary": "Keeping track of what the player character knows and sees.",
+                            "time": "Time: Sat, 19 Jun 2010 15:56:14 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Commands",
+            "leafname": "commands",
+            "subsections": [
+                {
+                    "title": "Looking",
+                    "holdings": [
+                        {
+                            "author": "Alice Grove",
+                            "title": "Simple Spelling",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 20164,
+                            "version": "2.2",
+                            "summary": "Simple Spelling aims to make stories more screen-reader-friendly by allowing players to request the spelling of any visible thing. This extension adds two actions: 'listing visible items for spelling' and 'spelling the numbered word.'",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Gavin Lambert",
+                            "title": "Exit Lister",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 17917,
+                            "version": "4",
+                            "summary": "Based on Exit Lister by Andre Kosmos, Gavin Lambert's edition reworks the internal design and provides more options for controlling lists in dark rooms.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Introductions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13565,
+                            "version": "2",
+                            "summary": "Introductions provides an introductory paragraph about objects in a room description the first time the player looks in that location. It also allows the author to add segue text that will appear between one description and the next.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Ordinary Room Description",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13571,
+                            "version": "4.0.220524",
+                            "summary": "Note: An extension to go with Room Description Control, which emulates as closely as possible the behavior of Inform defaults, but allows the intervention of Room Description Control.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Room Description Control",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13576,
+                            "version": "14.1.220524",
+                            "summary": "A framework by which the author can considerably change the listing of objects in a room description. Includes facilities for concealing objects arbitrarily and changing the order in which objects are listed.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Single Paragraph Description",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13578,
+                            "version": "7.0.220525",
+                            "summary": "A room description extension based on Room Description Control (which is required). All contents of a room are summarized in a single paragraph, starting with the regular room description.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Tailored Room Description",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13579,
+                            "version": "13.2.220524",
+                            "summary": "An extension to go with Room Description Control, providing a different style of room description than the default. Parenthetical remarks such as (open) and (in which are...) are omitted in favor of full English sentences. Removes the requirement for Text Variations.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Looking Under and Hiding",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Underside",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13602,
+                            "version": "6.1",
+                            "summary": "Allows objects to be put under other objects. An underside usually starts out closed so that its contents are hidden from view. Requires Version 7 (or later) of Bulk Limiter; the space under objects is limited by bulk. Underside is compatible with Version 10 or later of Implicit Actions, but does not require it. Version 5 of Underside avoids features deprecated in Version 6E59 of Inform.",
+                            "time": "Time: Thu, 24 Apr 2014 17:37:10 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Hiding Under",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13593,
+                            "version": "4",
+                            "summary": "Allows things to be hidden under other things, using a many-to-one underconcealment relation. Can be used either standalone (with basic functionality) or in conjunction with Underside (to add fuller functionality to both extensions). Version 3 of Hiding Under avoids using phrases deprecated in Version 6E59 of Inform.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Going, Pushing things in Directions",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Approaches",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13558,
+                            "version": "8",
+                            "summary": "Approaches provides a GO TO place action which allows the player to move through visited rooms to a new location. It also allows other characters to traverse the map to named locations. It is designed to work with Locksmith by Emily Short.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "Permission to Visit",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13617,
+                            "version": "7",
+                            "summary": "In lieu of compass directions, we may VISIT, ATTEND, GO TO, and FIND various people, events, places, and things.  Characters may INVITE, PERMIT, and FORBID each other to or from their respective domains.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        },
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Regional Travel",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13607,
+                            "version": "2",
+                            "summary": "Allows the player to travel between regions. Useful for example when the player travels between large regions far apart from each other (e.g. cities), or for traveling in vehicles and public transportation.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Entering and Exiting, Sitting and Standing",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Modified Exit",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13569,
+                            "version": "6",
+                            "summary": "Changes the handling of the EXIT action, allowing commands such as EXIT PLATFORM and GET OUT OF CHAIR, making characters leave enterable objects before traveling, and altering the default interpretation of >OUT when the player is neither inside an object nor in a room with an outside exit. Updated for adaptive text.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Opening, Closing, Locking and Unlocking",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Locksmith",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "12",
+                            "summary": "Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Skeleton Keys",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Allows for locks which can be opened by more than one key.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Additional Command Sets",
+                    "holdings": [
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Extended Grammar",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13549,
+                            "version": "8.2",
+                            "summary": "Some of the most commonly attempted synonyms for verb words. Based on the Inform 6 extension ExpertGrammar.h by Emily Short.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Remembering, Converting and Combining Actions",
+                    "holdings": [
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "Editable Stored Actions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13616,
+                            "version": "10",
+                            "summary": "This extension expands section 12.20 of Writing with Inform.  The individual parts of a stored action -- actor, noun, second noun, action-name -- can now be directly changed.  Also adds four new parts: request, text, participle, and preposition.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Implicit Actions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13594,
+                            "version": "13.1",
+                            "summary": "Provides implicit taking, opening, closing, locking and unlocking actions for a variety of cases where this makes for smoother game play. The extension also defines phrases which make it easy to define additional implicit actions if desired. Version 11 can be used with Locksmith by Emily Short (although Implicit Actions covers most of what Locksmith does, and in most cases it will be better to use Implicit Actions without Locksmith). Requires Plurality by Emily Short and Version 5 of Text Capture by Eric Eve.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Limited Implicit Actions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13596,
+                            "version": "3.0.1",
+                            "summary": "A cut-down version of Implicit Actions for use where code size may be restricted and the full functionality of Implicit Actions is not needed. Requires Plurality by Emily Short and is compatible with Locksmith by Emily Short.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Small Kindnesses",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13555,
+                            "version": "13.2",
+                            "summary": "Provides a number of small interface improvements for players, understanding commands like GO BACK and GET IN, automatically getting off enclosables before moving, responding to vague movement commands when there is only one sensible option, and more.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "After Not Doing Something",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13615,
+                            "version": "2.1",
+                            "summary": "A small, straightforward extension that provides authors a new hook for when the player (or any NPC) fails an action.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Action at a Distance",
+                    "holdings": [
+                        {
+                            "author": "Ron Newcomb",
+                            "title": "Scope Control",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13622,
+                            "version": "2",
+                            "summary": "Allows us to ask why the Deciding the Scope For Something activity is running, so we can modify the scope only when we absolutely need to.  Highly useful for giving NPCs commands over telephones or while in darkness, creating 'can hear' relations, or modifying how Inform parses the command line.",
+                            "time": "Time: Tue, 22 Apr 2014 01:18:37 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Clarification and Correction",
+                    "holdings": [
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Numbered Disambiguation Choices",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13551,
+                            "version": "10.2",
+                            "summary": "Numbers the options in disambiguation questions, to help new players and solve the 'disambiguation loop' problem caused by indistinguishable objects.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Reversed Persuasion Correction",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13608,
+                            "version": "2",
+                            "summary": "Automatically corrects commands given to NPCs where the word order is reversed, for example HELLO, ALICE instead of ALICE, HELLO.",
+                            "time": "Time: Mon, 03 Jun 2013 11:42:46 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Other Characters",
+            "leafname": "npc",
+            "subsections": [
+                {
+                    "title": "Getting Started with Conversation",
+                    "holdings": [
+                        {
+                            "author": "Brian Rushton",
+                            "title": "Clues and Conversation",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 99999,
+                            "version": "5",
+                            "summary": "A simple system for building conversations.",
+                            "time": ""
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversation Framework",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13585,
+                            "version": "12",
+                            "summary": "A framework for conversations that allows saying hello and goodbye, abbreviated forms of ask and tell commands for conversing with the current interlocutor, and asking and telling about things as well as topics.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Chris Conley",
+                            "title": "Threaded Conversation",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 17924,
+                            "version": "9.1",
+                            "summary": "A conversation system tracking facts known, phrases spoken, and subjects of conversation, modified from the original by Emily Short. Combines ask/tell style commands with hints about what to say next, and extensive authoring tools for organizing and controlling the flow of conversations. Requires Conversation Framework by Eric Eve.",
+                            "time": "Time: Fri, 21 Jan 2022 23:39:24 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Inanimate Listeners",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Allows the player to address inanimate objects such as a talking computer, microphone, or telephone in a form such as ASK COMPUTER ABOUT COORDINATES.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Saying Complicated Things",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversation Nodes",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13586,
+                            "version": "7",
+                            "summary": "Builds on Conversational Defaults and adds the ability to define particular points in a conversational thread (nodes) at which particular conversational options become available.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversation Package",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13587,
+                            "version": "3",
+                            "summary": "This extension includes both Conversation Nodes and Conversation Suggestions, and makes the suggestions aware of conversation nodes. It therefore includes the complete conversational system in one package. It also requires Conversation Responses, Conversational Defaults, Conversation Framework and Epistemology. The documentation for this extension give some guidance on how these other extensions can be mixed and matched.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversation Responses",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13588,
+                            "version": "7",
+                            "summary": "Conversation Responses allows response rules for various conversational commands to be written in the form \"Response for Bob when asked about...\" or \"Response for Bob when asked-or-told...\" (or many other variations).",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversation Suggestions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13590,
+                            "version": "6.2",
+                            "summary": "Provides a means of suggesting topics of conversation to the player, either in response to a TOPICS command or when NPCs are greeted. This extension requires Conversation Framework.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Conversational Defaults",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13591,
+                            "version": "3",
+                            "summary": "Provides a set of rules to facilitate defining default conversational responses for different conversational commands targeted at various NPCs. This extension requires Conversation Framework.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Character Emotion",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Mood Variations",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13570,
+                            "version": "3.1",
+                            "summary": "Allows the author to define a mood value for characters and then use text substitutions such as '[when bored]The king fidgets on his throne[or sleepy]The king snores[at other times]The king grins[end when].' Moods will be interpreted in 'writing a paragraph' and similar contexts as the mood of the person described in the paragraph, but at other times according to the mood of the person to whom the player is currently speaking.",
+                            "time": "Time: Thu, 08 Jul 2010 11:40:50 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Traveling Characters",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Simple Followers",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13577,
+                            "version": "7",
+                            "summary": "Allows non-player characters to follow the player (or one another); adds a FOLLOW command and a corresponding STOP FOLLOWING command so that the player can issue these orders to non-player characters. Adds adaptive text features.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Vehicles, Animals, and Furniture",
+            "leafname": "vehicles",
+            "subsections": [
+                {
+                    "title": "Bicycles, Cars, and Boats",
+                    "holdings": [
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Rideable Vehicles",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "3",
+                            "summary": "Vehicles which one sits on top of, rather than inside, such as elephants or motorcycles.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Ships, Trains, and Elevators",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Transit System",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13580,
+                            "version": "6",
+                            "summary": "Transit System provides a train-car kind which follows a schedule around the map, allowing the player or other characters to get on or off.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Furniture",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Automated Drawers",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13560,
+                            "version": "6",
+                            "summary": "Creates a drawer kind of container, which is designed to be part of an item of furniture. Automatically parses names such as 'top drawer' or 'fourth drawer' or 'left drawer'; adds some features for describing furniture with drawers.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Postures",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13572,
+                            "version": "2.2",
+                            "summary": "Postures defines three postures -- seated, standing, and reclining -- and allows pieces of furniture to specify which postures are possible and preferred when the player is on those furnishings.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Kitchen and Bathroom",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Modern Conveniences",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13568,
+                            "version": "5",
+                            "summary": "Modern Conveniences creates kitchen and bathroom kinds of room, which will automatically be furnished with a set of plausible appliances. (This was originally an example in the manual of how to create extensions, and an annotated version may still be found there.) Version 3 adds compatibility with Measured Liquid, modeling flowing water from taps.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Props: Food, Clothing, Money, Toys, Books, Electronics",
+            "leafname": "props",
+            "subsections": [
+                {
+                    "title": "Bags, Bottles, Boxes and Safes",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Dishes",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13563,
+                            "version": "2",
+                            "summary": "Dishes is a convenience extension for use with Measured Liquid. It provides some standard-sized cups, glasses, graduated measuring cups, jugs, bottles, etc., as well as a corked bottle kind that opens with the use of a secondary cork object.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Computers",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Computers",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13561,
+                            "version": "8.2",
+                            "summary": "Computer hardware and software, including search engines and email programs. Version 3 adds handling for batteries and cords, if we include Power Sources by Emily Short (which itself depends on Plugs and Sockets by Sean Turner).",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Reading and Writing",
+                    "holdings": [
+                        {
+                            "author": "Bart Massey",
+                            "title": "Basic Literacy",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 22755,
+                            "version": "2.3",
+                            "summary": "Provides objects and actions for (proper) reading, writing and erasing.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Physics: Substances, Ropes, Energy and Weight",
+            "leafname": "physics",
+            "subsections": [
+                {
+                    "title": "Liquids",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Measured Liquid",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13567,
+                            "version": "6.3",
+                            "summary": "Measured Liquid provides a concept of volume, together with the ability to fill containers, pour measured amounts of liquid, and drink from containers. It handles mixtures as well, if desired. It is compatible with, but does not require, the Metric Units extension by Graham Nelson.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Volume, Height, Weight",
+                    "holdings": [
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Metric Units",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "2",
+                            "summary": "Scientific kinds of value for simulations, using real number arithmetic. Uses SI units for mass, elapsed time, electric current, temperature, luminosity, frequency, force, energy, pressure, power, electric charge, voltage, luminance, area, volume, velocity, acceleration, momentum, density, heat capacity.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Approximate Metric Units",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Scientific kinds of value for simulations, using scaled integer arithmetic: really only useful for Z-machine projects.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Bulk Limiter",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13584,
+                            "version": "9",
+                            "summary": "Containers that limit their contents by bulk.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Bulky Items",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13604,
+                            "version": "3",
+                            "summary": "Bulky items that can be carried only if the player is not carrying anything else. Version 2 fixes a bug and adds a new example.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Journals and Notebooks",
+                    "holdings": [
+                        {
+                            "author": "Jim Aikin",
+                            "title": "Notepad",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 18059,
+                            "version": "3",
+                            "summary": "Provides a new kind of thing called a notepad, which the player (and NPCs) can write in. The text in a notepad can be read, added to, copied, erased, and erased from in a selective manner. It can also be write-protected. A notepad can optionally require a writing implement.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Connections and Attachments",
+                    "holdings": [
+                        {
+                            "author": "Sean Turner",
+                            "title": "Plugs and Sockets",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13625,
+                            "version": "4.2",
+                            "summary": "Plug and Sockets is an extension designed to assist with the modelling of devices that can plug and be plugged into. This is done by defining kinds of connectors - male \"plugs\" and female \"sockets\" - which form part of the device in question. Grammar is provided to support the connection and disconnection process.",
+                            "time": "Time: Mon, 21 Apr 2014 16:12:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Power Sources",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13573,
+                            "version": "2",
+                            "summary": "Power Sources provides an implementation of plugs and batteries, and is designed to be used alongside Computers or as a base for other device implementations. It requires Plugs and Sockets by Sean Turner.",
+                            "time": "Time: Mon, 21 Apr 2014 16:12:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Numerical Effects and Programming Tools",
+            "leafname": "programming",
+            "subsections": [
+                {
+                    "title": "Conditionals",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Alternatives",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13583,
+                            "version": "3",
+                            "summary": "Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., \"If the noun is either the carrot or the potato:\", or \"Instead of eating something when the noun is neither the cake nor the pudding:\".",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Jesse McGrew",
+                            "title": "Hypothetical Questions",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 17930,
+                            "version": "5.1.0",
+                            "summary": "Allows us to test the consequences of a phrase or action without permanently changing the game state.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Out of World Actions and Effects",
+            "leafname": "out-of-world",
+            "subsections": [
+                {
+                    "title": "Helping and Hinting",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Adaptive Hints",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13582,
+                            "version": "7",
+                            "summary": "An adaptive hint system based on Menus by Emily Short.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Basic Help Menu",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Provides a simple collection of standard IF-playing advice that can be incorporated as a help menu in a game.",
+                            "time": "Time: Sun, 23 Oct 2011 17:48:53 GMT"
+                        },
+                        {
+                            "author": "Wade Clarke",
+                            "title": "Basic Help Menu",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 19344,
+                            "version": "4",
+                            "summary": "Adds a HELP command to your Glulx or Z-Code project for Inform 6M62 or later which brings up a menu giving some standard instructions about IF. This is a tech and content update of Emily Short's Basic Help Menu extension made for compatibility with Wade Clarke's Menus. Requires Menus by Wade Clarke (version 5 or greater) to run.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Wade Clarke",
+                            "title": "Menus",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 19343,
+                            "version": "5",
+                            "summary": "Lets you include a menu system of help, hints and/or other information in your Glulx or Z-Code project for Inform 6M62 or later. This upgrade of Emily Short's classic Menus extension features user-friendly single keypress controls, a more sophisticated UI, compatibility with screen readers and portable devices, an optional book mode with automatic pagination, and isolated message content to make translations easier. Classic Menus tables can be reformatted for this extension with a little work.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        },
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Commonly Unimplemented",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13547,
+                            "version": "2",
+                            "summary": "Responds to attempts to interact with unimplemented clothing, body parts, or generic surroundings. Requires Smarter Parser by Aaron Reed.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Poor Man's Mistype",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13552,
+                            "version": "8",
+                            "summary": "Adds basic typo correction by checking the first few letters of misunderstood input against the printed names of visible objects. Requires Smarter Parser by Aaron Reed.",
+                            "time": "Time: Sat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Aaron Reed",
+                            "title": "Smarter Parser",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13556,
+                            "version": "16.1",
+                            "summary": "Understands a broader range of input than the standard parser, and can direct new players towards proper syntax. A rules-based system makes it easy to customize by removing or add new forms of understood input.",
+                            "time": "Time: zSat, 26 Apr 2014 22:57:37 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Tutorial Mode",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13581,
+                            "version": "5",
+                            "summary": "Adds a tutorial mode, which is on by default, to any game, to introduce key actions for the novice player. Can be revised or expanded by the author.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Scoring",
+                    "holdings": [
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Achievements",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 19492,
+                            "version": "1.2",
+                            "summary": "A simple but flexible rule-based achievement system. Awarded achievements can optionally persist in external files after a restart.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Ending",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Recorded Endings",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13575,
+                            "version": "5",
+                            "summary": "Records the endings the player encounters in multiple play-throughs to an external file; then adds an ENDINGS option to the final question to allow the player to review which endings he has seen so far.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Typography, Layout, and Multimedia Effects",
+            "leafname": "typography",
+            "subsections": [
+                {
+                    "title": "Screen Effects (General)",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Basic Screen Effects",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "7/140425",
+                            "summary": "Waiting for a keypress; clearing the screen. Also provides facilities for changing the foreground and background colors of text, when using the z-machine. These abilities will not function under Glulx.",
+                            "time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Typography",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Glulx Text Effects",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "4/140425",
+                            "summary": "Glulx Text Effects provides an easy way to set up special text effects for Glulx.",
+                            "time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Unicode Character Names",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Defines 2909 names like [unicode Greek small letter gamma] for Latin, Cyrillic, Greek and Hebrew letters, along with currency and other symbols.",
+                            "time": "Time: Sun, 11 Nov 2007 17:48:53 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Unicode Full Character Names",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "1",
+                            "summary": "Defines 12997 names like [unicode Arabic letter hah with three dots above] for the full range of characters named in the Unicode 4.1 standard.",
+                            "time": "Time: Sun, 11 Nov 2007 17:48:53 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "The Status Line",
+                    "holdings": [
+                        {
+                            "author": "Eric Eve",
+                            "title": "Exit Lister",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13592,
+                            "version": "11",
+                            "summary": "A status line exit-lister and an EXITS command, with optional colouring of unvisited exits.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Footnotes",
+                    "holdings": [
+                        {
+                            "author": "Stephen Granade",
+                            "title": "Footnotes",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 17911,
+                            "version": "2",
+                            "summary": "Lets you add footnotes to your game, similar to those in the Infocom game Hitchhiker's Guide to the Galaxy. Footnotes are numbered beginning with 1, and are only assigned numbers as they are referenced. The player can turn footnoting on and off.",
+                            "time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Menus",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Menus",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "3",
+                            "summary": "A table-based way to display full-screen menus to the player.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Glulx Multimedia Effects (General)",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Glulx Entry Points",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "10/140425",
+                            "summary": "Provides hooks to allow the author to write specialized multimedia behavior that would normally go through HandleGlkEvent. This is a rather dull utility library that will be of most use to authors wanting to write Glulx extensions compatible with other Glulx extensions already in use.",
+                            "time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                },
+                {
+                    "title": "Glulx Graphics",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Glulx Image Centering",
+                            "standard-installation": true,
+                            "visible": true,
+                            "version": "4",
+                            "summary": "Glulx Image Centering adds the ability to display an image that is centered (left/right) on the screen.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Testing and Publishing",
+            "leafname": "testing-and-publishing",
+            "subsections": [
+                {
+                    "title": "Testing and Debugging",
+                    "holdings": [
+                        {
+                            "author": "Michael Kielstra",
+                            "title": "Debug Tags",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 26369,
+                            "version": "1",
+                            "summary": "Allows you to take quick notes about what needs to be done, where it needs to be done, and who needs to do it.  It\u2019s scriptable, extensible, and interacts better with the rest of Inform than [TODO: ] comments do.  All your tags live next to the code in question, and they can even be in rooms in-game, but they\u2019re accessible from anywhere.  Best of all, if you leave one in by accident, the end-user will never notice as they destroy themselves in release builds.",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Debug Files",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13605,
+                            "version": "2",
+                            "summary": "A development tool for saving debugging information to an external text file during beta testing. (Glulx-only)",
+                            "time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
+                        },
+                        {
+                            "author": "Juhana Leinonen",
+                            "title": "Object Response Tests",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13606,
+                            "version": "7",
+                            "summary": "A development tool for testing all actions on any given object - or one action on all objects - at once to see whether the game's responses are sensible. Version 2 adds the possibility to test individual actions and to run the tests with NPC as the actor.",
+                            "time": "Time: Sun, 15 Dec 2013 02:29:33 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Property Checking",
+                            "standard-installation": false,
+                            "visible": true,
+                            "forum-thread": 13574,
+                            "version": "4",
+                            "summary": "A lightweight extension to identify rooms and objects in a game for which no description has yet been written.",
+                            "time": "Time: Mon, 05 Jul 2010 12:17:31 GMT"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
