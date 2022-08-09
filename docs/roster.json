@@ -23,7 +23,7 @@
 				"visible": true,
 				"forum-thread": 13559,
 				"version": "5",
-				"summary": "Provides a range of convenient say phrases, including more varieties of number-printing, descriptions of object locations, and descriptions of which members of a set conform to a criterion (such as "Three of them are closed." when speaking of a group of doors).",
+				"summary": "Provides a range of convenient say phrases, including more varieties of number-printing, descriptions of object locations, and descriptions of which members of a set conform to a criterion (such as \"Three of them are closed.\" when speaking of a group of doors).",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			}, {
 				"author": "Emily Short",
@@ -69,7 +69,7 @@
 				"standard-installation": true,
 				"visible": true,
 				"version": "5",
-				"summary": "Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as "Mrs." or "Dr.".",
+				"summary": "Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as \"Mrs.\" or \"Dr.\".",
 				"time": "Time: Mon, 14 Apr 2014 08:52:12 GMT"
 			} ]
 		}, {
@@ -589,7 +589,7 @@
 				"visible": true,
 				"forum-thread": 13588,
 				"version": "7",
-				"summary": "Conversation Responses allows response rules for various conversational commands to be written in the form "Response for Bob when asked about..." or "Response for Bob when asked-or-told..." (or many other variations).",
+				"summary": "Conversation Responses allows response rules for various conversational commands to be written in the form \"Response for Bob when asked about...\" or \"Response for Bob when asked-or-told...\" (or many other variations).",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
 				"author": "Eric Eve",
@@ -826,7 +826,7 @@
 				"visible": true,
 				"forum-thread": 13625,
 				"version": "4",
-				"summary": "Plug and Sockets is an extension designed to assist with the modelling of devices that can plug and be plugged into. This is done by defining kinds of connectors - male "plugs" and female "sockets" - which form part of the device in question. Grammar is provided to support the connection and disconnection process.",
+				"summary": "Plug and Sockets is an extension designed to assist with the modelling of devices that can plug and be plugged into. This is done by defining kinds of connectors - male \"plugs\" and female \"sockets\" - which form part of the device in question. Grammar is provided to support the connection and disconnection process.",
 				"time": "Time: Mon, 21 Apr 2014 16:12:12 GMT"
 			}, {
 				"author": "Emily Short",
@@ -851,7 +851,7 @@
 				"visible": true,
 				"forum-thread": 13583,
 				"version": "3",
-				"summary": "Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., "If the noun is either the carrot or the potato:", or "Instead of eating something when the noun is neither the cake nor the pudding:".",
+				"summary": "Allows checking the presence of an object or value in a set of objects or values with new either/or and neither/nor phrases. e.g., \"If the noun is either the carrot or the potato:\", or \"Instead of eating something when the noun is neither the cake nor the pudding:\".",
 				"time": "Time: Mon, 21 Apr 2014 15:08:06 GMT"
 			}, {
 				"author": "Jesse McGrew",
