@@ -1,4 +1,4 @@
-Version 10 of Facing by Emily Short begins here.
+Version 11.2 of Facing by Emily Short begins here.
 
 "Provides actions to face a direction, look toward a named room, or look through a named door."
 
@@ -102,12 +102,15 @@ Check an actor looking toward a room (this is the can't see through closed door 
 			if the player is not the person asked, say "[The person asked] [can't] see that way because [the occluding door] [are] closed." (B) instead;
 			stop the action; 
 
+Section - (For use without Locksmith by Emily Short)
 
-Use sequential action translates as (- Constant SEQUENTIAL_ACTION; -). 
+Use sequential action translates as (- Constant SEQUENTIAL_ACTION; -).
+
+Section -
 
 Carry out looking toward (this is the describing a room from afar rule):
 	carry out the distantly describing activity with the noun.
-	
+
 Report someone trying looking toward (this is the default report someone looking toward rule): 
 	let N be "[the noun]";
 	say "[The person asked] [look] toward [N in lower case]." (A)
@@ -214,6 +217,8 @@ Version 5 isolates some of the text to make it more replaceable and upgrades the
 Version 9 updates for 6E59, removing deprecated features. It also removes a number of phrases formerly defined inside Facing, because equivalent ones are now built into the standard rules.
 
 Version 10 updates for adaptive text and responses.
+
+Version 11/160611 Small fix to make it work alongside Locksmith by Emily Short - Petter Sjölund
 
 Example: * Directions and Doors - Allowing the player and his sidekick Clark to see into various rooms.
 

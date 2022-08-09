@@ -1,6 +1,8 @@
-Version 7 of Computers by Emily Short begins here.
+Version 8.2 of Computers by Emily Short begins here.
 
 "Computer hardware and software, including search engines and email programs. Version 3 adds handling for batteries and cords, if we include Power Sources by Emily Short (which itself depends on Plugs and Sockets by Sean Turner)."
+
+[Version 8 updates for compatibility with the 6M62 port of Counterfeit Monkey. Changed out of bounds to out-of-bounds and password lock program to password-lock program. Removed deprecated features - Petter Sjölund]
 
 [Version 7 updates for compatibility with adaptive responses.]
 
@@ -81,7 +83,7 @@ Instead of examining a screen which is part of a switched on computer (called th
 Carry out switching off a computer (this is the screen fades after shutdown rule):
 	let chosen screen be a random screen which is part of the noun;
 	repeat with item running through things which are part of the chosen screen:
-		remove the item from play.   
+		now the item is nowhere.   
 
 Chapter 2 - Laptops
 
@@ -238,22 +240,22 @@ topic	title	data
 
 Section 2 - Password Locks
 
-A password lock program is a kind of software. The software priority of a password lock program is usually 1.
-	The description of a password lock program is usually "[regarding the noun]A box on the screen [invite] [us] to type a password to proceed.".
-	A password lock program has some indexed text called the password.
-	A password lock program has some text called the rejection. The rejection of a password lock program is usually "'Password incorrect.'"
-	A password lock program has some text called the success. The success of a password lock program is usually "[regarding the noun]The password field [vanish]."
+A password-lock program is a kind of software. The software priority of a password-lock program is usually 1.
+	The description of a password-lock program is usually "[regarding the noun]A box on the screen [invite] [us] to type a password to proceed.".
+	A password-lock program has some indexed text called the password.
+	A password-lock program has some text called the rejection. The rejection of a password-lock program is usually "'Password incorrect.'"
+	A password-lock program has some text called the success. The success of a password-lock program is usually "[regarding the noun]The password field [vanish]."
 
 Rewarding successful answering of something is an activity.
 
-Rule for rewarding successful answering of a password lock program (called chosen software) (this is the default password resolution rule):
+Rule for rewarding successful answering of a password-lock program (called chosen software) (this is the default password resolution rule):
 	say "[success of the chosen software][paragraph break]" (A); 
 	let chosen computer be a random computer which is running the chosen software;
 	let the target screen be a random screen which is part of the chosen computer;
 	now the chosen software is not run by the chosen computer;
 	try examining the target screen.
 	
-Definition: a computer is protected if it runs a password lock program.
+Definition: a computer is protected if it runs a password-lock program.
 Definition: a computer is unprotected if it is not protected.
 
 Section 3 - Multiple Choice Programs
@@ -271,7 +273,7 @@ where the index will be filled in with numbers as appropriate, the title will la
 
 A multiple-choice program is a kind of software. 
 	A multiple-choice program has a table-name called the options table.
-	A multiple-choice program has some text called the out of bounds response. The out of bounds response is usually "[Our] selection, '[topic understood]', is not one of the available choices."
+	A multiple-choice program has some text called the out-of-bounds response. The out-of-bounds response is usually "[Our] selection, '[topic understood]', is not one of the available choices."
 
 The description of a multiple-choice program is usually "[options-list of the item described]".
 
@@ -303,7 +305,7 @@ where the index will be filled in with numbers as appropriate, the title will la
 
 An enumerated multiple-choice program is a kind of multiple-choice program.
 	The specification of an enumerated multiple-choice program is "Uses the options table and automatically numbers options rather than letting the player choose keywords to select."
-	The out of bounds response is usually "[The item described] [beep]: [our] selection [regarding the noun][are] not one of the available choices. Try, for instance, SELECT 1."
+	The out-of-bounds response is usually "[The item described] [beep]: [our] selection [regarding the noun][are] not one of the available choices. Try, for instance, SELECT 1."
 
 To say options-list of (chosen program - an enumerated multiple-choice program):
 	let the option count be the number of filled rows in the options table of the chosen program;
@@ -395,7 +397,7 @@ Chapter 3 - Which Program Receives Input?
 To decide what object is the controlling program of (chosen computer - a computer):
 	let the chosen screen be a random screen that is part of the chosen computer;
 	repeat with item running through software which is part of chosen screen:
-		remove item from play; 
+		now item is nowhere; 
 	if the chosen computer runs no software:
 		decide on nothing;
 	otherwise:
@@ -530,7 +532,7 @@ Section 3 - Input Handling
 
 Input handling rules are an object-based rulebook.
 
-An input handling rule for a password lock program (called chosen software) (this is the check for correct passwords rule):  
+An input handling rule for a password-lock program (called chosen software) (this is the check for correct passwords rule):  
 	let N be "[the topic understood]"; 
 	if N is the password of the chosen software:
 		carry out the rewarding successful answering activity with the chosen software;
@@ -547,7 +549,7 @@ An input handling rule for an enumerated multiple-choice program (called chosen 
 		if N is numero:
 			follow the effect entry;
 			rule succeeds; 
-	say "[out of bounds response of the chosen software][paragraph break]" (A);
+	say "[out-of-bounds response of the chosen software][paragraph break]" (A);
 	try examining the chosen software.
 
 An input handling rule for a multiple-choice program (called chosen software) (this is the pick a choice rule):
@@ -555,7 +557,7 @@ An input handling rule for a multiple-choice program (called chosen software) (t
 		follow the effect entry;
 		rule succeeds;
 	otherwise:
-		say "[out of bounds response of the chosen software][paragraph break]" (A);
+		say "[out-of-bounds response of the chosen software][paragraph break]" (A);
 		rule fails. 
 
 An input handling rule for a search engine (called chosen software) (this is the consult software rule):
@@ -630,9 +632,9 @@ A given computer may be running one or more pieces of software; whichever softwa
 
 The appearance of the software on the screen is given by the software's description. Thus we might have
 
-	The PC runs a password lock program called rudimentary passcode. The description of rudimentary passcode is "[regarding the noun]A box on the screen [invite] [us] to type a password to proceed."
+	The PC runs a password-lock program called rudimentary passcode. The description of rudimentary passcode is "[regarding the noun]A box on the screen [invite] [us] to type a password to proceed."
 
-A computer can run several programs at once, in which case the program with the lowest "software priority" is the one that is considered to be working and receiving input at the moment. By default, most software has a software priority of five, while password lock programs have software priority 1 (meaning they must be dealt with before other software becomes available). If it is intended that the user can change programs manually, we might handle this by changing software priorities during play to make the one in use uppermost; as in
+A computer can run several programs at once, in which case the program with the lowest "software priority" is the one that is considered to be working and receiving input at the moment. By default, most software has a software priority of five, while password-lock programs have software priority 1 (meaning they must be dealt with before other software becomes available). If it is intended that the user can change programs manually, we might handle this by changing software priorities during play to make the one in use uppermost; as in
 
 	now the software priority of the email program is 1.
 
@@ -643,7 +645,7 @@ When the player uses a TYPE or CLICK ON command, the topic understood is passed 
 			follow the effect entry;
 			rule succeeds;
 		otherwise:
-			say "[out of bounds response of the chosen software][paragraph 	break]";
+			say "[out-of-bounds response of the chosen software][paragraph 	break]";
 			rule fails. 
 
 ...and consequently we can make new input handling rules for any new software we write, or to customize the behavior of the default software kinds.
@@ -652,7 +654,7 @@ Section: Default software kinds
 
 Five types of software are provided by default: 
 
-(1) a password lock program that renders the computer inoperable until the password is typed
+(1) a password-lock program that renders the computer inoperable until the password is typed
 
 (2) a search program that returns results on typed searches, as well as to standard syntax such as LOOK UP "whatever" IN SEARCH PROGRAM
 
@@ -662,15 +664,15 @@ Five types of software are provided by default:
 
 (5) an email program capable of organizing incoming and outgoing messages, marking which messages are read, and reporting new arrivals.
 
-Section: Password lock programs
+Section: password-lock programs
 
-To define a password lock program, we may write something like:
+To define a password-lock program, we may write something like:
 	
-	The PC runs a password lock program called rudimentary passcode. The password of rudimentary passcode is "xyzzy". 
+	The PC runs a password-lock program called rudimentary passcode. The password of rudimentary passcode is "xyzzy". 
 
 Note that because of the way the z-machine handles typed input, the player's input will always be flattened to lower case before it is interpreted. Therefore passwords should always be in lower case.
 
-We may also optionally define two other aspects of a password lock program, namely the text displayed when the player's attempt fails, and that displayed when it succeeds. Thus:
+We may also optionally define two other aspects of a password-lock program, namely the text displayed when the player's attempt fails, and that displayed when it succeeds. Thus:
 
 	The rejection of rudimentary passcode is "'Password incorrect.'"
 	The success of rudimentary passcode is "The password field vanishes."
@@ -703,7 +705,7 @@ A subkind of multiple-choice program is the enumerated multiple-choice program, 
 
 Both enumerated and regular multiple-choice programs have a response to print if the player attempts to type or select something that is not understood as an option. We may change this by altering the out of bounds response, like so:
 
-	The out of bounds response of the ATM operation program is "Your selection, '[topic understood]', is not one of the available choices."
+	The out-of-bounds response of the ATM operation program is "Your selection, '[topic understood]', is not one of the available choices."
 
 Section: Search engines
 
@@ -766,7 +768,7 @@ If we wish to allow replies to email, we should first unlist the block replying 
 
 At that point, default behavior of the action is to mark the email replied and to report simply "You reply." It is up to us to elaborate on this in some more interesting way.
 
-Example: * Reading Email - A laptop set up with a password lock program that gives way to email we can read, and a new message that is delivered while we wait.
+Example: * Reading Email - A laptop set up with a password-lock program that gives way to email we can read, and a new message that is delivered while we wait.
 
 	*: "Reading Email"
 	
@@ -776,7 +778,7 @@ Example: * Reading Email - A laptop set up with a password lock program that giv
 
 	The conference table is a thing in the Conference Room. The small laptop is a laptop on the conference table.
 
-	The small laptop runs a password lock program called laptop security. Laptop security is privately-named. The password of laptop security is "mulderxox".
+	The small laptop runs a password-lock program called laptop security. Laptop security is privately-named. The password of laptop security is "mulderxox".
 
 	The small laptop runs an email program called laptop email. Laptop email is privately-named.
 
@@ -803,7 +805,7 @@ Example: * Powered Email Machine - The same as above, except that we add Power S
 
 	The conference table is a thing in the Conference Room. The small laptop is a laptop on the conference table.
 
-	The small laptop runs a password lock program called laptop security. Laptop security is privately-named. The password of laptop security is "mulderxox".
+	The small laptop runs a password-lock program called laptop security. Laptop security is privately-named. The password of laptop security is "mulderxox".
 
 	The small laptop runs an email program called laptop email. Laptop email is privately-named.
 
@@ -1021,7 +1023,7 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 		otherwise:
 			say "There is no obvious place to insert [the noun]." instead.
 
-	The PIN request screen is a privately-named password lock program. The password of PIN request screen is "2953". The description is "The screen now reads, PLEASE INPUT YOUR PERSONAL IDENTIFICATION NUMBER." The rejection of PIN request screen is "INCORRECT IDENTIFICATION NUMBER. TRY AGAIN."
+	The PIN request screen is a privately-named password-lock program. The password of PIN request screen is "2953". The description is "The screen now reads, PLEASE INPUT YOUR PERSONAL IDENTIFICATION NUMBER." The rejection of PIN request screen is "INCORRECT IDENTIFICATION NUMBER. TRY AGAIN."
 
 	The ATM operation program is an enumerated multiple-choice program. The options table of the ATM operation program is the Table of Transactions.
 
@@ -1066,4 +1068,3 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 		try examining the target screen.
 
 	Test me with "x atm / x keyboard / turn off atm / reboot atm / i / put wallet in slot / put card in slot / x card / get card / put card in slot / input 3311 / type 2953 / type 1 / input 3 on keyboard / i / input 2 / i / type 1 / type 4 / put card in atm / take card / insert card / type 2953 / take card / type 1 / n / insert card".
-

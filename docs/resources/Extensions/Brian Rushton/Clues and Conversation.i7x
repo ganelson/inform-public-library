@@ -1,4 +1,4 @@
-Version 4 of Clues and Conversation by Brian Rushton begins here.
+Version 5 of Clues and Conversation by Brian Rushton begins here.
 
 "A simple system for building conversations."
 
@@ -216,7 +216,9 @@ Understand the command "say" as something new.
 
 [Uttering it to is our main action.]
 
-Uttering it to is an action applying to two things. Understand "say [something] to [someone]" or "tell [something] to [someone]" or "t [something] to [someone]" or "a [something] to [someone]" or "talk about [something] to [someone]" or "say [something] [someone]" or "tell [something] [someone]" or "t [something]  [someone]" or "a [something] [someone]" or "talk about [something] [someone]" as uttering it to.
+Uttering it to is an action applying to two things. Understand "say [something] to [someone]" or "tell [something] to [someone]" or "t [something] to [someone]" or "a [something] to [someone]" or "talk about [something] to [someone]" or "say [something] [someone]" or "tell [something] [someone]" or "t [something] [someone]" or "a [something] [someone]" or "talk about [something] [someone]" as uttering it to.
+
+Understand "tell [someone] about [something]" as uttering it to (with nouns reversed).
 
 [Singleuttering automatically tries saying a quip to the target of the noun]
 
@@ -369,7 +371,7 @@ Carry out taking inventory (this is the quip-based inventory rule):
 		say "[We] [are] carrying:[line break]" (B);
 		list the contents of the player, with newlines, indented, including contents,
 			giving inventory information, with extra indentation, listing marked items only;
-	say "[first time][line break][bracket]You can see topics for speaking to others by typing T or TOPICS[close bracket].[only]" (C);
+	say "[first time][line break][bracket]You can see topics for speaking to others by typing T or TOPICS[close bracket].[line break][only]" (C);
 
 [Carry out taking inventory (this is the quip-based inventory rule):
 	say "[We] [are] carrying:";
@@ -673,7 +675,7 @@ Example: ** Lost Wallet - Getting quips from things and other quips.
 
 	Street is a room.
 
-	Stranger is a man in Street. The description of a stranger is "He looks exactly like the opposite of Timothy Chalamet."
+	The stranger is a man in Street. The description of a stranger is "He looks exactly like the opposite of Timothy Chalamet."
 	
 	When play begins:
 		say "A stranger in front of you drops his wallet!";
@@ -756,7 +758,7 @@ Example: *** Halloween Dance - A complete game using this extension.
 
 	The description of Jane is "A young woman wearing a simple frock covered with dozens of old... are those beepers? Like from the 90[']s?"
 
-	Boy is a quip. The preview of Boy is "'So, what do you know Boy?'".
+	Boy is a quip. The preview of Boy is "'So, what do you know about Fred?'".
 	The target of Boy is Jane.
 
 	Girl is a quip. The preview of Girl is "'So, what do you know about Jane?'".
@@ -819,7 +821,7 @@ Example: *** Halloween Dance - A complete game using this extension.
 		deliver Uhh;
 		deliver Okay;
 
-	TargetResponse of Okay is "Why not?'[paragraph break] He hands you a brainpop."
+	TargetResponse of Okay is "'Why not?'[paragraph break] He hands you a brainpop."
 	TargetResponse of Uhh is "'Actually, I'm not interested.'[paragraph break]He shrugs."
 
 	Report uttering Okay to Fred:
@@ -845,7 +847,7 @@ Example: *** Halloween Dance - A complete game using this extension.
 		deliver Crush;
 		deliver Lie;
 
-	TargetResponse of Boy is "'So, what do you know Boy?'[paragraph break]She brightens up, peeking over at Fred. 'Can you keep a secret? I think Fred is the sweetest man at school. He's really into repairing old technology, so I made this costume for him.' She twirls to display her outfit. 'I love fixing old stuff too, That's how we met, in our Tech class.'";
+	TargetResponse of Boy is "'So, what do you know about Fred?'[paragraph break]She brightens up, peeking over at Fred. 'Can you keep a secret? I think Fred is the sweetest man at school. He's really into repairing old technology, so I made this costume for him.' She twirls to display her outfit. 'I love fixing old stuff too, That's how we met, in our Tech class.'";
 	
 	Report uttering Boy to Jane:
 		deliver Romance;
@@ -873,7 +875,7 @@ Example: *** Halloween Dance - A complete game using this extension.
 			
 	Romance is a quip. The preview of Romance is "'So, I found out who Jane is interested in...'" The target of Romance is Fred.
 
-	TargetResponse of Romance is "'So, I found out who Jane is interested in...[paragraph break]He looks upset for a second. 'Who?'[paragraph break]'She said she's been into you ever since Tech class. She wore the beeper dress just for you.'";
+	TargetResponse of Romance is "'So, I found out who Jane is interested in...'[paragraph break]He looks upset for a second. 'Who?'[paragraph break]'She said she's been into you ever since Tech class. She wore the beeper dress just for you.'";
 
 	Report uttering Romance to Fred:
 		now FredKnows is 1;

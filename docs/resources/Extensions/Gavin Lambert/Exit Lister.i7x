@@ -1,4 +1,4 @@
-Version 3 of Exit Lister by Gavin Lambert begins here.
+Version 4 of Exit Lister by Gavin Lambert begins here.
 
 "Automatic listing of available exits, with a reasonable dose of customisation built in."
 
@@ -124,7 +124,7 @@ This extension is based on Exit Lister by Andre Kosmos.  I've tried to keep the 
 This gives you a list of available exits at the end of the room description.
 There are options to mention doors that are in your way, to mention rooms you have already visited, and how much info to reveal in dark rooms.
 
-For suggestions and feedback, Gavin Lambert can be contacted via "http://www.mirality.co.nz/".
+For suggestions and feedback, Gavin Lambert can be contacted via "http://www.mirality.co.nz/" or via GitHub.
 
 Chapter: Reference
 
@@ -197,9 +197,9 @@ Note that it is best to only use "rule fails" and "make no decision" -- this per
 You can also decide on a room-by-room basis (the destination room) whether you want to tell the player the destination of the exit or not.  The default rule is to only show the destination if the player has been there before ("visited"), but for example if there's a glass door between the two locations then it may be reasonable for the player to know what's on the other side regardless (you can check "the location" to see where they are now).  Conversely in a maze you may not want the player to know which rooms they've been to already:
 
 	A room memory rule for the Garden:
-		if the location is the Conservatory, rule succeeds. [due to glass door]
+		if the location is the Conservatory, rule succeeds; [due to glass door]
 	A room memory rule for Inside the Well:
-		if the well cover is open, rule succeeds.
+		if the well cover is open, rule succeeds;
 	A room memory rule:
 		if the location is mazelike, rule fails.
 
@@ -227,13 +227,15 @@ If the "Secret Doors by Andrew Owen" (or its update, "Secret Doors by Gavin Lamb
 
 Chapter: Change Log
 
-Section: Changes from version 2 to version 3
+Section: Changes from version 2 to version 4
 
 Updated various phrases for 6L02 compatibility, after some prompting by Joey Cramsey.
 
 Replaced "To say no obvious exits" with "the standard exit listing rule response (A)".  (Response (B) is also editable, but that seems less useful as it's already pretty flexible.)
 
 Added room memory rulebook to allow further customisation.
+
+Skipped version 3 because Mark Harviston used that version number in the Friends of i7 repo (since I didn't republish this quickly enough); this version ignores and supersedes those changes.
 
 Section: Changes from version 1 to version 2
 

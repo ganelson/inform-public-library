@@ -1,12 +1,18 @@
-Version 4/180124 of Hypothetical Questions (for Glulx only) by Jesse McGrew begins here.
+Version 5.1.0 of Hypothetical Questions (for Glulx only) by Jesse McGrew begins here.
 
 "Allows us to test the consequences of a phrase or action without permanently changing the game state."
 
 [At one point, I7 did some weird things with curly braces in the generated source when we use phrases as parameters, so we had to work around that here. Specifically, I7 added an opening brace before {ph} and a closing brace after the end of our code.]
 
-[To hypothetically (ph - a phrase) and consider (R - a rule): (- switch (Hypo_Start({phrase options})) { 1: do {ph} } until (1); Hypo_Middle({R}); 2: Hypo_End(); } if (0) { -).]
+To hypothetically (ph - a phrase) and consider (R - a rule): (-
+{-my:1} = Hypo_Start({phrase options});
+if ({-my:1} == 1) {ph}
+Hypo_Middle({R});
+if ({-my:1} == 2) Hypo_End();
+-)
 
-To hypothetically (ph - a phrase) and consider (R - a rule): (- switch (Hypo_Start({phrase options})) { 1: do { {ph} } until (1); Hypo_Middle({R}); 2: Hypo_End(); } -).
+
+[To hypothetically (ph - a phrase) and consider (R - a rule): (- switch (Hypo_Start({phrase options})) { 1: do { {ph} } until (1); Hypo_Middle({R}); 2:  } -).]
 
 To say the/-- hypothetical output: (- Hypo_Capture_Print(); -).
 
@@ -45,7 +51,7 @@ Global hypo_capture_previous;
 ];
 
 ! consider a rule, protect its result, and restore the state saved by Hypo_Start
-[ Hypo_Middle rule  a b save_sp;
+[ Hypo_Middle rule  a b save_sp hypo_size;
 	Hypo_Capture_End();
 	save_sp = say__p; say__p = 0;
 	FollowRulebook(rule);
@@ -53,7 +59,8 @@ Global hypo_capture_previous;
 	hypo_result-->0 = RulebookOutcome();
 	if (hypo_result-->0 == RS_FAILS or RS_SUCCEEDS)
 		hypo_result-->1 = ResultOfRule();
-	@protect hypo_result (HYPO_RESULT_WORDS * WORDSIZE);
+    hypo_size = (HYPO_RESULT_WORDS * WORDSIZE);
+	@protect hypo_result hypo_size;
 	@restoreundo rule;	! never returns if successful
 	print "[What happened to my undo state? --hypo]^";
 ];

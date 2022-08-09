@@ -1,4 +1,4 @@
-Version 3/160425 of Easy Doors by Hanon Ondricek begins here.
+Version 3.2 of Easy Doors by Hanon Ondricek begins here.
 
 "Easy Doors provides a new kind of door which does not use map connections, and may be manipulated via rules more flexibly than the standard doors provided in Inform 7.  Version 3 removes elements for compatibility with 6M62"
 
@@ -8,8 +8,7 @@ An easydoor is a kind of thing.
 An easydoor is usually fixed in place.
 An easydoor can be enterable.  An easydoor is usually enterable.
 An easydoor can be scenery.
-An easydoor can be unopenable or openable.  An easydoor can be open or closed.  An easydoor is usually openable.
-
+An easydoor can be openable or unopenable. An easydoor can be open or closed.  An easydoor is usually openable.
 An easydoor can be lockable.  An easydoor can be locked or unlocked.
 
 An easydoor has a text called dooraction.  The dooraction of an easydoor is usually "".

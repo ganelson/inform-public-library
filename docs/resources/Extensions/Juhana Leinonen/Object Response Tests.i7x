@@ -1,16 +1,16 @@
-Version 6 of Object Response Tests by Juhana Leinonen begins here.
+Version 7 of Object Response Tests by Juhana Leinonen begins here.
 
-"A development tool for testing all actions on any given object - or one acton on all objects - at once to see whether the game's responses are sensible."
+"A development tool for testing all actions on any given object - or one action on all objects - at once to see whether the game's responses are sensible."
 
 
 Book 1 - Testing actor
 	
 The test-actor is a person that varies.
 
-This is the set testing actor rule:
+This is the set default testing actor rule:
 	now the test-actor is the player.
 
-The set testing actor rule is listed last in the when play begins rulebook.
+The set default testing actor rule is listed last in the when play begins rulebook.
 
 
 Book 2 - Testing rules
@@ -418,11 +418,11 @@ Carry out test-verb-trying (this is the repeat an action with all objects rule):
 				follow the testing rule entry.
 
 
-Test-actor changing is an action out of world applying to one visible thing.
+Changing the test actor is an action out of world applying to one visible thing.
 
-Understand "actor is [any person]" as test-actor changing.
+Understand "actor is [any person]" as changing the test actor.
 
-Carry out test-actor changing (this is the change testing actor rule):
+Carry out changing the test actor (this is the change testing actor rule):
 	now the test-actor is the noun;
 	say "Object Response Tests now uses [the noun] as the actor." (A).
 
@@ -485,6 +485,12 @@ The extension automatically disables itself in release versions. Any abovementio
 
 
 Chapter: Version history
+
+Section: Version 7 (2015-12-31)
+
+ - updated to work with release 6M62 of Inform.
+ - renamed the 'set testing actor' rule to 'set default testing actor' for clarity.
+
 
 Section: Version 6 (2014-04-30)
 
