@@ -44,18 +44,15 @@ Physics: Substances, Ropes, Energy and Weight
 Numerical Effects and Programming Tools
 	Conditionals
 Out of World Actions and Effects
-	Start-up Features
 	Helping and Hinting
 	Scoring
 	Ending
-	Map building
 Typography, Layout, and Multimedia Effects
 	Screen Effects (General)
 	Typography
 	The Status Line
 	Footnotes
 	Menus
-	Vorple Framework
 	Glulx Multimedia Effects (General)
 	Glulx Graphics
 Testing and Publishing
