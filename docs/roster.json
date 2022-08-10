@@ -1146,9 +1146,9 @@
                         {
                             "author": "Emily Short",
                             "title": "Glulx Entry Points",
-                            "standard-installation": true,
+                            "standard-installation": false,
                             "visible": true,
-                            "version": "10/140425",
+                            "version": "10/150101",
                             "summary": "Provides hooks to allow the author to write specialized multimedia behavior that would normally go through HandleGlkEvent. This is a rather dull utility library that will be of most use to authors wanting to write Glulx extensions compatible with other Glulx extensions already in use.",
                             "time": "Time: Fri, 25 Apr 2014 08:52:12 GMT"
                         }

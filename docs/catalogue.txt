@@ -141,7 +141,7 @@ Typography, Layout, and Multimedia Effects
 	Menus
 		Menus by Emily Short v3
 	Glulx Multimedia Effects (General)
-		Glulx Entry Points by Emily Short v10/140425
+		Glulx Entry Points by Emily Short v10/150101
 	Glulx Graphics
 		Glulx Image Centering by Emily Short v4
 Testing and Publishing
