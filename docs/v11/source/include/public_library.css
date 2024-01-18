@@ -1,0 +1,160 @@
+	.headingpanellayout {
+		position: relative;
+		height: 56px;
+		padding: 0px;
+		white-space:nowrap;
+	}
+	.headingpanelalt {
+		background: #808080;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+	.headingtext {
+		position: absolute;
+		top: -4px;
+		left: -1px;
+		width: 100%;
+		padding: 14px 10px 0px 10px;
+	}
+	span.headingpaneltextalt {
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.headingrubric {
+		position: absolute;
+		top: 36px;
+		width: 100%;
+		padding: 0px 10px 0px 10px;
+	}
+	span.headingpanelrubricalt {
+		color: #ffffff;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	span.registrybuttons {
+		height: 20px;
+		padding: 2px 8px 2px 8px;
+		margin: 2px;
+		border:1px solid;
+		border-radius: 5px;
+	}
+	span.registrybuttontext {
+		font-size: 11px;
+		border-color: #000000;
+	}
+	span.registryminibuttons {
+		height: 14px;
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border:1px solid;
+		border-radius: 4px;
+	}
+	span.registryminibuttontext {
+		font-size: 10px;
+		border-color: #000000;
+	}
+
+
+	span.registrybuttonuninstalled {
+		color: #000000;
+		background: #ffffdd;
+	}
+	span.registrybuttoninstalled {
+		color: #000000;
+		background: #ffffff;
+		pointer-events: none;
+	}
+	span.registrybuttonbuiltin {
+		color: #888888;
+		background: #ffffff;
+		pointer-events: none;
+	}
+	span.registrybuttonupdate {
+		color: #000000;
+		background: #aaddff;
+	}
+	span.registrybuttonrevert {
+		color: #000000;
+		background: #ddaaff;
+	}
+	span.registrybuttonrevealer {
+		color: #ffffff;
+		background: #444444;
+	}
+
+	p {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+	}
+	div.registrysectionitemsopen {
+		display: block;
+	}
+	div.registrysectionitemsclosed {
+		display: none;
+	}
+	span.registrysectionname {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+	}
+	span.registrysubsectionname {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	span.registrysectionmark {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		line-height: 18px;
+		color: #666;
+	}
+	span.registrysubsectionmark {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 14px;
+		line-height: 16px;
+		color: #666;
+	}
+	span.registryitemtext {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	p.registryitem {
+		padding-left: 80px;
+		text-indent: -40px;
+	}
+	p.registryaddition {
+		padding-left: 40px;
+		text-indent: -40px;
+	}
+
+	a.registrysilentlink {
+		text-decoration: none;
+		color: #000;
+	}
+	a.registrybuttonlink {
+		text-decoration: none;
+	}
+	a.registrycontentslink:link {
+		text-decoration: none;
+		color: #202020;
+	}
+	a.registrycontentslink:visited {
+		text-decoration: none;
+		color: #202020;
+	}
+	a.registrycontentslink:hover {
+		text-decoration: none;
+		color: #D00000;
+	}
+	a.registrycontentslink:active {
+		text-decoration: none;
+		color: #D00000;
+	}

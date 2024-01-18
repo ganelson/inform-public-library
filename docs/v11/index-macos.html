@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extensions</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Extensions</title>
 <style type="text/css">
 <!--
 :root {
-	--informdefault-fontfamily: sans-serif;
-	--informmonospaced-fontfamily: monospace;
-	--informcode-fontfamily: monospace;
-	--informcommand-fontfamily: serif;
+	--informdefault-fontfamily: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	--informmonospaced-fontfamily: SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+	--informcode-fontfamily: SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+	--informcommand-fontfamily: Georgia, "Times New Roman", Times, serif;
 }
 
 :root {
@@ -2047,25 +2051,460 @@ div.skeinreport span.insertion {
 }
 
 --></style>
+<script type="text/javascript">
+	window.getAllList = [];
+	window.getAllLength = 0;
+	window.updateList = [];
+	window.updateListLength = 0;
+	window.sectionExtentD = new Array();
+	window.sectionExtentI = new Array();
+	window.sectionExtentU = new Array();
+	window.sectionExtentR = new Array();
+	window.subsectionExtentD = new Array();
+	window.subsectionExtentI = new Array();
+	window.subsectionExtentU = new Array();
+	window.subsectionExtentR = new Array();
+	function query(itemid, sid, ssid, author, title, available, url) {
+		var myProject = window.Project;
+		var imid = 'button' + itemid;
+		var res = myProject.askInterfaceForLocalVersion(author, title, available);
+		var buttontext = 'DOWNLOAD';
+		var buttonclass = 'registrybuttons registrybuttonuninstalled';
+		if (res == '!') {
+			buttontext = 'BUILT IN'; buttonclass = 'registrybuttons registrybuttonbuiltin';
+			window.sectionExtentI[sid]++;
+			window.subsectionExtentI[ssid]++;
+		}
+		if (res == '=') {
+			buttontext = 'INSTALLED'; buttonclass = 'registrybuttons registrybuttoninstalled';
+			window.sectionExtentI[sid]++;
+			window.subsectionExtentI[ssid]++;
+		}
+		if (res == '<') {
+			var loc = myProject.askInterfaceForLocalVersionText(author, title);
+			buttontext = 'UPDATE ' + loc + ' &#9654 ' + available;
+			buttonclass = 'registrybuttons registrybuttonupdate';
+			window.updateList.push(itemid);
+			window.updateList.push(url);
+			window.updateList.push(title + ' by ' + author);
+			window.updateListLength = window.updateListLength + 1;
+			window.sectionExtentU[sid]++;
+			window.subsectionExtentU[ssid]++;
+		}
+		if (res == '>') {
+			var loc = myProject.askInterfaceForLocalVersionText(author, title);
+			buttontext = 'REVERT TO LIBRARY VERSION (' + loc + ' &#9654 ' + available + ')';
+			buttonclass = 'registrybuttons registrybuttonrevert';
+			window.sectionExtentR[sid]++;
+			window.subsectionExtentR[ssid]++;
+		}
+		if (buttontext == 'DOWNLOAD') {
+			window.getAllList.push(itemid);
+			window.getAllList.push(url);
+			window.getAllList.push(title + ' by ' + author);
+			window.getAllLength = window.getAllLength + 1;
+			window.sectionExtentD[sid]++;
+			window.subsectionExtentD[ssid]++;
+		}
+		document.getElementById(imid).innerHTML = buttontext;
+		document.getElementById(imid).className = buttonclass;
+	}
+	function onLoaded() {
+		resetCounts(0);
+	}
+	window.onload=onLoaded;
+	function addToIndicator(existing, count, className) {
+		if (count == 0) return existing;
+		if (existing != '') existing = existing + '+';
+		return existing + '<span class="registryminibuttons registryminibuttontext ' + className + '">' + count + '</span>';
+	}
+	function setIndicatorForSection(sid) {
+		var temp = addToIndicator('', window.sectionExtentI[sid], 'registrybuttoninstalled');
+		temp = addToIndicator(temp, window.sectionExtentD[sid], 'registrybuttonuninstalled');
+		temp = addToIndicator(temp, window.sectionExtentU[sid], 'registrybuttonupdate');
+		temp = addToIndicator(temp, window.sectionExtentR[sid], 'registrybuttonrevert');
+		document.getElementById('sectionindicator'+sid).innerHTML = temp;
+	}
+	function setIndicatorForSubsection(sid) {
+		var temp = addToIndicator('', window.subsectionExtentI[sid], 'registrybuttoninstalled');
+		temp = addToIndicator(temp, window.subsectionExtentD[sid], 'registrybuttonuninstalled');
+		temp = addToIndicator(temp, window.subsectionExtentU[sid], 'registrybuttonupdate');
+		temp = addToIndicator(temp, window.subsectionExtentR[sid], 'registrybuttonrevert');
+		document.getElementById('subsectionindicator'+sid).innerHTML = temp;
+	}
+	function openSection(sid) {
+		document.getElementById('sectionitems'+sid).className = 'registrysectionitemsopen';
+		document.getElementById('sectionindicator'+sid).innerHTML = '';
+	}
+	function closeSection(sid) {
+		document.getElementById('sectionitems'+sid).className = 'registrysectionitemsclosed';
+		setIndicatorForSection(sid);
+	}
+	function maybeCloseSection(sid, updating) {
+		if ((updating == 1) && (document.getElementById('sectionitems'+sid).className != 'registrysectionitemsclosed')) {
+			return;
+		}
+		document.getElementById('sectionitems'+sid).className = 'registrysectionitemsclosed';
+		setIndicatorForSection(sid);
+	}
+	function toggleSection(sid) {
+		if (document.getElementById('sectionitems'+sid).className == 'registrysectionitemsclosed') {
+			openSection(sid);
+		} else {
+			closeSection(sid);
+		}
+	}
+	function openSubsection(ssid) {
+		document.getElementById('subsectionitems'+ssid).className = 'registrysectionitemsopen';
+		document.getElementById('subsectionindicator'+ssid).innerHTML = '';
+	}
+	function closeSubsection(ssid) {
+		document.getElementById('subsectionitems'+ssid).className = 'registrysectionitemsclosed';
+		setIndicatorForSubsection(ssid);
+	}
+	function maybeCloseSubsection(ssid, updating) {
+		if ((updating == 1) && (document.getElementById('subsectionitems'+ssid).className != 'registrysectionitemsclosed')) {
+			return;
+		}
+		document.getElementById('subsectionitems'+ssid).className = 'registrysectionitemsclosed';
+		setIndicatorForSubsection(ssid);
+	}
+	function toggleSubsection(ssid) {
+		if (document.getElementById('subsectionitems'+ssid).className == 'registrysectionitemsclosed') {
+			openSubsection(ssid);
+		} else {
+			closeSubsection(ssid);
+		}
+	}
+	function updateButtonLabels() {
+		if (window.getAllLength == 0) {
+			document.getElementById('getall').innerHTML = 'ALL DOWNLOADED';
+			document.getElementById('getall').className = 'registrybuttons registrybuttoninstalled';
+		} else {
+			if (window.getAllLength == 1) {
+				document.getElementById('getall').innerHTML = 'DOWNLOAD 1 EXTENSION';
+			} else {
+				document.getElementById('getall').innerHTML = 'DOWNLOAD ' + window.getAllLength + ' EXTENSIONS';
+			}
+			document.getElementById('getall').className = 'registrybuttons registrybuttonuninstalled';
+		}
+		if (window.updateListLength == 0) {
+			document.getElementById('updateall').innerHTML = 'ALL UP TO DATE';
+			document.getElementById('updateall').className = 'registrybuttons registrybuttoninstalled';
+		} else {
+			if (window.updateListLength == 1) {
+				document.getElementById('updateall').innerHTML = 'UPDATE 1 EXTENSION';
+			} else {
+				document.getElementById('updateall').innerHTML = 'UPDATE ' + window.updateListLength + ' EXTENSIONS';
+			}
+			document.getElementById('updateall').className = 'registrybuttons registrybuttonupdate';
+		}
+	}
+	function clearSectionExtents(sid) {
+		window.sectionExtentI[sid] = 0;
+		window.sectionExtentD[sid] = 0;
+		window.sectionExtentU[sid] = 0;
+		window.sectionExtentR[sid] = 0;
+	}
+	function clearSubsectionExtents(ssid) {
+		window.subsectionExtentI[ssid] = 0;
+		window.subsectionExtentD[ssid] = 0;
+		window.subsectionExtentU[ssid] = 0;
+		window.subsectionExtentR[ssid] = 0;
+	}
+	function resetCounts(updating) {
+		clearExtents();
+		setupResources();
+		maybeCloseSubsections(updating);
+		updateButtonLabels();
+	}
+
+	function setupResources() {
+		query(0,
+			0,
+			0,
+			'Emily Short',
+			'Complex Listing',
+			'Version 10',
+			'library:/resources/Extensions/Emily%20Short/Complex%20Listing.i7x?id=0');
+		query(1,
+			0,
+			0,
+			'Emily Short',
+			'Inanimate Listeners',
+			'Version 3',
+			'library:/resources/Extensions/Emily%20Short/Inanimate%20Listeners.i7x?id=1');
+		query(2,
+			0,
+			0,
+			'Emily Short',
+			'Locksmith',
+			'Version 15',
+			'library:/resources/Extensions/Emily%20Short/Locksmith.i7x?id=2');
+		query(3,
+			0,
+			0,
+			'Emily Short',
+			'Skeleton Keys',
+			'Version 2',
+			'library:/resources/Extensions/Emily%20Short/Skeleton%20Keys.i7x?id=3');
+		query(4,
+			0,
+			0,
+			'Emily Short',
+			'Punctuation Removal',
+			'Version 7',
+			'library:/resources/Extensions/Emily%20Short/Punctuation%20Removal.i7x?id=4');
+		query(5,
+			0,
+			0,
+			'Eric Eve',
+			'Epistemology',
+			'Version 9',
+			'library:/resources/Extensions/Eric%20Eve/Epistemology.i7x?id=5');
+		query(6,
+			0,
+			0,
+			'Graham Nelson',
+			'Metric Units',
+			'Version 3',
+			'library:/resources/Extensions/Graham%20Nelson/Metric%20Units.i7x?id=6');
+		query(7,
+			0,
+			0,
+			'Graham Nelson',
+			'Approximate Metric Units',
+			'Version 2',
+			'library:/resources/Extensions/Graham%20Nelson/Approximate%20Metric%20Units.i7x?id=7');
+		query(8,
+			0,
+			0,
+			'Graham Nelson',
+			'Rideable Vehicles',
+			'Version 4',
+			'library:/resources/Extensions/Graham%20Nelson/Rideable%20Vehicles.i7x?id=8');
+	}
+	function downloadSucceeded(itemid) {
+		if (itemid == 0) { openSection(0); openSubsection(0); }
+		if (itemid == 1) { openSection(0); openSubsection(0); }
+		if (itemid == 2) { openSection(0); openSubsection(0); }
+		if (itemid == 3) { openSection(0); openSubsection(0); }
+		if (itemid == 4) { openSection(0); openSubsection(0); }
+		if (itemid == 5) { openSection(0); openSubsection(0); }
+		if (itemid == 6) { openSection(0); openSubsection(0); }
+		if (itemid == 7) { openSection(0); openSubsection(0); }
+		if (itemid == 8) { openSection(0); openSubsection(0); }
+		resetCounts(1);
+	}
+	function clearExtents() {
+		clearSectionExtents(0);
+		clearSubsectionExtents(0);
+	}
+	function maybeCloseSubsections(updating) {
+		maybeCloseSection(0, updating);
+		maybeCloseSubsection(0, updating);
+	}
+	function showJustHeadings() {
+		closeSection(0);
+	}
+	function showHeadingsAndSubheadings() {
+		openSection(0);
+		closeSubsection(0);
+	}
+	function showEverything() {
+		openSection(0);
+		openSubsection(0);
+	}
+
+</script>
 </head>
 <body>
 <table cellspacing="3" border="0" width="100%">
 	<tr id="surround0">
+		<td align="left" valign="top" border=0 width=150 height=150>
+			<img src='inform:/doc_images/extensions@2x.png' width=150 height=150>
+		</td>
 		<td style="width:100%">
 			<div class="headingpanellayout headingpanelalt">
-				<div class="headingtext"><span class="headingpaneltextalt">The Public Library: <i>Disconnected</i></span></div>
+				<div class="headingtext"><span class="headingpaneltextalt">The Public Library</span></div>
 				<div class="headingrubric"><span class="headingpanelrubricalt">Extensions shared by Inform users</span></div>
 			</div>
-			<p>This tab normally holds a public library of extensions shared by
-			Inform authors, but right now it's <b>disconnected</b>.</p>
-			<p>It's possible that the Inform website is down, and if so then our
-			apologies: please try again later.</p>
-			<p>It's possible that your computer is not currently connected to the
-			Internet, and if so, please try again when you're back online.</p>
-			<p>Though this is less likely, it's also possible that you're behind
-			a firewall which is for some reason blocking the traffic. But since
-			Inform is only making a regular Internet connection, not using an
-			unusual port, it's more likely to be for one of the reasons above.</p>
+			<p>This is a public library of extensions shared by Inform authors. They're all published under a
+			Creative Commons Attribution licence, which means you can use them for free in any project of your own.
+			(Inform will automatically take care of crediting the authors.)</p>
+			<p>This version of the library is intended for projects using version 11
+			of Inform. It is <b>experimental and for now exists only for testing the Inform apps ahead of the v11 release</b>.
+			As such, it contains only a handful of extensions, but in their modernised file format.</p>
+
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="4" cellpadding="0" width=100%>
+	<tr>
+		<td align="left" valign="top" width="0"></td>
+		<td align="left" valign="top">
+			<hr>
+			<p class='registryaddition'>
+			<span class='registryitemtext'>
+			Show:
+			&nbsp;
+			<a class="registrybuttonlink" href="#" onClick="showJustHeadings(); return false;">
+			<span class="registrybuttons registrybuttontext registrybuttonrevealer">JUST HEADINGS</span></a>
+			&nbsp;
+			<a class="registrybuttonlink" href="#" onClick="showHeadingsAndSubheadings(); return false;">
+			<span class="registrybuttons registrybuttontext registrybuttonrevealer">HEADINGS AND SUBHEADINGS</span></a>
+			&nbsp;
+			<a class="registrybuttonlink" href="#" onClick="showEverything(); return false;">
+			<span class="registrybuttons registrybuttontext registrybuttonrevealer">EVERYTHING</span></a>
+			</span>
+			</p>
+			<hr>
+
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=40>
+						<span class='registrysectionmark'>§1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='registrysectionname' id="section0">
+							<a href='#' onClick="toggleSection(0); return false;" class='registrycontentslink'>
+								Testing
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSection(0); return false;" class='registrysilentlink'>
+							<span id="sectionindicator0"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='sectionitems0'>
+			<table border="0" cellspacing="4" cellpadding="0" width=100%>
+				<tr>
+					<td align="right" valign="top" width=70>
+						<span class='registrysubsectionmark'>§1.1.&nbsp;</span>
+					</td>
+					<td align="left" valign="top">
+						<span class='registrysubsectionname' id="subsection0">
+							<a href='#' onClick="toggleSubsection(0); return false;" class='registrycontentslink'>
+								Testing only
+							</a>
+						</span>
+					</td>
+					<td valign="top" align="right">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href='#' onClick="toggleSubsection(0); return false;" class='registrysilentlink'>
+							<span id="subsectionindicator0"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<div id='subsectionitems0'>
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Emily%20Short/Complex%20Listing-v10.zip?id=0' class="registrybuttonlink">
+						<span id="button0" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Complex Listing by Emily Short</b> (Version 10).
+					Complex Listing provides more sophisticated listing options: the ability to impose special ordering instructions on a list, and also the ability to change the delimiters of the list to produce different styles and effects.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Emily%20Short/Inanimate%20Listeners-v3.zip?id=1' class="registrybuttonlink">
+						<span id="button1" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Inanimate Listeners by Emily Short</b> (Version 3).
+					Allows the player to address inanimate objects such as a talking computer, microphone, or telephone in a form such as ASK COMPUTER ABOUT COORDINATES.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Emily%20Short/Locksmith-v15.zip?id=2' class="registrybuttonlink">
+						<span id="button2" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Locksmith by Emily Short</b> (Version 15).
+					Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Emily%20Short/Skeleton%20Keys-v2.zip?id=3' class="registrybuttonlink">
+						<span id="button3" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Skeleton Keys by Emily Short</b> (Version 2).
+					Allows for locks which can be opened by more than one key.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Emily%20Short/Punctuation%20Removal-v7.zip?id=4' class="registrybuttonlink">
+						<span id="button4" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Punctuation Removal by Emily Short</b> (Version 7).
+					Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as "Mrs." or "Dr.".
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Eric%20Eve/Epistemology-v9.zip?id=5' class="registrybuttonlink">
+						<span id="button5" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Epistemology by Eric Eve</b> (Version 9).
+					Keeping track of what the player character knows and sees.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Graham%20Nelson/Metric%20Units-v3.zip?id=6' class="registrybuttonlink">
+						<span id="button6" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Metric Units by Graham Nelson</b> (Version 3).
+					Scientific kinds of value for simulations, using real number arithmetic. Uses SI units for mass, elapsed time, electric current, temperature, luminosity, frequency, force, energy, pressure, power, electric charge, voltage, luminance, area, volume, velocity, acceleration, momentum, density, heat capacity.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Graham%20Nelson/Approximate%20Metric%20Units-v2.zip?id=7' class="registrybuttonlink">
+						<span id="button7" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Approximate Metric Units by Graham Nelson</b> (Version 2).
+					Scientific kinds of value for simulations, using scaled integer arithmetic: really only useful for Z-machine projects.
+				</span>
+			</p>
+
+			<p class='registryitem'>
+				<span class='registryitemtext'>
+					<a href='library:/resources/Extensions/Graham%20Nelson/Rideable%20Vehicles-v4.zip?id=8' class="registrybuttonlink">
+						<span id="button8" class="registrybuttons registrybuttontext">buttontext</span>
+					</a>
+					&nbsp;
+					<b>Rideable Vehicles by Graham Nelson</b> (Version 4).
+					Vehicles which one sits on top of, rather than inside, such as elephants or motorcycles.
+				</span>
+			</p>
+
+			</div>
+			</div>
 			<hr>
 
 		</td>
@@ -2073,4 +2512,3 @@ div.skeinreport span.insertion {
 </table>
 </body>
 </html>
-

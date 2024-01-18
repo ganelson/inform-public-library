@@ -1,0 +1,105 @@
+{
+    "sections": [
+        {
+            "title": "Testing",
+            "leafname": "testing",
+            "subsections": [
+                {
+                    "title": "Testing only",
+                    "holdings": [
+                        {
+                            "author": "Emily Short",
+                            "title": "Complex Listing",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "10",
+                            "summary": "Complex Listing provides more sophisticated listing options: the ability to impose special ordering instructions on a list, and also the ability to change the delimiters of the list to produce different styles and effects.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Inanimate Listeners",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "3",
+                            "summary": "Allows the player to address inanimate objects such as a talking computer, microphone, or telephone in a form such as ASK COMPUTER ABOUT COORDINATES.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Locksmith",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "15",
+                            "summary": "Implicit handling of doors and containers so that lock manipulation is automatic if the player has the necessary keys.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Skeleton Keys",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "2",
+                            "summary": "Allows for locks which can be opened by more than one key.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Emily Short",
+                            "title": "Punctuation Removal",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "7",
+                            "summary": "Offers specialized commands to strip troublesome punctuation such as periods, commas, question marks, and quote marks out of the player's typed commands; provides a converter to especially interpret titles that contain full stops, such as \"Mrs.\" or \"Dr.\".",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Eric Eve",
+                            "title": "Epistemology",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "9",
+                            "summary": "Keeping track of what the player character knows and sees.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Metric Units",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "3",
+                            "summary": "Scientific kinds of value for simulations, using real number arithmetic. Uses SI units for mass, elapsed time, electric current, temperature, luminosity, frequency, force, energy, pressure, power, electric charge, voltage, luminance, area, volume, velocity, acceleration, momentum, density, heat capacity.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Approximate Metric Units",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "2",
+                            "summary": "Scientific kinds of value for simulations, using scaled integer arithmetic: really only useful for Z-machine projects.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        },
+                        {
+                            "author": "Graham Nelson",
+                            "title": "Rideable Vehicles",
+                            "standard-installation": false,
+                            "directory-format": true,
+                            "visible": true,
+                            "version": "4",
+                            "summary": "Vehicles which one sits on top of, rather than inside, such as elephants or motorcycles.",
+                            "time": "Time: Thu, 18 Jan 2024 21:07:12 GMT"
+                        }
+                  ]
+                }
+            ]
+        }
+    ]
+}
